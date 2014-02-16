@@ -77,8 +77,8 @@ section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
 .nbss                        0x800                   0            0x42  (66)
 .ndata                       0x842                   0            0x10  (16)
-_0x23ab9b453003064          0x4780                   0            0x30  (48)
-_0x23aba1053003064          0x47c0                   0            0x30  (48)
+_0x12ab9b4530035f6          0x4780                   0            0x30  (48)
+_0x12aba10530035f6          0x47c0                   0            0x30  (48)
 
                         Total data memory used (bytes):           0xb2  (178) 1%
 
@@ -1758,15 +1758,15 @@ __c30_signature
  __c30_signature
                   0x000380          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(udivsi3.eo)
 
-_0x23ab9b453003064
+_0x12ab9b4530035f6
                     0x4780         0x30
- _0x23ab9b453003064
+ _0x12ab9b4530035f6
                     0x4780         0x30 build/default/production/_ext/230937639/adc.o
                     0x4780                  _dmaBufferA
 
-_0x23aba1053003064
+_0x12aba10530035f6
                     0x47c0         0x30
- _0x23aba1053003064
+ _0x12aba10530035f6
                     0x47c0         0x30 build/default/production/_ext/230937639/adc.o
                     0x47c0                  _dmaBufferB
 
