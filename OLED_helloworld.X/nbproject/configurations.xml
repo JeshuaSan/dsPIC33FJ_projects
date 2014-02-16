@@ -13,22 +13,20 @@
                    displayName="Source Files"
                    projectFiles="true">
       <logicalFolder name="oled" displayName="oled" projectFiles="true">
-        <itemPath>../libs/oled/oled.c</itemPath>
-        <itemPath>../libs/oled/oled_draw.c</itemPath>
-        <itemPath>../libs/oled/oled_print.c</itemPath>
-        <itemPath>../libs/oled/SSD1306.c</itemPath>
+        <itemPath>../../libs/oled/oled.c</itemPath>
+        <itemPath>../../libs/oled/oled_draw.c</itemPath>
+        <itemPath>../../libs/oled/oled_print.c</itemPath>
+        <itemPath>../../libs/oled/SSD1306.c</itemPath>
       </logicalFolder>
       <logicalFolder name="src" displayName="src" projectFiles="true">
-        <logicalFolder name="common" displayName="common" projectFiles="true">
-        </logicalFolder>
         <logicalFolder name="device" displayName="device" projectFiles="true">
-          <itemPath>../libs/dspic33f_pic24h_corelibs/src/device/sysconfig.c</itemPath>
+          <itemPath>../../libs/dspic33f_pic24h_corelibs/src/device/sysconfig.c</itemPath>
         </logicalFolder>
         <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
-          <itemPath>../libs/dspic33f_pic24h_corelibs/src/peripheral/adc.c</itemPath>
-          <itemPath>../libs/dspic33f_pic24h_corelibs/src/peripheral/spi.c</itemPath>
-          <itemPath>../libs/dspic33f_pic24h_corelibs/src/peripheral/timer.c</itemPath>
-          <itemPath>../libs/dspic33f_pic24h_corelibs/src/peripheral/uart.c</itemPath>
+          <itemPath>../../libs/dspic33f_pic24h_corelibs/src/peripheral/adc.c</itemPath>
+          <itemPath>../../libs/dspic33f_pic24h_corelibs/src/peripheral/spi.c</itemPath>
+          <itemPath>../../libs/dspic33f_pic24h_corelibs/src/peripheral/timer.c</itemPath>
+          <itemPath>../../libs/dspic33f_pic24h_corelibs/src/peripheral/uart.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <itemPath>main.c</itemPath>
@@ -40,9 +38,8 @@
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
-    <Elem>../include</Elem>
-    <Elem>../libs/dspic33f_pic24h_corelibs/src</Elem>
-    <Elem>../libs/oled</Elem>
+    <Elem>../../libs/dspic33f_pic24h_corelibs/src</Elem>
+    <Elem>../../libs/oled</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -52,7 +49,7 @@
         <targetDevice>dsPIC33FJ128MC802</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>Simulator</platformTool>
+        <platformTool>PICkit2PlatformTool</platformTool>
         <languageToolchain>XC16</languageToolchain>
         <languageToolchainVersion>1.21</languageToolchainVersion>
         <platform>4</platform>
@@ -91,7 +88,7 @@
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="extra-include-directories"
-                  value="../libs/dspic33f_pic24h_corelibs/include;../libs"/>
+                  value="../../libs/dspic33f_pic24h_corelibs/include;../../libs"/>
         <property key="isolate-each-function" value="false"/>
         <property key="keep-inline" value="false"/>
         <property key="oXC16gcc-align-arr" value="false"/>
@@ -163,6 +160,13 @@
         <property key="output-file-format" value="elf"/>
         <property key="save-temps" value="false"/>
       </C30Global>
+      <PICkit2PlatformTool>
+        <property key="pk2settings.3state" value="false"/>
+        <property key="pk2settings.preserveee" value="false"/>
+        <property key="pk2settings.setvddvoltage" value="3.25"/>
+        <property key="pk2settings.userpgmexec" value="true"/>
+        <property key="pk2settings.usetargetpower" value="false"/>
+      </PICkit2PlatformTool>
       <Simulator>
         <property key="breakoptions.coreerrors" value="Ignore"/>
         <property key="breakoptions.corewarnings" value="Ignore"/>

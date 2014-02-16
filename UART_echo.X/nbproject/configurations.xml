@@ -13,16 +13,14 @@
                    displayName="Source Files"
                    projectFiles="true">
       <logicalFolder name="src" displayName="src" projectFiles="true">
-        <logicalFolder name="common" displayName="common" projectFiles="true">
-        </logicalFolder>
         <logicalFolder name="device" displayName="device" projectFiles="true">
-          <itemPath>../libs/dspic33f_pic24h_corelibs/src/device/sysconfig.c</itemPath>
+          <itemPath>../../libs/dspic33f_pic24h_corelibs/src/device/sysconfig.c</itemPath>
         </logicalFolder>
         <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
-          <itemPath>../libs/dspic33f_pic24h_corelibs/src/peripheral/adc.c</itemPath>
-          <itemPath>../libs/dspic33f_pic24h_corelibs/src/peripheral/spi.c</itemPath>
-          <itemPath>../libs/dspic33f_pic24h_corelibs/src/peripheral/timer.c</itemPath>
-          <itemPath>../libs/dspic33f_pic24h_corelibs/src/peripheral/uart.c</itemPath>
+          <itemPath>../../libs/dspic33f_pic24h_corelibs/src/peripheral/adc.c</itemPath>
+          <itemPath>../../libs/dspic33f_pic24h_corelibs/src/peripheral/spi.c</itemPath>
+          <itemPath>../../libs/dspic33f_pic24h_corelibs/src/peripheral/timer.c</itemPath>
+          <itemPath>../../libs/dspic33f_pic24h_corelibs/src/peripheral/uart.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <itemPath>main.c</itemPath>
@@ -36,6 +34,7 @@
   <sourceRootList>
     <Elem>../include</Elem>
     <Elem>../libs/dspic33f_pic24h_corelibs</Elem>
+    <Elem>../../libs/dspic33f_pic24h_corelibs/src</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -84,7 +83,7 @@
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="extra-include-directories"
-                  value="../libs/dspic33f_pic24h_corelibs/include"/>
+                  value="../../libs/dspic33f_pic24h_corelibs/include"/>
         <property key="isolate-each-function" value="false"/>
         <property key="keep-inline" value="false"/>
         <property key="oXC16gcc-align-arr" value="false"/>

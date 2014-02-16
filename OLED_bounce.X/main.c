@@ -1,10 +1,10 @@
-#include <stdint.h>
-#include "configbits.h"
-#include "sysconfig.h"
-#include "globals.h"
-#include "pinconfig.h"
+#include "device/configbits.h"
+#include "device/sysconfig.h"
+#include "device/pinconfig.h"
+#include "peripheral/timer.h"
 #include "oled/oled.h"
-#include "timer/timer1.h"
+#include <stdint.h>
+
 
 volatile uint8_t oledUpdate = 0;
 
@@ -16,8 +16,8 @@ int main(void)
     sys_init();
     oled_init();
 
-    timer1_init();
-    timer1_set_ms(16);
+    timer_init(TIMER1);
+    timer_set_ms(TIMER1,16);
     
     // Initial parameters
     uint8_t x = OLED_WIDTH / 2;     // x initial position
@@ -30,7 +30,7 @@ int main(void)
     oled_drawPixel(x,y);
     oled_render();
     
-    timer1_start();
+    timer_start(TIMER1);
 
     while(1)
     {

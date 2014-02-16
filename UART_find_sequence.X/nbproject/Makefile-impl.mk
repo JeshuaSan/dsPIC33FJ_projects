@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=UART_find_secuence.X
+PROJECTNAME=UART_find_sequence.X
 
 # Active Configuration
 DEFAULTCONF=default

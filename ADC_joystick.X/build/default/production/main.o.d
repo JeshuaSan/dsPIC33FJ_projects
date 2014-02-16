@@ -1,9 +1,8 @@
 build/default/production/main.o:  \
 main.c  \
-../include/configbits.h  \
- ../include/sysconfig.h  \
-../include/pinconfig.h  \
-../include/oled/oled.h  \
- ../include/uart/uart.h  \
-../include/timer/timer1.h  \
-../include/adc/adc.h 
+ ../../libs/dspic33f_pic24h_corelibs/include/device/configbits.h  \
+ ../../libs/dspic33f_pic24h_corelibs/include/device/sysconfig.h  \
+ ../../libs/dspic33f_pic24h_corelibs/include/device/pinconfig.h  \
+ ../../libs/oled/oled.h  \
+ ../../libs/dspic33f_pic24h_corelibs/include/peripheral/timer.h  \
+ ../../libs/dspic33f_pic24h_corelibs/include/peripheral/adc.h 

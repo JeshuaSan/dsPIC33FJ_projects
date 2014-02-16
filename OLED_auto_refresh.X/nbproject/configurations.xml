@@ -12,20 +12,22 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <logicalFolder name="include" displayName="include" projectFiles="true">
-        <logicalFolder name="oled" displayName="oled" projectFiles="true">
-          <itemPath>../include/oled/oled.c</itemPath>
-          <itemPath>../include/oled/oled_draw.c</itemPath>
-          <itemPath>../include/oled/oled_print.c</itemPath>
-          <itemPath>../include/oled/SSD1306.c</itemPath>
+      <logicalFolder name="oled" displayName="oled" projectFiles="true">
+        <itemPath>../../libs/oled/oled.c</itemPath>
+        <itemPath>../../libs/oled/oled_draw.c</itemPath>
+        <itemPath>../../libs/oled/oled_print.c</itemPath>
+        <itemPath>../../libs/oled/SSD1306.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="src" displayName="src" projectFiles="true">
+        <logicalFolder name="device" displayName="device" projectFiles="true">
+          <itemPath>../../libs/dspic33f_pic24h_corelibs/src/device/sysconfig.c</itemPath>
         </logicalFolder>
-        <logicalFolder name="spi" displayName="spi" projectFiles="true">
-          <itemPath>../include/spi/spi.c</itemPath>
+        <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
+          <itemPath>../../libs/dspic33f_pic24h_corelibs/src/peripheral/adc.c</itemPath>
+          <itemPath>../../libs/dspic33f_pic24h_corelibs/src/peripheral/spi.c</itemPath>
+          <itemPath>../../libs/dspic33f_pic24h_corelibs/src/peripheral/timer.c</itemPath>
+          <itemPath>../../libs/dspic33f_pic24h_corelibs/src/peripheral/uart.c</itemPath>
         </logicalFolder>
-        <logicalFolder name="timer" displayName="timer" projectFiles="true">
-          <itemPath>../include/timer/timer1.c</itemPath>
-        </logicalFolder>
-        <itemPath>../include/sysconfig.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
     </logicalFolder>
@@ -37,6 +39,8 @@
   </logicalFolder>
   <sourceRootList>
     <Elem>../include</Elem>
+    <Elem>../../libs/dspic33f_pic24h_corelibs/src</Elem>
+    <Elem>../../libs/oled</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -84,7 +88,8 @@
         <property key="enable-short-double" value="false"/>
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
-        <property key="extra-include-directories" value="../include"/>
+        <property key="extra-include-directories"
+                  value="../../libs/dspic33f_pic24h_corelibs/include;../../libs"/>
         <property key="isolate-each-function" value="false"/>
         <property key="keep-inline" value="false"/>
         <property key="oXC16gcc-align-arr" value="false"/>

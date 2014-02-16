@@ -1,11 +1,11 @@
-#include <stdint.h>
-#include "configbits.h"
-#include "sysconfig.h"
-#include "pinconfig.h"
-#include "globals.h"
+#include "device/configbits.h"
+#include "device/sysconfig.h"
+#include "device/pinconfig.h"
+#include "common/globals.h"
 #include <libpic30.h>
 #include "oled/oled.h"
-#include "timer/timer1.h"
+#include "peripheral/timer.h"
+#include <stdint.h>
 
 
 volatile uint16_t _ms = 0;
@@ -14,9 +14,9 @@ volatile uint8_t oledUpdate = 0;
 int main(void) {
     sys_init();
     oled_init();
-    timer1_init();
-    timer1_set_ms(1);
-    timer1_start();
+    timer_init(TIMER1);
+    timer_set_ms(TIMER1,1);
+    timer_start(TIMER1);
     int8_t x = 0;
     oled_clearDisplay();
     oled_printf(1, 1, "Hello World!!");

@@ -1,11 +1,10 @@
-#include <stdint.h>
-#include "configbits.h"
-#include "sysconfig.h"
-#include "pinconfig.h"
-#include <libpic30.h>
+#include "device/configbits.h"
+#include "device/sysconfig.h"
+#include "device/pinconfig.h"
+#include "peripheral/uart.h"
+#include "peripheral/timer.h"
 #include "oled/oled.h"
-#include "uart/uart.h"
-#include "timer/timer1.h"
+#include <stdint.h>
 
 enum states {
     search_ini,
@@ -25,8 +24,8 @@ int main(void)
 
     uart_init(115200);
 
-    timer1_init();
-    timer1_set_ms(16);
+    timer_init(TIMER1);
+    timer_set_ms(TIMER1, 16);
 
     oled_clearDisplay();
     oled_render();
@@ -37,7 +36,7 @@ int main(void)
 
     uint8_t data[] = {0,0};
 
-    timer1_start();
+    timer_start(TIMER1);
     while(1)
     {
         if (uart_charReady())
@@ -85,7 +84,7 @@ int main(void)
     return (0);
 }
 
-void __attribute__ ((__interrupt__, no_auto_psv)) _T1Interrupt(void)
+void __attribute__ ((interrupt, no_auto_psv)) _T1Interrupt(void)
 {
     IFS0bits.T1IF = 0;      // Clear Timer1 interrupt flag
     oledUpdate = 1;

@@ -1,12 +1,10 @@
-#include <stdint.h>
-#include "configbits.h"
-#include "sysconfig.h"
-#include "pinconfig.h"
+#include "device/configbits.h"
+#include "device/sysconfig.h"
+#include "device/pinconfig.h"
 #include "oled/oled.h"
-#include "uart/uart.h"
-#include "timer/timer1.h"
-#include "adc/adc.h"
-
+#include "peripheral/timer.h"
+#include "peripheral/adc.h"
+#include <stdint.h>
 
 
 volatile uint8_t oledUpdate = 0;

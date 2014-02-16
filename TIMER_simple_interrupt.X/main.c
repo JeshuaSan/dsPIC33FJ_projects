@@ -5,7 +5,6 @@
 #include "peripheral/timer.h"
 #include <stdint.h>
 
-
 volatile uint16_t _ms = 0;
 
 int main(void)
@@ -29,7 +28,7 @@ int main(void)
 }
 
 
-void __attribute__ ((__interrupt__, no_auto_psv)) _T1Interrupt(void)
+void __attribute__ ((interrupt, no_auto_psv)) _T1Interrupt(void)
 {
     BIT_CLR(IFS0, TMR1_INT);      // Clear Timer1 interrupt flag
     _ms++;

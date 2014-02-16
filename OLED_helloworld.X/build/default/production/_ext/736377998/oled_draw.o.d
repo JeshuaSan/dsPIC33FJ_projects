@@ -1,4 +1,0 @@
-build/default/production/_ext/736377998/oled_draw.o:  \
- ../libs/oled/oled_draw.c  \
-../libs/oled/oled_draw.h  \
-../libs/oled/oled.h 

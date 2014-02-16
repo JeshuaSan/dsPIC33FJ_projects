@@ -1,8 +1,9 @@
+#include "device/configbits.h"
+#include "device/sysconfig.h"
+#include "device/pinconfig.h"
+#include "peripheral/uart.h"
 #include <stdint.h>
-#include "configbits.h"
-#include "sysconfig.h"
-#include <libpic30.h>
-#include "uart/uart.h"
+
 
 enum states {
     search,
@@ -10,9 +11,9 @@ enum states {
     found_d1,
     found_d2
 };
-int main(void) {
-    sysConfigClock();
-    sysConfigPins();
+int main(void)
+{
+    sys_init();
 
     uart_init(115200);
 

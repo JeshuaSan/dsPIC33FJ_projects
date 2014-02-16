@@ -1,6 +1,6 @@
 #include "device/configbits.h"
-#include "device/sysconfig.h"
 #include "device/pinconfig.h"
+#include "device/sysconfig.h"
 #include "common/globals.h"
 #include "oled/oled.h"
 #include <libpic30.h>

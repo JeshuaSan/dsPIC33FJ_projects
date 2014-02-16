@@ -1,8 +1,6 @@
 build/default/production/main.o:  \
 main.c  \
-../include/configbits.h  \
- ../include/sysconfig.h  \
-../include/pinconfig.h  \
-../include/uart/uart.h  \
- ../include/uart/../pinconfig.h  \
-../include/uart/../sysconfig.h 
+ ../../libs/dspic33f_pic24h_corelibs/include/device/configbits.h  \
+ ../../libs/dspic33f_pic24h_corelibs/include/device/sysconfig.h  \
+ ../../libs/dspic33f_pic24h_corelibs/include/device/pinconfig.h  \
+ ../../libs/dspic33f_pic24h_corelibs/include/peripheral/uart.h 
