@@ -1,0 +1,430 @@
+Disassembly Listing for TIMER_simple_interrupt
+Generated From:
+/Users/jesus/Documents/Microchip/MPLABX/MPLABXProjects/dsPIC/dsPIC33/TIMER_simple_interrupt.X/dist/default/debug/TIMER_simple_interrupt.X.debug.elf
+Feb 7, 2014 10:10:24 PM
+
+---  /Users/jesus/Documents/Microchip/MPLABX/MPLABXProjects/dsPIC/dsPIC33/include/uart/uart.c  ----------
+1:                 /* http://www.ganssle.com/tem/tem110.pdf */
+2:                 
+3:                 #include "uart.h"
+4:                 #include <pps.h>
+5:                 #include "../pinconfig.h"
+6:                 #include "../globals.h"
+7:                 #include <string.h>
+8:                 
+9:                 #define BRG(br)     ((FCY/16U/br)-1U)
+10:                
+11:                #if !defined(UART_RX) || !defined (UART_TX)
+12:                #error Must define UART_RX and UART_TX
+13:                #endif
+14:                
+15:                
+16:                /* Private variables **********************************************************/
+17:                #define BUF_SIZE    (64U)
+18:                #define BUF_MASK    (BUF_SIZE - 1)
+19:                
+20:                typedef struct tagBuffer {
+21:                    uint8_t data[BUF_SIZE];
+22:                    uint8_t head;
+23:                    uint8_t tail;
+24:                } Buffer_t;
+25:                
+26:                static volatile Buffer_t rxBuffer;
+27:                
+28:                /* Private prototypes *********************************************************/
+29:                static void uart_Config(const uint32_t baudRate);
+30:                static void uart_Pins(void);
+31:                
+32:                /* Public funtions ************************************************************/
+33:                
+34:                void uart_init(const uint32_t baudRate)
+35:                {
+000306  BE9F88     MOV.D W8, [W15++]
+000308  BE0400     MOV.D W0, W8
+36:                    uart_Pins();
+00030A  07FFE3     RCALL uart_Pins
+37:                    uart_Config(baudRate);
+00030C  BE0008     MOV.D W8, W0
+00030E  07FFD4     RCALL uart_Config
+38:                //    memset((uint8_t *)&rxBuffer, 0x00, sizeof(rxBuffer));
+39:                }
+000310  BE044F     MOV.D [--W15], W8
+000312  060000     RETURN
+40:                
+41:                void __attribute__((__interrupt__, no_auto_psv)) _U1RXInterrupt(void)
+42:                {
+000314  781F80     MOV W0, [W15++]
+000316  BE9F84     MOV.D W4, [W15++]
+000318  781F86     MOV W6, [W15++]
+00031A  FA0002     LNK #0x2
+43:                    _U1RXIF = 0;
+00031C  A96085     BCLR 0x85, #3
+44:                
+45:                    volatile uint8_t c;
+46:                    c = U1RXREG;
+00031E  801134     MOV U1RXREG, W4
+000320  9FFFE4     MOV.B W4, [W15-2]
+47:                
+48:                    /* If the buffer is not full, store the character read in it */
+49:                    if ((rxBuffer.head - rxBuffer.tail) < BUF_SIZE)
+000322  208405     MOV #0x840, W5
+000324  784295     MOV.B [W5], W5
+000326  208414     MOV #0x841, W4
+000328  784214     MOV.B [W4], W4
+00032A  FB8285     ZE W5, W5
+00032C  FB8204     ZE W4, W4
+00032E  528284     SUB W5, W4, W5
+000330  2003F4     MOV #0x3F, W4
+000332  528F84     SUB W5, W4, [W15]
+000334  3E000C     BRA GTU, 0x34E
+50:                    {
+51:                        rxBuffer.head &= BUF_MASK;          // Wrap if necessary
+000336  208404     MOV #0x840, W4
+000338  784214     MOV.B [W4], W4
+00033A  B243F4     AND.B #0x3F, W4
+00033C  784004     MOV.B W4, W0
+00033E  B7E840     MOV.B WREG, 0x840
+52:                        rxBuffer.data[rxBuffer.head] = c;
+000340  208404     MOV #0x840, W4
+000342  784214     MOV.B [W4], W4
+000344  FB8204     ZE W4, W4
+000346  208005     MOV #0x800, W5
+000348  97FB6F     MOV.B [W15-2], W6
+00034A  7A7286     MOV.B W6, [W5+W4]
+53:                        ++rxBuffer.head;
+00034C  EC6840     INC.B 0x840
+54:                    }
+55:                }
+00034E  FA8000     ULNK
+000350  78034F     MOV [--W15], W6
+000352  BE024F     MOV.D [--W15], W4
+000354  78004F     MOV [--W15], W0
+000356  064000     RETFIE
+56:                
+57:                uint8_t uart_charReady()
+58:                {
+59:                    /* Return "true" if the buffer is not empty */
+60:                    return (rxBuffer.head - rxBuffer.tail) != 0;
+000358  BFC840     MOV.B 0x840, WREG
+00035A  B6C841     XOR.B 0x841, WREG
+00035C  FB8000     ZE W0, W0
+00035E  EA0000     NEG W0, W0
+000360  DE004F     LSR W0, #15, W0
+61:                }
+000362  060000     RETURN
+62:                
+63:                int8_t uart_getc()
+64:                {
+65:                    int8_t c = -1;
+00036C  EBC200     SETM.B W4
+66:                
+67:                    /* If the buffer is not empty, return the last character stored */
+68:                    if ((rxBuffer.head - rxBuffer.tail) != 0 )
+000364  208406     MOV #0x840, W6
+000366  784316     MOV.B [W6], W6
+000368  208415     MOV #0x841, W5
+00036A  784295     MOV.B [W5], W5
+00036E  534F85     SUB.B W6, W5, [W15]
+000370  32000B     BRA Z, 0x388
+69:                    {
+70:                        rxBuffer.tail &= BUF_MASK;          // Wrap if necessary
+000372  208414     MOV #0x841, W4
+000374  784214     MOV.B [W4], W4
+000376  B243F4     AND.B #0x3F, W4
+000378  784004     MOV.B W4, W0
+00037A  B7E841     MOV.B WREG, 0x841
+71:                        c = rxBuffer.data[rxBuffer.tail];
+00037C  208414     MOV #0x841, W4
+00037E  784214     MOV.B [W4], W4
+000380  FB8204     ZE W4, W4
+000382  208005     MOV #0x800, W5
+000384  7A4265     MOV.B [W5+W4], W4
+72:                        ++rxBuffer.tail;
+000386  EC6841     INC.B 0x841
+73:                    }
+74:                    return c;
+75:                }
+000388  784004     MOV.B W4, W0
+00038A  060000     RETURN
+76:                
+77:                void uart_putc(const uint8_t c)
+78:                {
+79:                    U1TXREG = c;
+00038C  FB8000     ZE W0, W0
+00038E  881120     MOV W0, U1TXREG
+80:                }
+000390  060000     RETURN
+81:                
+82:                
+83:                /* Private functions **********************************************************/
+84:                
+85:                static void uart_Config(const uint32_t baudRate)
+86:                {
+0002B8  BE0100     MOV.D W0, W2
+87:                    U1BRG = BRG(baudRate);          // Set baudrate
+0002BA  216000     MOV #0x1600, W0
+0002BC  200261     MOV #0x26, W1
+0002BE  07FFEC     RCALL 0x298
+0002C0  E90200     DEC W0, W4
+0002C2  881144     MOV W4, U1BRG
+88:                
+89:                    // UART Mode Register
+90:                    U1MODE =
+0002C4  280004     MOV #0x8000, W4
+0002C6  881104     MOV W4, U1MODE
+91:                            (1U << 15)  |   // UARTEN = 1   UART1 enabled
+92:                            /* bit 14 us unimplemented */
+93:                            (0U << 13)  |   // USIDL = 0    Continue operation in idle mode
+94:                            (0U << 12)  |   // IREN = 0     IrDA encoder and decoder disabled
+95:                            (0U << 11)  |   // RTSMD = 0    UxRTS1 in flow control mode. Given
+96:                            (0U << 8)   |   // UEN = 0      UxTX and UxRx pins are enabled and
+97:                                            //                  used; UxCTS, UxRTS, and BCLKx pins are
+98:                                            //                  controlled by port latches
+99:                            (0U << 7)   |   // WAKE = 0     Wake-up is disabled
+100:                           (0U << 6)   |   // LPBACK = 0   Loopback mode is disabled
+101:                           (0U << 5)   |   // ABAUD = 0    Auto-baud disabled
+102:                           (0U << 4)   |   // URXINV = 0   UxRX Idle is '1
+103:                           (0U << 3)   |   // BRGH = 0     Low speed mode
+104:                           (0U << 1)   |   // PDSEL = 0    8-bit data, no parity
+105:                           (0U << 0);      // STSEL = 0    1 stop bit
+106:               
+107:                   // UART Status and Control Register
+108:                   U1STA =
+0002C8  204004     MOV #0x400, W4
+0002CA  881114     MOV W4, U1STA
+109:                           (0U << 15)  |   // UTXISEL1 = 0 See bit 13
+110:                           (0U << 14)  |   // UTXINV = 0   UxTX idle state is '1'
+111:                           (0U << 13)  |   // UTXISEL0 = 0 With bit 15, UTXISEL = 00:
+112:                                           //                  Interrupt generated when any character
+113:                                           //                  is transferred to the Transmit Shift Register).
+114:                           /* Bit 12 is unimplemented */
+115:                           (0U << 11)  |   // UTXBRK = 0   Sync break transmission disabled
+116:                           (1U << 10)  |   // UTXEN = 0    UARTx transmitter enabled. NOTE: per
+117:                                           //                  the data sheet, this must be set
+118:                                           //                  *AFTER* UARTEN is set to 1
+119:                           /* Bit 9 is read-only (UTXBF) */
+120:                           /* Bit 8 is read-only (TRMT) */
+121:                           (0U <<  7)  |   // URXISEL<7:6> = 00 Interrupt flag bit is set when
+122:                                           //                  a character is received
+123:                           (0U <<  5)  |   // ADDEN = 0    Address detect mode disabled
+124:                           /* Bit 4 is read-only */
+125:                           /* Bit 3 is read-only */
+126:                           /* Bit 2 is read-only */
+127:                           (0U <<  1);     // OERR = 0     Clear any overrun errors
+128:                                           /* Bit 0 is read-only */
+129:               
+130:               
+131:                   IFS0bits.U1RXIF = 0;
+0002CC  A96085     BCLR 0x85, #3
+132:                   IEC0bits.U1RXIE = 1;            // Enable UART1 RX interrupt
+0002CE  A86095     BSET 0x95, #3
+133:               }
+0002D0  060000     RETURN
+134:               
+135:               static void uart_Pins()
+136:               {
+137:                   // Map PPS pins to periphereal functions
+138:                   PPSUnLock;
+0002D2  200BF6     MOV #0xBF, W6
+0002D4  803A14     MOV OSCCON, W4
+0002D6  630304     AND W6, W4, W6
+0002D8  200464     MOV #0x46, W4
+0002DA  200575     MOV #0x57, W5
+0002DC  207427     MOV #0x742, W7
+0002DE  784B84     MOV.B W4, [W7]
+0002E0  784B85     MOV.B W5, [W7]
+0002E2  784B86     MOV.B W6, [W7]
+139:                   PPSInput(IN_FN_PPS_U1RX, UART_RX);
+0002E4  2FFE06     MOV #0xFFE0, W6
+0002E6  803527     MOV RPINR18, W7
+0002E8  630307     AND W6, W7, W6
+0002EA  B300A6     IOR #0xA, W6
+0002EC  883526     MOV W6, RPINR18
+140:                   PPSOutput(OUT_FN_PPS_U1TX, UART_TX);
+0002EE  2E0FF6     MOV #0xE0FF, W6
+0002F0  803657     MOV RPOR5, W7
+0002F2  630307     AND W6, W7, W6
+0002F4  B33006     IOR #0x300, W6
+0002F6  883656     MOV W6, RPOR5
+141:                   PPSLock;
+0002F8  803A16     MOV OSCCON, W6
+0002FA  A06006     BSET W6, #6
+0002FC  207427     MOV #0x742, W7
+0002FE  784B84     MOV.B W4, [W7]
+000300  784B85     MOV.B W5, [W7]
+000302  784B86     MOV.B W6, [W7]
+142:               }
+000304  060000     RETURN
+---  /Users/jesus/Documents/Microchip/MPLABX/MPLABXProjects/dsPIC/dsPIC33/include/timers/timer1.c  ------
+1:                 #include "timer1.h"
+2:                 #include "../globals.h"
+3:                 #include <xc.h>
+4:                 
+5:                 
+6:                 #define TMR1_ON()       (T1CON |=  (1U << 15))
+7:                 #define TMR1_OFF()      (T1CON &= ~(1U << 15))
+8:                 #define TMR1_PR_MS(ms)  (ms * (FCY / 256U / 1000U)) // Timer period in ms
+9:                                                                     //  with a 1:256 prescaler
+10:                #define TMR1_PR_US(us)  (us * (FCY / 1000000U))     // Timer period in us
+11:                                                                    //  with a 1:1 prescaler
+12:                
+13:                void timer1_set_ms(uint16_t ms)
+14:                {
+15:                
+16:                    T1CON =
+000392  200304     MOV #0x30, W4
+000394  880824     MOV W4, T1CON
+17:                            (0U << 15)  |   // TON = 0      Disable Timer1
+18:                                            /* bit 14 unimplemented */
+19:                            (0U << 13)  |   // TSIDL = 0    Continue timer operation in idle mode
+20:                                            /* bits <12-7> unimplemented */
+21:                            (0U << 6)   |   // TGATE = 0    Gated time accumulation disabled
+22:                            (1U << 5)   |   // TCKPS <1:0> = 3
+23:                            (1U << 4)   |   //              1:256 prescaler value
+24:                                            /* bit 3 unimplemented */
+25:                            (0U << 2)   |   // TSYNC = 0    Timer uses internal clock when TCS = 0
+26:                            (0U << 1);      // TCS = 0      Use internal clock
+27:                                            /* bit 0 unimplemented */
+28:                    // ms max value is 400
+29:                    if (ms > 400U)
+30:                    {
+31:                        ms = 400U;
+32:                    }
+33:                
+34:                    TMR1 = 0x0000;          // Clear Timer1 register
+000396  EF2100     CLR TMR1
+35:                    PR1 = TMR1_PR_MS(ms);              // ~1 ms period
+000398  201904     MOV #0x190, W4
+00039A  500F84     SUB W0, W4, [W15]
+00039C  360001     BRA LEU, 0x3A0
+00039E  780004     MOV W4, W0
+0003A0  2009C4     MOV #0x9C, W4
+0003A2  B98004     MUL.SS W0, W4, W0
+0003A4  880810     MOV W0, PR1
+36:                    IFS0bits.T1IF = 0;      // Clear Timer1 interrupt flag
+0003A6  A96084     BCLR IFS0, #3
+37:                    IEC0bits.T1IE = 1;      // Enable Timer1 interrupt
+0003A8  A86094     BSET IEC0, #3
+38:                }
+0003AA  060000     RETURN
+39:                
+40:                void timer1_set_us(uint16_t us)
+41:                {
+42:                
+43:                    T1CON =
+0003AC  EB0200     CLR W4
+0003AE  880824     MOV W4, T1CON
+44:                            (0U << 15)  |   // TON = 0      Disable Timer1
+45:                                            /* bit 14 unimplemented */
+46:                            (0U << 13)  |   // TSIDL = 0    Continue timer operation in idle mode
+47:                                            /* bits <12-7> unimplemented */
+48:                            (0U << 6)   |   // TGATE = 0    Gated time accumulation disabled
+49:                            (0U << 5)   |   // TCKPS <1:0> = 0
+50:                            (0U << 4)   |   //              1:1 prescaler value
+51:                                            /* bit 3 unimplemented */
+52:                            (0U << 2)   |   // TSYNC = 0    Timer uses internal clock when TCS = 0
+53:                            (0U << 1);      // TCS = 0      Use internal clock
+54:                                            /* bit 0 unimplemented */
+55:                    // us max value is 999
+56:                    if (us > 999U)
+57:                    {
+58:                        us = 999U;
+59:                    }
+60:                
+61:                    TMR1 = 0x0000;          // Clear Timer1 register
+0003B0  880804     MOV W4, TMR1
+62:                    PR1 = TMR1_PR_US(us);              // ~1 ms period
+0003B2  203E74     MOV #0x3E7, W4
+0003B4  500F84     SUB W0, W4, [W15]
+0003B6  360001     BRA LEU, 0x3BA
+0003B8  780004     MOV W4, W0
+0003BA  200274     MOV #0x27, W4
+0003BC  B98004     MUL.SS W0, W4, W0
+0003BE  880810     MOV W0, PR1
+63:                    IFS0bits.T1IF = 0;      // Clear Timer1 interrupt flag
+0003C0  A96084     BCLR IFS0, #3
+64:                    IEC0bits.T1IE = 1;      // Enable Timer1 interrupt
+0003C2  A86094     BSET IEC0, #3
+65:                }
+0003C4  060000     RETURN
+---  /Users/jesus/Documents/Microchip/MPLABX/MPLABXProjects/dsPIC/dsPIC33/include/sysconfig.c  ----------
+1:                 #include "sysconfig.h"
+2:                 #include <xc.h>
+3:                 #include "pinconfig.h"
+4:                 
+5:                 static void sys_ConfigClock(void);
+6:                 static void sys_ConfigPins(void);
+7:                 
+8:                 void sys_init()
+9:                 {
+10:                    sys_ConfigClock();
+0003E6  07FFEF     RCALL sys_ConfigClock
+11:                    sys_ConfigPins();
+0003E8  07FFFB     RCALL sys_ConfigPins
+12:                }
+0003EA  060000     RETURN
+13:                
+14:                static void sys_ConfigClock()
+15:                {
+16:                    _PLLPRE = 4;        // Prescale = PLLPRE + 2
+0003C6  2FFE04     MOV #0xFFE0, W4
+0003C8  803A25     MOV CLKDIV, W5
+0003CA  620205     AND W4, W5, W4
+0003CC  A02004     BSET W4, #2
+0003CE  883A24     MOV W4, CLKDIV
+17:                    _PLLDIV = 128;      // Multiply = PLLDIV + 2
+0003D0  2FE004     MOV #0xFE00, W4
+0003D2  803A35     MOV PLLFBD, W5
+0003D4  620205     AND W4, W5, W4
+0003D6  A07004     BSET W4, #7
+0003D8  883A34     MOV W4, PLLFBD
+18:                    _PLLPOST = 0;        // Postscale = 2 * (PLLPOST + 1)
+0003DA  2FF3F0     MOV #0xFF3F, W0
+0003DC  B62744     AND CLKDIV
+19:                }
+0003DE  060000     RETURN
+20:                
+21:                static void sys_ConfigPins()
+22:                {
+23:                    // All pins digital by default
+24:                    AD1PCFGL = 0xFFFF;        // All digital I/O
+0003E0  EFA32C     SETM AD1PCFGL
+25:                
+26:                    LED_TRS = 0;
+0003E2  A982C0     BCLR TRISA, #4
+27:                }
+0003E4  060000     RETURN
+28:                
+29:                
+---  /Users/jesus/Documents/Microchip/MPLABX/MPLABXProjects/dsPIC/dsPIC33/TIMER_simple_interrupt.X/main.c
+1:                 #include <stdint.h>
+2:                 #include "configbits.h"
+3:                 #include "pinconfig.h"
+4:                 #include "sysconfig.h"
+5:                 #include "timers/timer1.h"
+6:                 
+7:                 
+8:                 int main(void) {
+9:                 
+10:                    sys_init();
+0003EC  07FFFC     RCALL sys_init
+11:                    timer1_set_ms(-1);
+0003EE  EB8000     SETM W0
+0003F0  07FFD0     RCALL timer1_set_ms
+12:                    while(1)
+13:                    {
+14:                        LED ^= 1;
+0003F2  2FFEF6     MOV #0xFFEF, W6
+0003F4  801624     MOV LATA, W4
+0003F6  DE2244     LSR W4, #4, W4
+0003F8  EA8204     COM W4, W4
+0003FA  620261     AND W4, #0x1, W4
+0003FC  DD2244     SL W4, #4, W4
+0003FE  801627     MOV LATA, W7
+000400  630287     AND W6, W7, W5
+000402  728204     IOR W5, W4, W4
+000404  881624     MOV W4, LATA
+000406  37FFF6     BRA 0x3F4
+15:                    }
+16:                    return (0);
+17:                }
