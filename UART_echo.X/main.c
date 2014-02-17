@@ -9,7 +9,7 @@ int main(void)
 {
     sys_init();
     uart_init(115200U);
-
+uart_putc('A');
     while(1)
     {
         if (uart_charReady())

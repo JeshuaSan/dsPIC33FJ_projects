@@ -45,17 +45,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c ../../libs/dspic33f_pic24h_corelibs/src/device/sysconfig.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/adc.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/spi.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/timer.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/uart.c ../../libs/oled/oled.c ../../libs/oled/oled_draw.c ../../libs/oled/oled_print.c ../../libs/oled/SSD1306.c
+SOURCEFILES_QUOTED_IF_SPACED=../../libs/oled/oled.c ../../libs/oled/oled_draw.c ../../libs/oled/oled_print.c ../../libs/oled/SSD1306.c ../../libs/dspic33f_pic24h_corelibs/src/device/sysconfig.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/adc.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/spi.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/timer.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/uart.c main.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/_ext/506297139/sysconfig.o ${OBJECTDIR}/_ext/230937639/adc.o ${OBJECTDIR}/_ext/230937639/spi.o ${OBJECTDIR}/_ext/230937639/timer.o ${OBJECTDIR}/_ext/230937639/uart.o ${OBJECTDIR}/_ext/1321615235/oled.o ${OBJECTDIR}/_ext/1321615235/oled_draw.o ${OBJECTDIR}/_ext/1321615235/oled_print.o ${OBJECTDIR}/_ext/1321615235/SSD1306.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/_ext/506297139/sysconfig.o.d ${OBJECTDIR}/_ext/230937639/adc.o.d ${OBJECTDIR}/_ext/230937639/spi.o.d ${OBJECTDIR}/_ext/230937639/timer.o.d ${OBJECTDIR}/_ext/230937639/uart.o.d ${OBJECTDIR}/_ext/1321615235/oled.o.d ${OBJECTDIR}/_ext/1321615235/oled_draw.o.d ${OBJECTDIR}/_ext/1321615235/oled_print.o.d ${OBJECTDIR}/_ext/1321615235/SSD1306.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1321615235/oled.o ${OBJECTDIR}/_ext/1321615235/oled_draw.o ${OBJECTDIR}/_ext/1321615235/oled_print.o ${OBJECTDIR}/_ext/1321615235/SSD1306.o ${OBJECTDIR}/_ext/506297139/sysconfig.o ${OBJECTDIR}/_ext/230937639/adc.o ${OBJECTDIR}/_ext/230937639/spi.o ${OBJECTDIR}/_ext/230937639/timer.o ${OBJECTDIR}/_ext/230937639/uart.o ${OBJECTDIR}/main.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1321615235/oled.o.d ${OBJECTDIR}/_ext/1321615235/oled_draw.o.d ${OBJECTDIR}/_ext/1321615235/oled_print.o.d ${OBJECTDIR}/_ext/1321615235/SSD1306.o.d ${OBJECTDIR}/_ext/506297139/sysconfig.o.d ${OBJECTDIR}/_ext/230937639/adc.o.d ${OBJECTDIR}/_ext/230937639/spi.o.d ${OBJECTDIR}/_ext/230937639/timer.o.d ${OBJECTDIR}/_ext/230937639/uart.o.d ${OBJECTDIR}/main.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/_ext/506297139/sysconfig.o ${OBJECTDIR}/_ext/230937639/adc.o ${OBJECTDIR}/_ext/230937639/spi.o ${OBJECTDIR}/_ext/230937639/timer.o ${OBJECTDIR}/_ext/230937639/uart.o ${OBJECTDIR}/_ext/1321615235/oled.o ${OBJECTDIR}/_ext/1321615235/oled_draw.o ${OBJECTDIR}/_ext/1321615235/oled_print.o ${OBJECTDIR}/_ext/1321615235/SSD1306.o
+OBJECTFILES=${OBJECTDIR}/_ext/1321615235/oled.o ${OBJECTDIR}/_ext/1321615235/oled_draw.o ${OBJECTDIR}/_ext/1321615235/oled_print.o ${OBJECTDIR}/_ext/1321615235/SSD1306.o ${OBJECTDIR}/_ext/506297139/sysconfig.o ${OBJECTDIR}/_ext/230937639/adc.o ${OBJECTDIR}/_ext/230937639/spi.o ${OBJECTDIR}/_ext/230937639/timer.o ${OBJECTDIR}/_ext/230937639/uart.o ${OBJECTDIR}/main.o
 
 # Source Files
-SOURCEFILES=main.c ../../libs/dspic33f_pic24h_corelibs/src/device/sysconfig.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/adc.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/spi.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/timer.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/uart.c ../../libs/oled/oled.c ../../libs/oled/oled_draw.c ../../libs/oled/oled_print.c ../../libs/oled/SSD1306.c
+SOURCEFILES=../../libs/oled/oled.c ../../libs/oled/oled_draw.c ../../libs/oled/oled_print.c ../../libs/oled/SSD1306.c ../../libs/dspic33f_pic24h_corelibs/src/device/sysconfig.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/adc.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/spi.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/timer.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/uart.c main.c
 
 
 CFLAGS=
@@ -79,12 +79,33 @@ MP_LINKER_FILE_OPTION=,--script=p33FJ128MC802.gld
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/main.o.d 
-	@${RM} ${OBJECTDIR}/main.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  main.c  -o ${OBJECTDIR}/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PICKIT2=1  -omf=elf -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
-	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+${OBJECTDIR}/_ext/1321615235/oled.o: ../../libs/oled/oled.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1321615235 
+	@${RM} ${OBJECTDIR}/_ext/1321615235/oled.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1321615235/oled.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/oled/oled.c  -o ${OBJECTDIR}/_ext/1321615235/oled.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1321615235/oled.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PICKIT2=1  -omf=elf -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1321615235/oled.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/1321615235/oled_draw.o: ../../libs/oled/oled_draw.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1321615235 
+	@${RM} ${OBJECTDIR}/_ext/1321615235/oled_draw.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1321615235/oled_draw.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/oled/oled_draw.c  -o ${OBJECTDIR}/_ext/1321615235/oled_draw.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1321615235/oled_draw.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PICKIT2=1  -omf=elf -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1321615235/oled_draw.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/1321615235/oled_print.o: ../../libs/oled/oled_print.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1321615235 
+	@${RM} ${OBJECTDIR}/_ext/1321615235/oled_print.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1321615235/oled_print.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/oled/oled_print.c  -o ${OBJECTDIR}/_ext/1321615235/oled_print.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1321615235/oled_print.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PICKIT2=1  -omf=elf -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1321615235/oled_print.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/1321615235/SSD1306.o: ../../libs/oled/SSD1306.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/1321615235 
+	@${RM} ${OBJECTDIR}/_ext/1321615235/SSD1306.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1321615235/SSD1306.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/oled/SSD1306.c  -o ${OBJECTDIR}/_ext/1321615235/SSD1306.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1321615235/SSD1306.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PICKIT2=1  -omf=elf -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1321615235/SSD1306.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/_ext/506297139/sysconfig.o: ../../libs/dspic33f_pic24h_corelibs/src/device/sysconfig.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/506297139 
@@ -121,41 +142,41 @@ ${OBJECTDIR}/_ext/230937639/uart.o: ../../libs/dspic33f_pic24h_corelibs/src/peri
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/dspic33f_pic24h_corelibs/src/peripheral/uart.c  -o ${OBJECTDIR}/_ext/230937639/uart.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/230937639/uart.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PICKIT2=1  -omf=elf -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
 	@${FIXDEPS} "${OBJECTDIR}/_ext/230937639/uart.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
+${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR} 
+	@${RM} ${OBJECTDIR}/main.o.d 
+	@${RM} ${OBJECTDIR}/main.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  main.c  -o ${OBJECTDIR}/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PICKIT2=1  -omf=elf -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+else
 ${OBJECTDIR}/_ext/1321615235/oled.o: ../../libs/oled/oled.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1321615235 
 	@${RM} ${OBJECTDIR}/_ext/1321615235/oled.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1321615235/oled.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/oled/oled.c  -o ${OBJECTDIR}/_ext/1321615235/oled.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1321615235/oled.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PICKIT2=1  -omf=elf -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/oled/oled.c  -o ${OBJECTDIR}/_ext/1321615235/oled.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1321615235/oled.o.d"      -g -omf=elf -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1321615235/oled.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/_ext/1321615235/oled_draw.o: ../../libs/oled/oled_draw.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1321615235 
 	@${RM} ${OBJECTDIR}/_ext/1321615235/oled_draw.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1321615235/oled_draw.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/oled/oled_draw.c  -o ${OBJECTDIR}/_ext/1321615235/oled_draw.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1321615235/oled_draw.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PICKIT2=1  -omf=elf -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/oled/oled_draw.c  -o ${OBJECTDIR}/_ext/1321615235/oled_draw.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1321615235/oled_draw.o.d"      -g -omf=elf -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1321615235/oled_draw.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/_ext/1321615235/oled_print.o: ../../libs/oled/oled_print.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1321615235 
 	@${RM} ${OBJECTDIR}/_ext/1321615235/oled_print.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1321615235/oled_print.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/oled/oled_print.c  -o ${OBJECTDIR}/_ext/1321615235/oled_print.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1321615235/oled_print.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PICKIT2=1  -omf=elf -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/oled/oled_print.c  -o ${OBJECTDIR}/_ext/1321615235/oled_print.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1321615235/oled_print.o.d"      -g -omf=elf -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1321615235/oled_print.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/_ext/1321615235/SSD1306.o: ../../libs/oled/SSD1306.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1321615235 
 	@${RM} ${OBJECTDIR}/_ext/1321615235/SSD1306.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1321615235/SSD1306.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/oled/SSD1306.c  -o ${OBJECTDIR}/_ext/1321615235/SSD1306.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1321615235/SSD1306.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PICKIT2=1  -omf=elf -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/oled/SSD1306.c  -o ${OBJECTDIR}/_ext/1321615235/SSD1306.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1321615235/SSD1306.o.d"      -g -omf=elf -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1321615235/SSD1306.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-else
-${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/main.o.d 
-	@${RM} ${OBJECTDIR}/main.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  main.c  -o ${OBJECTDIR}/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d"      -g -omf=elf -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
-	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/_ext/506297139/sysconfig.o: ../../libs/dspic33f_pic24h_corelibs/src/device/sysconfig.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/506297139 
@@ -192,33 +213,12 @@ ${OBJECTDIR}/_ext/230937639/uart.o: ../../libs/dspic33f_pic24h_corelibs/src/peri
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/dspic33f_pic24h_corelibs/src/peripheral/uart.c  -o ${OBJECTDIR}/_ext/230937639/uart.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/230937639/uart.o.d"      -g -omf=elf -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
 	@${FIXDEPS} "${OBJECTDIR}/_ext/230937639/uart.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/_ext/1321615235/oled.o: ../../libs/oled/oled.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1321615235 
-	@${RM} ${OBJECTDIR}/_ext/1321615235/oled.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1321615235/oled.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/oled/oled.c  -o ${OBJECTDIR}/_ext/1321615235/oled.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1321615235/oled.o.d"      -g -omf=elf -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1321615235/oled.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/1321615235/oled_draw.o: ../../libs/oled/oled_draw.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1321615235 
-	@${RM} ${OBJECTDIR}/_ext/1321615235/oled_draw.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1321615235/oled_draw.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/oled/oled_draw.c  -o ${OBJECTDIR}/_ext/1321615235/oled_draw.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1321615235/oled_draw.o.d"      -g -omf=elf -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1321615235/oled_draw.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/1321615235/oled_print.o: ../../libs/oled/oled_print.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1321615235 
-	@${RM} ${OBJECTDIR}/_ext/1321615235/oled_print.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1321615235/oled_print.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/oled/oled_print.c  -o ${OBJECTDIR}/_ext/1321615235/oled_print.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1321615235/oled_print.o.d"      -g -omf=elf -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1321615235/oled_print.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/1321615235/SSD1306.o: ../../libs/oled/SSD1306.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1321615235 
-	@${RM} ${OBJECTDIR}/_ext/1321615235/SSD1306.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1321615235/SSD1306.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/oled/SSD1306.c  -o ${OBJECTDIR}/_ext/1321615235/SSD1306.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1321615235/SSD1306.o.d"      -g -omf=elf -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1321615235/SSD1306.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR} 
+	@${RM} ${OBJECTDIR}/main.o.d 
+	@${RM} ${OBJECTDIR}/main.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  main.c  -o ${OBJECTDIR}/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d"      -g -omf=elf -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 endif
 

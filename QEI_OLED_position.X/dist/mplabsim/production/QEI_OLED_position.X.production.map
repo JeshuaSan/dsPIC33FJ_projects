@@ -1,0 +1,131 @@
+Microchip Technology Inc, v
+
+Tool Name:
+  /Applications/microchip/xc16/v1.21/bin/bin/../bin/elf-ld
+
+Command:
+  -p33FJ128MC802 \
+  -o \
+  dist/mplabsim/production/QEI_OLED_position.X.production.elf \
+  -L/Applications/microchip/xc16/v1.21/bin/bin/.. \
+  -L/Applications/microchip/xc16/v1.21/bin/bin/../../lib \
+  -L/Applications/microchip/xc16/v1.21/bin/bin/../../lib/PIC24E \
+  -L/Applications/microchip/xc16/v1.21/bin/bin/../../support/PIC24E/gld \
+  -L/Applications/microchip/xc16/v1.21/bin/bin/../../lib/PIC24F \
+  -L/Applications/microchip/xc16/v1.21/bin/bin/../../support/PIC24F/gld \
+  -L/Applications/microchip/xc16/v1.21/bin/bin/../../lib/PIC24H \
+  -L/Applications/microchip/xc16/v1.21/bin/bin/../../support/PIC24H/gld \
+  -L/Applications/microchip/xc16/v1.21/bin/bin/../../lib/dsPIC30F \
+  -L/Applications/microchip/xc16/v1.21/bin/bin/../../support/dsPIC30F/gld \
+  -L/Applications/microchip/xc16/v1.21/bin/bin/../../lib/dsPIC33E \
+  -L/Applications/microchip/xc16/v1.21/bin/bin/../../support/dsPIC33E/gld \
+  -L/Applications/microchip/xc16/v1.21/bin/bin/../../lib/dsPIC33F \
+  -L/Applications/microchip/xc16/v1.21/bin/bin/../../support/dsPIC33F/gld \
+  build/mplabsim/production/_ext/1321615235/oled.o \
+  build/mplabsim/production/_ext/1321615235/oled_draw.o \
+  build/mplabsim/production/_ext/1321615235/oled_print.o \
+  build/mplabsim/production/_ext/1321615235/SSD1306.o \
+  build/mplabsim/production/_ext/506297139/sysconfig.o \
+  build/mplabsim/production/_ext/230937639/adc.o \
+  build/mplabsim/production/_ext/230937639/spi.o \
+  build/mplabsim/production/_ext/230937639/timer.o \
+  build/mplabsim/production/_ext/230937639/uart.o \
+  build/mplabsim/production/main.o \
+  build/mplabsim/production/_ext/230937639/qei.o \
+  build/mplabsim/production/_ext/230937639/pps.o \
+  --defsym=__MPLAB_BUILD=1 \
+  -Tp33FJ128MC802.gld.00 \
+  --stack=16 \
+  --check-sections \
+  --data-init \
+  --pack-data \
+  --handles \
+  --isr \
+  --no-gc-sections \
+  --fill-upper=0 \
+  --stackguard=16 \
+  --no-force-link \
+  --smart-io \
+  -Map=dist/mplabsim/production/QEI_OLED_position.X.production.map \
+  --report-mem \
+  -start-group \
+  --library=fx-elf \
+  --library=pic30-elf \
+  --library=m-elf \
+  --library=c-elf \
+  -end-group \
+
+Archive member included because of file (symbol)
+
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libpic30-elf.a(crt0_standard.o)
+                              (__resetPRI)
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libpic30-elf.a(data_init_standard.o)
+                              /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libpic30-elf.a(crt0_standard.o) (__data_init_standard)
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libpic30-elf.a(delay32.eo)
+                              build/mplabsim/production/_ext/1321615235/oled.o (___delay32)
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(udivsi3.eo)
+                              build/mplabsim/production/_ext/230937639/uart.o (___udivsi3)
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(strlen.eo)
+                              build/mplabsim/production/_ext/1321615235/oled.o (_strlen)
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(vsnprintf.eo)
+                              build/mplabsim/production/_ext/1321615235/oled.o (_vsnprintf)
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(doprnt.eo)
+                              /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(vsnprintf.eo) (_vfprintf)
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(fputc.eo)
+                              /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(doprnt.eo) (_fputc)
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(powers.eo)
+                              /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(doprnt.eo) (__powers_)
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(_iob.eo)
+                              /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(fputc.eo) (__outdone)
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(flsbuf.eo)
+                              /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(fputc.eo) (__flsbuf)
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libpic30-elf.a(write.eo)
+                              /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(fputc.eo) (_write)
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libpic30-elf.a(c30_uart.eo)
+                              /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libpic30-elf.a(write.eo) (___C30_UART)
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(adddf3.eo)
+                              /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(doprnt.eo) (___adddf3)
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(deqltle.eo)
+                              /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(doprnt.eo) (___ltdf2)
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(dgtge.eo)
+                              /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(doprnt.eo) (___gedf2)
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(divdf3.eo)
+                              /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(doprnt.eo) (___divdf3)
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(dne.eo)
+                              /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(doprnt.eo) (___nedf2)
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(dpack.eo)
+                              /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(adddf3.eo) (__dpack)
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(dunpack2.eo)
+                              /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(adddf3.eo) (__dunpack2)
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(extendsfdf.eo)
+                              /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(doprnt.eo) (___extendsfdf2)
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(fixunsdfdi.eo)
+                              /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(doprnt.eo) (___fixunsdfdi)
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(fixunsdfsi.eo)
+                              /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(doprnt.eo) (___fixunsdfsi)
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(floatundidf.eo)
+                              /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(doprnt.eo) (___floatundidf)
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(floatunsidf.eo)
+                              /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(doprnt.eo) (___floatunsidf)
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(frexp.eo)
+                              /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(doprnt.eo) (_frexp)
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(funpack.eo)
+                              /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(extendsfdf.eo) (__funpack)
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(muldf3.eo)
+                              /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(doprnt.eo) (___muldf3)
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(subdf3.eo)
+                              /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(doprnt.eo) (___subdf3)
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(truncdfsf.eo)
+                              /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(doprnt.eo) (___truncdfsf2)
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(divmoddi3.eo)
+                              /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(doprnt.eo) (___udivdi3)
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(dcompare.eo)
+                              /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(deqltle.eo) (__dcompare)
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(dpropagateNaN.eo)
+                              /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(dunpack2.eo) (__dPropagateNaN)
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(dtype.eo)
+                              /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(dcompare.eo) (__dtype)
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(dunpack.eo)
+                              /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(dunpack2.eo) (__dunpack)
+/Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(fpack.eo)
+                              /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(truncdfsf.eo) (__fpack)
