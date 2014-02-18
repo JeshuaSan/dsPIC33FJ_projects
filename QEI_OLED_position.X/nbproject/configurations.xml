@@ -181,7 +181,7 @@
         <property key="pk2settings.usetargetpower" value="false"/>
       </PICkit2PlatformTool>
     </conf>
-    <conf name="mplabsim" type="2">
+    <conf name="simulator" type="2">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>dsPIC33FJ128MC802</targetDevice>

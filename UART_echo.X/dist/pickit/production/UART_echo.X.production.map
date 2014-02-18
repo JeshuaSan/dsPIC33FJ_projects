@@ -67,11 +67,10 @@ section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200               0x120           0x1b0  (432)
 .const                       0x320                0x58            0x84  (132)
-.text                        0x378               0x450           0x678  (1656)
-.dinit                       0x7c8                0x24            0x36  (54)
-.text                        0x7ec                0x22            0x33  (51)
+.text                        0x378               0x486           0x6c9  (1737)
+.dinit                       0x7fe                0x24            0x36  (54)
 
-                     Total program memory used (bytes):          0x915  (2325) 1%
+                     Total program memory used (bytes):          0x933  (2355) 1%
 
 
 Data Memory  [Origin = 0x800, Length = 0x4000]
@@ -80,8 +79,8 @@ section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
 .nbss                        0x800                   0            0x42  (66)
 .ndata                       0x842                   0             0xe  (14)
-_0x19ab9b453025a4a          0x4780                   0            0x30  (48)
-_0x19aba1053025a4a          0x47c0                   0            0x30  (48)
+_0x1cab9b45302796e          0x4780                   0            0x30  (48)
+_0x1caba105302796e          0x47c0                   0            0x30  (48)
 
                         Total data memory used (bytes):           0xb0  (176) 1%
 
@@ -123,7 +122,7 @@ External Symbols in Program Memory (by address):
                   0x00041e                  _adc_stop
                   0x000424                  _adc_read
                   0x00042c                  __DMA0Interrupt
-                  0x0004e2                  _uart_init
+                  0x0004e6                  _uart_init
                   0x0004f4                  _uart_charReady
                   0x000500                  _uart_getc
                   0x000528                  _uart_putc
@@ -145,26 +144,26 @@ External Symbols in Program Memory (by address):
                   0x000676                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP9
                   0x00067c                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP10
                   0x000682                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP11
-                  0x000688                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP12
-                  0x00068e                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP13
-                  0x000694                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP14
-                  0x00069a                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP15
-                  0x0006a0                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP16
-                  0x0006a6                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP17
-                  0x0006ac                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP18
-                  0x0006b2                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP19
-                  0x0006b8                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP20
-                  0x0006be                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP21
-                  0x0006c4                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP22
-                  0x0006ca                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP23
-                  0x0006d0                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP24
-                  0x0006d6                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP25
-                  0x0006dc                  _pps_mapRP
-                  0x000740                  _spi_init
-                  0x000746                  _spiWrite
-                  0x000794                  _sys_init
-                  0x00079a                  _main
-                  0x0007ec                  _qei_init
+                  0x00068e                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP12
+                  0x000694                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP13
+                  0x00069a                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP14
+                  0x0006a0                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP15
+                  0x0006a6                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP16
+                  0x0006ac                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP17
+                  0x0006b2                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP18
+                  0x0006b8                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP19
+                  0x0006be                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP20
+                  0x0006c4                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP21
+                  0x0006ca                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP22
+                  0x0006d0                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP23
+                  0x0006d6                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP24
+                  0x0006dc                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP25
+                  0x0006e2                  _pps_mapRP
+                  0x000746                  _spi_init
+                  0x00074c                  _spiWrite
+                  0x00079a                  _sys_init
+                  0x0007a0                  _qei_init
+                  0x0007d4                  _main
 
 External Symbols in Program Memory (by name):
 
@@ -180,12 +179,12 @@ External Symbols in Program Memory (by name):
                   0x000424                  _adc_read
                   0x000416                  _adc_start
                   0x00041e                  _adc_stop
-                  0x00079a                  _main
-                  0x0006dc                  _pps_mapRP
-                  0x0007ec                  _qei_init
-                  0x000746                  _spiWrite
-                  0x000740                  _spi_init
-                  0x000794                  _sys_init
+                  0x0007d4                  _main
+                  0x0006e2                  _pps_mapRP
+                  0x0007a0                  _qei_init
+                  0x00074c                  _spiWrite
+                  0x000746                  _spi_init
+                  0x00079a                  _sys_init
                   0x000610                  _timer1_stop
                   0x000572                  _timer_init
                   0x00058e                  _timer_set_ms
@@ -193,27 +192,27 @@ External Symbols in Program Memory (by name):
                   0x0005d6                  _timer_start
                   0x0004f4                  _uart_charReady
                   0x000500                  _uart_getc
-                  0x0004e2                  _uart_init
+                  0x0004e6                  _uart_init
                   0x000528                  _uart_putc
                   0x000640                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP0
                   0x000646                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP1
                   0x00067c                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP10
                   0x000682                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP11
-                  0x000688                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP12
-                  0x00068e                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP13
-                  0x000694                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP14
-                  0x00069a                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP15
-                  0x0006a0                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP16
-                  0x0006a6                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP17
-                  0x0006ac                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP18
-                  0x0006b2                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP19
+                  0x00068e                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP12
+                  0x000694                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP13
+                  0x00069a                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP14
+                  0x0006a0                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP15
+                  0x0006a6                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP16
+                  0x0006ac                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP17
+                  0x0006b2                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP18
+                  0x0006b8                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP19
                   0x00064c                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP2
-                  0x0006b8                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP20
-                  0x0006be                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP21
-                  0x0006c4                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP22
-                  0x0006ca                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP23
-                  0x0006d0                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP24
-                  0x0006d6                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP25
+                  0x0006be                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP20
+                  0x0006c4                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP21
+                  0x0006ca                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP22
+                  0x0006d0                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP23
+                  0x0006d6                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP24
+                  0x0006dc                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP25
                   0x000652                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP3
                   0x000658                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP4
                   0x00065e                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP5
@@ -349,39 +348,39 @@ __FUID3
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x308c
+.debug_info       0x000000       0x31c7
  *(.debug_info)
  .debug_info      0x000000        0x462 build/pickit/production/_ext/506297139/sysconfig.o
  .debug_info      0x000462        0x21e build/pickit/production/main.o
  .debug_info      0x000680        0xa5c build/pickit/production/_ext/230937639/adc.o
  .debug_info      0x0010dc        0x7fe build/pickit/production/_ext/230937639/pps.o
- .debug_info      0x0018da        0x1f2 build/pickit/production/_ext/230937639/qei.o
- .debug_info      0x001acc        0x60b build/pickit/production/_ext/230937639/spi.o
- .debug_info      0x0020d7        0x597 build/pickit/production/_ext/230937639/timer.o
- .debug_info      0x00266e        0xa1e build/pickit/production/_ext/230937639/uart.o
+ .debug_info      0x0018da        0x346 build/pickit/production/_ext/230937639/qei.o
+ .debug_info      0x001c20        0x60b build/pickit/production/_ext/230937639/spi.o
+ .debug_info      0x00222b        0x597 build/pickit/production/_ext/230937639/timer.o
+ .debug_info      0x0027c2        0xa05 build/pickit/production/_ext/230937639/uart.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0x77f
+.debug_abbrev     0x000000        0x810
  *(.debug_abbrev)
  .debug_abbrev    0x000000         0xcb build/pickit/production/_ext/506297139/sysconfig.o
  .debug_abbrev    0x0000cb         0xa4 build/pickit/production/main.o
  .debug_abbrev    0x00016f        0x1ac build/pickit/production/_ext/230937639/adc.o
  .debug_abbrev    0x00031b         0xcf build/pickit/production/_ext/230937639/pps.o
- .debug_abbrev    0x0003ea         0x75 build/pickit/production/_ext/230937639/qei.o
- .debug_abbrev    0x00045f        0x100 build/pickit/production/_ext/230937639/spi.o
- .debug_abbrev    0x00055f         0xc2 build/pickit/production/_ext/230937639/timer.o
- .debug_abbrev    0x000621        0x15e build/pickit/production/_ext/230937639/uart.o
+ .debug_abbrev    0x0003ea         0xe1 build/pickit/production/_ext/230937639/qei.o
+ .debug_abbrev    0x0004cb        0x100 build/pickit/production/_ext/230937639/spi.o
+ .debug_abbrev    0x0005cb         0xc2 build/pickit/production/_ext/230937639/timer.o
+ .debug_abbrev    0x00068d        0x183 build/pickit/production/_ext/230937639/uart.o
 
-.debug_line       0x000000       0x130d
+.debug_line       0x000000       0x12cd
  *(.debug_line)
  .debug_line      0x000000        0x157 build/pickit/production/_ext/506297139/sysconfig.o
- .debug_line      0x000157        0x11c build/pickit/production/main.o
- .debug_line      0x000273        0x3b6 build/pickit/production/_ext/230937639/adc.o
- .debug_line      0x000629        0x492 build/pickit/production/_ext/230937639/pps.o
- .debug_line      0x000abb        0x129 build/pickit/production/_ext/230937639/qei.o
+ .debug_line      0x000157        0x114 build/pickit/production/main.o
+ .debug_line      0x00026b        0x3b6 build/pickit/production/_ext/230937639/adc.o
+ .debug_line      0x000621        0x492 build/pickit/production/_ext/230937639/pps.o
+ .debug_line      0x000ab3        0x131 build/pickit/production/_ext/230937639/qei.o
  .debug_line      0x000be4        0x1fc build/pickit/production/_ext/230937639/spi.o
  .debug_line      0x000de0        0x272 build/pickit/production/_ext/230937639/timer.o
- .debug_line      0x001052        0x2bb build/pickit/production/_ext/230937639/uart.o
+ .debug_line      0x001052        0x27b build/pickit/production/_ext/230937639/uart.o
 
 .debug_frame      0x000000        0x420
  *(.debug_frame)
@@ -394,15 +393,16 @@ __FUID3
  .debug_frame     0x000338         0x64 build/pickit/production/_ext/230937639/timer.o
  .debug_frame     0x00039c         0x84 build/pickit/production/_ext/230937639/uart.o
 
-.debug_str        0x000000         0xe0
+.debug_str        0x000000        0x102
  *(.debug_str)
  .debug_str       0x000000         0x1e build/pickit/production/_ext/506297139/sysconfig.o
  .debug_str       0x00001e          0x9 build/pickit/production/main.o
  .debug_str       0x000027         0x69 build/pickit/production/_ext/230937639/adc.o
  .debug_str       0x000090          0xb build/pickit/production/_ext/230937639/pps.o
- .debug_str       0x00009b         0x24 build/pickit/production/_ext/230937639/spi.o
- .debug_str       0x0000bf          0x6 build/pickit/production/_ext/230937639/timer.o
- .debug_str       0x0000c5         0x1b build/pickit/production/_ext/230937639/uart.o
+ .debug_str       0x00009b          0xc build/pickit/production/_ext/230937639/qei.o
+ .debug_str       0x0000a7         0x24 build/pickit/production/_ext/230937639/spi.o
+ .debug_str       0x0000cb          0x6 build/pickit/production/_ext/230937639/timer.o
+ .debug_str       0x0000d1         0x31 build/pickit/production/_ext/230937639/uart.o
 
 .debug_loc
  *(.debug_loc)
@@ -1799,7 +1799,7 @@ LOAD default_isr
 LOAD data_init
 
 .debug_pubtypes
-                  0x0000c0        0x2dc
+                  0x0000c0        0x31c
  .debug_pubtypes
                   0x0000c0         0x52 build/pickit/production/_ext/506297139/sysconfig.o
  .debug_pubtypes
@@ -1809,48 +1809,48 @@ LOAD data_init
  .debug_pubtypes
                   0x0001e1         0x1e build/pickit/production/_ext/230937639/pps.o
  .debug_pubtypes
-                  0x0001ff         0x1a build/pickit/production/_ext/230937639/qei.o
+                  0x0001ff         0x3d build/pickit/production/_ext/230937639/qei.o
  .debug_pubtypes
-                  0x000219         0x94 build/pickit/production/_ext/230937639/spi.o
+                  0x00023c         0x94 build/pickit/production/_ext/230937639/spi.o
  .debug_pubtypes
-                  0x0002ad         0x3f build/pickit/production/_ext/230937639/timer.o
+                  0x0002d0         0x3f build/pickit/production/_ext/230937639/timer.o
  .debug_pubtypes
-                  0x0002ec         0xb0 build/pickit/production/_ext/230937639/uart.o
+                  0x00030f         0xcd build/pickit/production/_ext/230937639/uart.o
 
 __c30_signature
-                  0x00039c         0x42
+                  0x0003dc         0x42
  __c30_signature
-                  0x00039c          0x6 build/pickit/production/_ext/506297139/sysconfig.o
+                  0x0003dc          0x6 build/pickit/production/_ext/506297139/sysconfig.o
  __c30_signature
-                  0x0003a2          0x6 build/pickit/production/main.o
+                  0x0003e2          0x6 build/pickit/production/main.o
  __c30_signature
-                  0x0003a8          0x6 build/pickit/production/_ext/230937639/adc.o
+                  0x0003e8          0x6 build/pickit/production/_ext/230937639/adc.o
  __c30_signature
-                  0x0003ae          0x6 build/pickit/production/_ext/230937639/pps.o
+                  0x0003ee          0x6 build/pickit/production/_ext/230937639/pps.o
  __c30_signature
-                  0x0003b4          0x6 build/pickit/production/_ext/230937639/qei.o
+                  0x0003f4          0x6 build/pickit/production/_ext/230937639/qei.o
  __c30_signature
-                  0x0003ba          0x6 build/pickit/production/_ext/230937639/spi.o
+                  0x0003fa          0x6 build/pickit/production/_ext/230937639/spi.o
  __c30_signature
-                  0x0003c0          0x6 build/pickit/production/_ext/230937639/timer.o
+                  0x000400          0x6 build/pickit/production/_ext/230937639/timer.o
  __c30_signature
-                  0x0003c6          0x6 build/pickit/production/_ext/230937639/uart.o
+                  0x000406          0x6 build/pickit/production/_ext/230937639/uart.o
  __c30_signature
-                  0x0003cc          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libpic30-elf.a(crt0_standard.o)
+                  0x00040c          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libpic30-elf.a(crt0_standard.o)
  __c30_signature
-                  0x0003d2          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libpic30-elf.a(data_init_standard.o)
+                  0x000412          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libpic30-elf.a(data_init_standard.o)
  __c30_signature
-                  0x0003d8          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(udivsi3.eo)
+                  0x000418          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(udivsi3.eo)
 
-_0x19ab9b453025a4a
+_0x1cab9b45302796e
                     0x4780         0x30
- _0x19ab9b453025a4a
+ _0x1cab9b45302796e
                     0x4780         0x30 build/pickit/production/_ext/230937639/adc.o
                     0x4780                  _dmaBufferA
 
-_0x19aba1053025a4a
+_0x1caba105302796e
                     0x47c0         0x30
- _0x19aba1053025a4a
+ _0x1caba105302796e
                     0x47c0         0x30 build/pickit/production/_ext/230937639/adc.o
                     0x47c0                  _dmaBufferB
 
@@ -1893,7 +1893,7 @@ _0x19aba1053025a4a
  .const             0x8320         0x34 build/pickit/production/_ext/230937639/pps.o
  .const             0x8354         0x24 build/pickit/production/_ext/230937639/timer.o
 
-.text             0x000378        0x450
+.text             0x000378        0x486
  .text            0x000378        0x120 build/pickit/production/_ext/230937639/adc.o
                   0x0003ee                  _adc_init
                   0x000416                  _adc_start
@@ -1901,7 +1901,7 @@ _0x19aba1053025a4a
                   0x000424                  _adc_read
                   0x00042c                  __DMA0Interrupt
  .text            0x000498         0xda build/pickit/production/_ext/230937639/uart.o
-                  0x0004e2                  _uart_init
+                  0x0004e6                  _uart_init
                   0x0004f4                  _uart_charReady
                   0x000500                  _uart_getc
                   0x000528                  _uart_putc
@@ -1912,7 +1912,7 @@ _0x19aba1053025a4a
                   0x0005b2                  _timer_set_us
                   0x0005d6                  _timer_start
                   0x000610                  _timer1_stop
- .text            0x000640         0xaa build/pickit/production/_ext/230937639/pps.o
+ .text            0x000640         0xb0 build/pickit/production/_ext/230937639/pps.o
                   0x000640                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP0
                   0x000646                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP1
                   0x00064c                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP2
@@ -1925,32 +1925,30 @@ _0x19aba1053025a4a
                   0x000676                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP9
                   0x00067c                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP10
                   0x000682                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP11
-                  0x000688                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP12
-                  0x00068e                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP13
-                  0x000694                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP14
-                  0x00069a                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP15
-                  0x0006a0                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP16
-                  0x0006a6                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP17
-                  0x0006ac                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP18
-                  0x0006b2                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP19
-                  0x0006b8                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP20
-                  0x0006be                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP21
-                  0x0006c4                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP22
-                  0x0006ca                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP23
-                  0x0006d0                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP24
-                  0x0006d6                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP25
-                  0x0006dc                  _pps_mapRP
- .text            0x0006ea         0x68 build/pickit/production/_ext/230937639/spi.o
-                  0x000740                  _spi_init
-                  0x000746                  _spiWrite
- .text            0x000752         0x48 build/pickit/production/_ext/506297139/sysconfig.o
-                  0x000794                  _sys_init
- .text            0x00079a         0x2e build/pickit/production/main.o
-                  0x00079a                  _main
+                  0x00068e                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP12
+                  0x000694                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP13
+                  0x00069a                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP14
+                  0x0006a0                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP15
+                  0x0006a6                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP16
+                  0x0006ac                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP17
+                  0x0006b2                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP18
+                  0x0006b8                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP19
+                  0x0006be                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP20
+                  0x0006c4                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP21
+                  0x0006ca                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP22
+                  0x0006d0                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP23
+                  0x0006d6                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP24
+                  0x0006dc                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP25
+                  0x0006e2                  _pps_mapRP
+ .text            0x0006f0         0x68 build/pickit/production/_ext/230937639/spi.o
+                  0x000746                  _spi_init
+                  0x00074c                  _spiWrite
+ .text            0x000758         0x48 build/pickit/production/_ext/506297139/sysconfig.o
+                  0x00079a                  _sys_init
+ .text            0x0007a0         0x34 build/pickit/production/_ext/230937639/qei.o
+                  0x0007a0                  _qei_init
+ .text            0x0007d4         0x2a build/pickit/production/main.o
+                  0x0007d4                  _main
 
-.dinit            0x0007c8         0x24
- .dinit           0x0007c8         0x24 data_init
-
-.text             0x0007ec         0x22
- .text            0x0007ec         0x22 build/pickit/production/_ext/230937639/qei.o
-                  0x0007ec                  _qei_init
+.dinit            0x0007fe         0x24
+ .dinit           0x0007fe         0x24 data_init

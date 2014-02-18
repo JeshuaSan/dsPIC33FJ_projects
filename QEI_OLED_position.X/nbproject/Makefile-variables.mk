@@ -11,10 +11,10 @@ CND_ARTIFACT_PATH_pickit=dist/pickit/production/QEI_OLED_position.X.production.h
 CND_PACKAGE_DIR_pickit=${CND_DISTDIR}/pickit/package
 CND_PACKAGE_NAME_pickit=qeioledposition.x.tar
 CND_PACKAGE_PATH_pickit=${CND_DISTDIR}/pickit/package/qeioledposition.x.tar
-# mplabsim configuration
-CND_ARTIFACT_DIR_mplabsim=dist/mplabsim/production
-CND_ARTIFACT_NAME_mplabsim=QEI_OLED_position.X.production.hex
-CND_ARTIFACT_PATH_mplabsim=dist/mplabsim/production/QEI_OLED_position.X.production.hex
-CND_PACKAGE_DIR_mplabsim=${CND_DISTDIR}/mplabsim/package
-CND_PACKAGE_NAME_mplabsim=qeioledposition.x.tar
-CND_PACKAGE_PATH_mplabsim=${CND_DISTDIR}/mplabsim/package/qeioledposition.x.tar
+# simulator configuration
+CND_ARTIFACT_DIR_simulator=dist/simulator/production
+CND_ARTIFACT_NAME_simulator=QEI_OLED_position.X.production.hex
+CND_ARTIFACT_PATH_simulator=dist/simulator/production/QEI_OLED_position.X.production.hex
+CND_PACKAGE_DIR_simulator=${CND_DISTDIR}/simulator/package
+CND_PACKAGE_NAME_simulator=qeioledposition.x.tar
+CND_PACKAGE_PATH_simulator=${CND_DISTDIR}/simulator/package/qeioledposition.x.tar

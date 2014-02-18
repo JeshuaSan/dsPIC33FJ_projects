@@ -27,11 +27,11 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 PROJECTNAME=QEI_OLED_position.X
 
 # Active Configuration
-DEFAULTCONF=mplabsim
+DEFAULTCONF=pickit
 CONF=${DEFAULTCONF}
 
 # All Configurations
-ALLCONFS=pickit mplabsim 
+ALLCONFS=pickit simulator 
 
 
 # build
@@ -46,14 +46,14 @@ ALLCONFS=pickit mplabsim
 # clobber
 .clobber-impl: .clobber-pre .depcheck-impl
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=pickit clean
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=mplabsim clean
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=simulator clean
 
 
 
 # all
 .all-impl: .all-pre .depcheck-impl
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=pickit build
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=mplabsim build
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=simulator build
 
 
 

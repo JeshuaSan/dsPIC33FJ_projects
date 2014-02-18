@@ -13,8 +13,8 @@ ifeq "${IGNORE_LOCAL}" "TRUE"
 else
 include Makefile
 # Include makefile containing local settings
-ifeq "$(wildcard nbproject/Makefile-local-mplabsim.mk)" "nbproject/Makefile-local-mplabsim.mk"
-include nbproject/Makefile-local-mplabsim.mk
+ifeq "$(wildcard nbproject/Makefile-local-simulator.mk)" "nbproject/Makefile-local-simulator.mk"
+include nbproject/Makefile-local-simulator.mk
 endif
 endif
 
@@ -25,7 +25,7 @@ MV=mv
 CP=cp 
 
 # Macros
-CND_CONF=mplabsim
+CND_CONF=simulator
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 IMAGE_TYPE=debug
 OUTPUT_SUFFIX=elf
@@ -72,7 +72,7 @@ LDLIBSOPTIONS=
 FIXDEPS=fixDeps
 
 .build-conf:  ${BUILD_SUBPROJECTS}
-	${MAKE}  -f nbproject/Makefile-mplabsim.mk dist/${CND_CONF}/${IMAGE_TYPE}/QEI_OLED_position.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+	${MAKE}  -f nbproject/Makefile-simulator.mk dist/${CND_CONF}/${IMAGE_TYPE}/QEI_OLED_position.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 
 MP_PROCESSOR_OPTION=33FJ128MC802
 MP_LINKER_FILE_OPTION=,--script=p33FJ128MC802.gld
@@ -287,8 +287,8 @@ endif
 
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
-	${RM} -r build/mplabsim
-	${RM} -r dist/mplabsim
+	${RM} -r build/simulator
+	${RM} -r dist/simulator
 
 # Enable dependency checking
 .dep.inc: .depcheck-impl
