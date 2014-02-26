@@ -22,7 +22,7 @@ int main(void)
 
     oled_init();
 
-    uart_init(115200);
+    uart_init(115200U);
 
     timer_init(TIMER1);
     timer_set_ms(TIMER1, 16);

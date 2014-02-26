@@ -158,10 +158,10 @@ section                    address      alignment gaps    total length  (dec)
 .data.dpowers                0xdb4                   0            0xa0  (160)
 .data                        0xe54                   0            0x2a  (42)
 .data._iob                   0xe7e                   0            0x26  (38)
-_0x1aab9b45302d417          0x4780                   0            0x30  (48)
+_0x1aab9b453041be6          0x4780                   0            0x30  (48)
 .bss                        0x47b0                   0             0x6  (6)
 .data.__C30_UART            0x47b6                   0             0x2  (2)
-_0x1aaba105302d417          0x47c0                   0            0x30  (48)
+_0x1aaba1053041be6          0x47c0                   0            0x30  (48)
 
                         Total data memory used (bytes):          0x70c  (1804) 11%
 
@@ -714,20 +714,20 @@ __FUID3
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x4fc2
+.debug_info       0x000000       0x4fe6
  *(.debug_info)
- .debug_info      0x000000        0x7a8 build/pickit/production/_ext/1321615235/oled.o
- .debug_info      0x0007a8        0x1aa build/pickit/production/_ext/1321615235/oled_draw.o
- .debug_info      0x000952        0x316 build/pickit/production/_ext/1321615235/oled_print.o
- .debug_info      0x000c68        0xcee build/pickit/production/_ext/1321615235/SSD1306.o
- .debug_info      0x001956        0x46a build/pickit/production/_ext/506297139/sysconfig.o
- .debug_info      0x001dc0        0xa64 build/pickit/production/_ext/230937639/adc.o
- .debug_info      0x002824        0x613 build/pickit/production/_ext/230937639/spi.o
- .debug_info      0x002e37        0x59f build/pickit/production/_ext/230937639/timer.o
- .debug_info      0x0033d6        0xa0d build/pickit/production/_ext/230937639/uart.o
- .debug_info      0x003de3        0x740 build/pickit/production/_ext/230937639/qei.o
- .debug_info      0x004523        0x806 build/pickit/production/_ext/230937639/pps.o
- .debug_info      0x004d29        0x299 build/pickit/production/main.o
+ .debug_info      0x000000        0x7ab build/pickit/production/_ext/1321615235/oled.o
+ .debug_info      0x0007ab        0x1ad build/pickit/production/_ext/1321615235/oled_draw.o
+ .debug_info      0x000958        0x319 build/pickit/production/_ext/1321615235/oled_print.o
+ .debug_info      0x000c71        0xcf1 build/pickit/production/_ext/1321615235/SSD1306.o
+ .debug_info      0x001962        0x46d build/pickit/production/_ext/506297139/sysconfig.o
+ .debug_info      0x001dcf        0xa67 build/pickit/production/_ext/230937639/adc.o
+ .debug_info      0x002836        0x616 build/pickit/production/_ext/230937639/spi.o
+ .debug_info      0x002e4c        0x5a2 build/pickit/production/_ext/230937639/timer.o
+ .debug_info      0x0033ee        0xa10 build/pickit/production/_ext/230937639/uart.o
+ .debug_info      0x003dfe        0x743 build/pickit/production/_ext/230937639/qei.o
+ .debug_info      0x004541        0x809 build/pickit/production/_ext/230937639/pps.o
+ .debug_info      0x004d4a        0x29c build/pickit/production/main.o
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000        0xbe6
@@ -2325,15 +2325,15 @@ __c30_signature
  __c30_signature
                   0x0006d6          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(fpack.eo)
 
-_0x1aab9b45302d417
+_0x1aab9b453041be6
                     0x4780         0x30
- _0x1aab9b45302d417
+ _0x1aab9b453041be6
                     0x4780         0x30 build/pickit/production/_ext/230937639/adc.o
                     0x4780                  _dmaBufferA
 
-_0x1aaba105302d417
+_0x1aaba1053041be6
                     0x47c0         0x30
- _0x1aaba105302d417
+ _0x1aaba1053041be6
                     0x47c0         0x30 build/pickit/production/_ext/230937639/adc.o
                     0x47c0                  _dmaBufferB
 
