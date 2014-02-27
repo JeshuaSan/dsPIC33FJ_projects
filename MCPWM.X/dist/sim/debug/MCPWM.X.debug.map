@@ -69,12 +69,12 @@ Program Memory  [Origin = 0x200, Length = 0x155fe]
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200               0x128           0x1bc  (444)
-.const                       0x328                0x68            0x9c  (156)
-.text                        0x390               0x4dc           0x74a  (1866)
-.dinit                       0x86c                0x24            0x36  (54)
-.text                        0x890                 0x8             0xc  (12)
+.const                       0x328                0x64            0x96  (150)
+.text                        0x38c               0x530           0x7c8  (1992)
+.dinit                       0x8bc                0x24            0x36  (54)
+.text                        0x8e0                0x10            0x18  (24)
 
-                     Total program memory used (bytes):          0x9e4  (2532) 1%
+                     Total program memory used (bytes):          0xa68  (2664) 2%
 
 
 Data Memory  [Origin = 0x800, Length = 0x4000]
@@ -83,8 +83,8 @@ section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
 .nbss                        0x800                   0            0x42  (66)
 .ndata                       0x842                   0             0xe  (14)
-_0x1aab9b4530d46c3          0x4780                   0            0x30  (48)
-_0x1aaba10530d46c3          0x47c0                   0            0x30  (48)
+_0x19ab9b4530e3098          0x4780                   0            0x30  (48)
+_0x19aba10530e3098          0x47c0                   0            0x30  (48)
 
                         Total data memory used (bytes):           0xb0  (176) 1%
 
@@ -121,119 +121,127 @@ External Symbols in Program Memory (by address):
                   0x000236                  __data_init
                   0x000304                  __DefaultInterrupt
                   0x000308                  ___udivsi3
-                  0x000406                  _adc_init
-                  0x00042e                  _adc_start
-                  0x000436                  _adc_stop
-                  0x00043c                  _adc_read
-                  0x000444                  __DMA0Interrupt
-                  0x0004fe                  _uart_init
-                  0x00050c                  _uart_charReady
-                  0x000518                  _uart_getc
-                  0x000540                  _uart_putc
-                  0x000546                  __U1RXInterrupt
-                  0x00058a                  _timer_init
-                  0x0005a6                  _timer_set_ms
-                  0x0005ca                  _timer_set_us
-                  0x0005ee                  _timer_start
-                  0x000628                  _timer1_stop
-                  0x000658                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP0
-                  0x00065e                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP1
-                  0x000664                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP2
-                  0x00066a                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP3
-                  0x000670                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP4
-                  0x000676                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP5
-                  0x00067c                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP6
-                  0x000682                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP7
-                  0x000688                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP8
-                  0x00068e                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP9
-                  0x000694                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP10
-                  0x00069a                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP11
-                  0x0006a6                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP12
-                  0x0006ac                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP13
-                  0x0006b2                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP14
-                  0x0006b8                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP15
-                  0x0006be                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP16
-                  0x0006c4                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP17
-                  0x0006ca                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP18
-                  0x0006d0                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP19
-                  0x0006d6                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP20
-                  0x0006dc                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP21
-                  0x0006e2                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP22
-                  0x0006e8                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP23
-                  0x0006ee                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP24
-                  0x0006f4                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP25
-                  0x0006fa                  _pps_mapRP
-                  0x000708                  build/sim/debug/_ext/230937639/qei.o:_qei_pins2
-                  0x000742                  build/sim/debug/_ext/230937639/qei.o:_qei_pins1
-                  0x00077c                  _qei_init
-                  0x00079c                  _qei_setMode
-                  0x00079e                  _qei_getCNT
-                  0x0007fe                  _spi_init
-                  0x000804                  _spiWrite
-                  0x00083c                  _sys_init
-                  0x000866                  _mcpwm_init
-                  0x000890                  _main
+                  0x000402                  _adc_init
+                  0x00042a                  _adc_start
+                  0x000432                  _adc_stop
+                  0x000438                  _adc_read
+                  0x000440                  __DMA0Interrupt
+                  0x0004fa                  _uart_init
+                  0x000508                  _uart_charReady
+                  0x000514                  _uart_getc
+                  0x00053c                  _uart_putc
+                  0x000542                  __U1RXInterrupt
+                  0x000586                  _timer_init
+                  0x0005a2                  _timer_set_ms
+                  0x0005c6                  _timer_set_us
+                  0x0005ea                  _timer_start
+                  0x000624                  _timer1_stop
+                  0x000654                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP0
+                  0x00065a                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP1
+                  0x000660                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP2
+                  0x000666                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP3
+                  0x00066c                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP4
+                  0x000672                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP5
+                  0x000678                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP6
+                  0x00067e                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP7
+                  0x000684                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP8
+                  0x00068a                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP9
+                  0x000690                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP10
+                  0x000696                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP11
+                  0x0006a2                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP12
+                  0x0006a8                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP13
+                  0x0006ae                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP14
+                  0x0006b4                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP15
+                  0x0006ba                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP16
+                  0x0006c0                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP17
+                  0x0006c6                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP18
+                  0x0006cc                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP19
+                  0x0006d2                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP20
+                  0x0006d8                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP21
+                  0x0006de                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP22
+                  0x0006e4                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP23
+                  0x0006ea                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP24
+                  0x0006f0                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP25
+                  0x0006f6                  _pps_mapRP
+                  0x000704                  build/sim/debug/_ext/230937639/qei.o:_qei_pins2
+                  0x00073e                  build/sim/debug/_ext/230937639/qei.o:_qei_pins1
+                  0x000778                  _qei_init
+                  0x000798                  _qei_setMode
+                  0x00079a                  _qei_getCNT
+                  0x0007c0                  _mcpwm_init
+                  0x0007ce                  _mcpwm_setDC
+                  0x0007e4                  _mcpwm_setDCPC
+                  0x000818                  _mcpwm_start
+                  0x00081e                  _mcpwm_stop
+                  0x000878                  _spi_init
+                  0x00087e                  _spiWrite
+                  0x0008b6                  _sys_init
+                  0x0008e0                  _main
 
 External Symbols in Program Memory (by name):
 
-                  0x000444                  __DMA0Interrupt
+                  0x000440                  __DMA0Interrupt
                   0x000304                  __DefaultInterrupt
-                  0x000546                  __U1RXInterrupt
+                  0x000542                  __U1RXInterrupt
                   0x000308                  ___udivsi3
                   0x000236                  __data_init
                   0x000236                  __data_init_standard
                   0x000226                  __psv_init
                   0x000200                  __resetPRI
-                  0x000406                  _adc_init
-                  0x00043c                  _adc_read
-                  0x00042e                  _adc_start
-                  0x000436                  _adc_stop
-                  0x000890                  _main
-                  0x000866                  _mcpwm_init
-                  0x0006fa                  _pps_mapRP
-                  0x00079e                  _qei_getCNT
-                  0x00077c                  _qei_init
-                  0x00079c                  _qei_setMode
-                  0x000804                  _spiWrite
-                  0x0007fe                  _spi_init
-                  0x00083c                  _sys_init
-                  0x000628                  _timer1_stop
-                  0x00058a                  _timer_init
-                  0x0005a6                  _timer_set_ms
-                  0x0005ca                  _timer_set_us
-                  0x0005ee                  _timer_start
-                  0x00050c                  _uart_charReady
-                  0x000518                  _uart_getc
-                  0x0004fe                  _uart_init
-                  0x000540                  _uart_putc
-                  0x000658                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP0
-                  0x00065e                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP1
-                  0x000694                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP10
-                  0x00069a                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP11
-                  0x0006a6                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP12
-                  0x0006ac                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP13
-                  0x0006b2                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP14
-                  0x0006b8                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP15
-                  0x0006be                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP16
-                  0x0006c4                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP17
-                  0x0006ca                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP18
-                  0x0006d0                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP19
-                  0x000664                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP2
-                  0x0006d6                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP20
-                  0x0006dc                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP21
-                  0x0006e2                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP22
-                  0x0006e8                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP23
-                  0x0006ee                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP24
-                  0x0006f4                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP25
-                  0x00066a                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP3
-                  0x000670                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP4
-                  0x000676                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP5
-                  0x00067c                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP6
-                  0x000682                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP7
-                  0x000688                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP8
-                  0x00068e                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP9
-                  0x000742                  build/sim/debug/_ext/230937639/qei.o:_qei_pins1
-                  0x000708                  build/sim/debug/_ext/230937639/qei.o:_qei_pins2
+                  0x000402                  _adc_init
+                  0x000438                  _adc_read
+                  0x00042a                  _adc_start
+                  0x000432                  _adc_stop
+                  0x0008e0                  _main
+                  0x0007c0                  _mcpwm_init
+                  0x0007ce                  _mcpwm_setDC
+                  0x0007e4                  _mcpwm_setDCPC
+                  0x000818                  _mcpwm_start
+                  0x00081e                  _mcpwm_stop
+                  0x0006f6                  _pps_mapRP
+                  0x00079a                  _qei_getCNT
+                  0x000778                  _qei_init
+                  0x000798                  _qei_setMode
+                  0x00087e                  _spiWrite
+                  0x000878                  _spi_init
+                  0x0008b6                  _sys_init
+                  0x000624                  _timer1_stop
+                  0x000586                  _timer_init
+                  0x0005a2                  _timer_set_ms
+                  0x0005c6                  _timer_set_us
+                  0x0005ea                  _timer_start
+                  0x000508                  _uart_charReady
+                  0x000514                  _uart_getc
+                  0x0004fa                  _uart_init
+                  0x00053c                  _uart_putc
+                  0x000654                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP0
+                  0x00065a                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP1
+                  0x000690                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP10
+                  0x000696                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP11
+                  0x0006a2                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP12
+                  0x0006a8                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP13
+                  0x0006ae                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP14
+                  0x0006b4                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP15
+                  0x0006ba                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP16
+                  0x0006c0                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP17
+                  0x0006c6                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP18
+                  0x0006cc                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP19
+                  0x000660                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP2
+                  0x0006d2                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP20
+                  0x0006d8                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP21
+                  0x0006de                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP22
+                  0x0006e4                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP23
+                  0x0006ea                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP24
+                  0x0006f0                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP25
+                  0x000666                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP3
+                  0x00066c                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP4
+                  0x000672                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP5
+                  0x000678                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP6
+                  0x00067e                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP7
+                  0x000684                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP8
+                  0x00068a                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP9
+                  0x00073e                  build/sim/debug/_ext/230937639/qei.o:_qei_pins1
+                  0x000704                  build/sim/debug/_ext/230937639/qei.o:_qei_pins2
 
 Memory Configuration
 
@@ -365,20 +373,20 @@ __FUID3
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x35c9
+.debug_info       0x000000       0x3751
  *(.debug_info)
- .debug_info      0x000000        0x2cb build/sim/debug/_ext/506297139/sysconfig.o
- .debug_info      0x0002cb        0xa58 build/sim/debug/_ext/230937639/adc.o
- .debug_info      0x000d23        0x7fa build/sim/debug/_ext/230937639/pps.o
- .debug_info      0x00151d        0x734 build/sim/debug/_ext/230937639/qei.o
- .debug_info      0x001c51        0x607 build/sim/debug/_ext/230937639/spi.o
- .debug_info      0x002258        0x593 build/sim/debug/_ext/230937639/timer.o
- .debug_info      0x0027eb        0xa01 build/sim/debug/_ext/230937639/uart.o
- .debug_info      0x0031ec        0x29a build/sim/debug/_ext/230937639/mcpwm.o
- .debug_info      0x003486        0x143 build/sim/debug/main.o
+ .debug_info      0x000000        0x2ce build/sim/debug/_ext/506297139/sysconfig.o
+ .debug_info      0x0002ce        0xa5b build/sim/debug/_ext/230937639/adc.o
+ .debug_info      0x000d29        0x7fd build/sim/debug/_ext/230937639/pps.o
+ .debug_info      0x001526        0x737 build/sim/debug/_ext/230937639/qei.o
+ .debug_info      0x001c5d        0x60a build/sim/debug/_ext/230937639/spi.o
+ .debug_info      0x002267        0x596 build/sim/debug/_ext/230937639/timer.o
+ .debug_info      0x0027fd        0xa04 build/sim/debug/_ext/230937639/uart.o
+ .debug_info      0x003201        0x3e6 build/sim/debug/_ext/230937639/mcpwm.o
+ .debug_info      0x0035e7        0x16a build/sim/debug/main.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0x89f
+.debug_abbrev     0x000000        0x91e
  *(.debug_abbrev)
  .debug_abbrev    0x000000         0xa1 build/sim/debug/_ext/506297139/sysconfig.o
  .debug_abbrev    0x0000a1        0x1ac build/sim/debug/_ext/230937639/adc.o
@@ -387,10 +395,10 @@ __FUID3
  .debug_abbrev    0x000479        0x100 build/sim/debug/_ext/230937639/spi.o
  .debug_abbrev    0x000579         0xc2 build/sim/debug/_ext/230937639/timer.o
  .debug_abbrev    0x00063b        0x183 build/sim/debug/_ext/230937639/uart.o
- .debug_abbrev    0x0007be         0xad build/sim/debug/_ext/230937639/mcpwm.o
- .debug_abbrev    0x00086b         0x34 build/sim/debug/main.o
+ .debug_abbrev    0x0007be        0x114 build/sim/debug/_ext/230937639/mcpwm.o
+ .debug_abbrev    0x0008d2         0x4c build/sim/debug/main.o
 
-.debug_line       0x000000       0x1460
+.debug_line       0x000000       0x15ae
  *(.debug_line)
  .debug_line      0x000000        0x147 build/sim/debug/_ext/506297139/sysconfig.o
  .debug_line      0x000147        0x3b6 build/sim/debug/_ext/230937639/adc.o
@@ -399,10 +407,10 @@ __FUID3
  .debug_line      0x000bbd        0x1fc build/sim/debug/_ext/230937639/spi.o
  .debug_line      0x000db9        0x272 build/sim/debug/_ext/230937639/timer.o
  .debug_line      0x00102b        0x27b build/sim/debug/_ext/230937639/uart.o
- .debug_line      0x0012a6        0x16a build/sim/debug/_ext/230937639/mcpwm.o
- .debug_line      0x001410         0x50 build/sim/debug/main.o
+ .debug_line      0x0012a6        0x266 build/sim/debug/_ext/230937639/mcpwm.o
+ .debug_line      0x00150c         0xa2 build/sim/debug/main.o
 
-.debug_frame      0x000000        0x494
+.debug_frame      0x000000        0x4e4
  *(.debug_frame)
  .debug_frame     0x000000         0x44 build/sim/debug/_ext/506297139/sysconfig.o
  .debug_frame     0x000044         0x94 build/sim/debug/_ext/230937639/adc.o
@@ -411,10 +419,10 @@ __FUID3
  .debug_frame     0x000300         0x54 build/sim/debug/_ext/230937639/spi.o
  .debug_frame     0x000354         0x64 build/sim/debug/_ext/230937639/timer.o
  .debug_frame     0x0003b8         0x84 build/sim/debug/_ext/230937639/uart.o
- .debug_frame     0x00043c         0x34 build/sim/debug/_ext/230937639/mcpwm.o
- .debug_frame     0x000470         0x24 build/sim/debug/main.o
+ .debug_frame     0x00043c         0x84 build/sim/debug/_ext/230937639/mcpwm.o
+ .debug_frame     0x0004c0         0x24 build/sim/debug/main.o
 
-.debug_str        0x000000         0xfa
+.debug_str        0x000000        0x116
  *(.debug_str)
  .debug_str       0x000000         0x13 build/sim/debug/_ext/506297139/sysconfig.o
  .debug_str       0x000013         0x69 build/sim/debug/_ext/230937639/adc.o
@@ -423,6 +431,7 @@ __FUID3
  .debug_str       0x00009f         0x24 build/sim/debug/_ext/230937639/spi.o
  .debug_str       0x0000c3          0x6 build/sim/debug/_ext/230937639/timer.o
  .debug_str       0x0000c9         0x31 build/sim/debug/_ext/230937639/uart.o
+ .debug_str       0x0000fa         0x1c build/sim/debug/_ext/230937639/mcpwm.o
 
 .debug_loc
  *(.debug_loc)
@@ -431,7 +440,7 @@ __FUID3
  *(.debug_macinfo)
 
 .debug_pubnames
-                  0x000000        0x243
+                  0x000000        0x284
  *(.debug_pubnames)
  .debug_pubnames
                   0x000000         0x1f build/sim/debug/_ext/506297139/sysconfig.o
@@ -448,9 +457,9 @@ __FUID3
  .debug_pubnames
                   0x0001a5         0x62 build/sim/debug/_ext/230937639/uart.o
  .debug_pubnames
-                  0x000207         0x21 build/sim/debug/_ext/230937639/mcpwm.o
+                  0x000207         0x62 build/sim/debug/_ext/230937639/mcpwm.o
  .debug_pubnames
-                  0x000228         0x1b build/sim/debug/main.o
+                  0x000269         0x1b build/sim/debug/main.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -489,14 +498,14 @@ __FUID3
                   0x000016          0x4 LONG 0x304 DEFINED (__IC1Interrupt)?ABSOLUTE (__IC1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000018          0x4 LONG 0x304 DEFINED (__OC1Interrupt)?ABSOLUTE (__OC1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00001a          0x4 LONG 0x304 DEFINED (__T1Interrupt)?ABSOLUTE (__T1Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00001c          0x4 LONG 0x444 DEFINED (__DMA0Interrupt)?ABSOLUTE (__DMA0Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00001c          0x4 LONG 0x440 DEFINED (__DMA0Interrupt)?ABSOLUTE (__DMA0Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00001e          0x4 LONG 0x304 DEFINED (__IC2Interrupt)?ABSOLUTE (__IC2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000020          0x4 LONG 0x304 DEFINED (__OC2Interrupt)?ABSOLUTE (__OC2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000022          0x4 LONG 0x304 DEFINED (__T2Interrupt)?ABSOLUTE (__T2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000024          0x4 LONG 0x304 DEFINED (__T3Interrupt)?ABSOLUTE (__T3Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000026          0x4 LONG 0x304 DEFINED (__SPI1ErrInterrupt)?ABSOLUTE (__SPI1ErrInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000028          0x4 LONG 0x304 DEFINED (__SPI1Interrupt)?ABSOLUTE (__SPI1Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00002a          0x4 LONG 0x546 DEFINED (__U1RXInterrupt)?ABSOLUTE (__U1RXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00002a          0x4 LONG 0x542 DEFINED (__U1RXInterrupt)?ABSOLUTE (__U1RXInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00002c          0x4 LONG 0x304 DEFINED (__U1TXInterrupt)?ABSOLUTE (__U1TXInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00002e          0x4 LONG 0x304 DEFINED (__ADC1Interrupt)?ABSOLUTE (__ADC1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000030          0x4 LONG 0x304 DEFINED (__DMA1Interrupt)?ABSOLUTE (__DMA1Interrupt):ABSOLUTE (__DefaultInterrupt)
@@ -617,14 +626,14 @@ __FUID3
                   0x000116          0x4 LONG 0x304 DEFINED (__AltIC1Interrupt)?ABSOLUTE (__AltIC1Interrupt):DEFINED (__IC1Interrupt)?ABSOLUTE (__IC1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000118          0x4 LONG 0x304 DEFINED (__AltOC1Interrupt)?ABSOLUTE (__AltOC1Interrupt):DEFINED (__OC1Interrupt)?ABSOLUTE (__OC1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00011a          0x4 LONG 0x304 DEFINED (__AltT1Interrupt)?ABSOLUTE (__AltT1Interrupt):DEFINED (__T1Interrupt)?ABSOLUTE (__T1Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00011c          0x4 LONG 0x444 DEFINED (__AltDMA0Interrupt)?ABSOLUTE (__AltDMA0Interrupt):DEFINED (__DMA0Interrupt)?ABSOLUTE (__DMA0Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00011c          0x4 LONG 0x440 DEFINED (__AltDMA0Interrupt)?ABSOLUTE (__AltDMA0Interrupt):DEFINED (__DMA0Interrupt)?ABSOLUTE (__DMA0Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00011e          0x4 LONG 0x304 DEFINED (__AltIC2Interrupt)?ABSOLUTE (__AltIC2Interrupt):DEFINED (__IC2Interrupt)?ABSOLUTE (__IC2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000120          0x4 LONG 0x304 DEFINED (__AltOC2Interrupt)?ABSOLUTE (__AltOC2Interrupt):DEFINED (__OC2Interrupt)?ABSOLUTE (__OC2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000122          0x4 LONG 0x304 DEFINED (__AltT2Interrupt)?ABSOLUTE (__AltT2Interrupt):DEFINED (__T2Interrupt)?ABSOLUTE (__T2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000124          0x4 LONG 0x304 DEFINED (__AltT3Interrupt)?ABSOLUTE (__AltT3Interrupt):DEFINED (__T3Interrupt)?ABSOLUTE (__T3Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000126          0x4 LONG 0x304 DEFINED (__AltSPI1ErrInterrupt)?ABSOLUTE (__AltSPI1ErrInterrupt):DEFINED (__SPI1ErrInterrupt)?ABSOLUTE (__SPI1ErrInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000128          0x4 LONG 0x304 DEFINED (__AltSPI1Interrupt)?ABSOLUTE (__AltSPI1Interrupt):DEFINED (__SPI1Interrupt)?ABSOLUTE (__SPI1Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00012a          0x4 LONG 0x546 DEFINED (__AltU1RXInterrupt)?ABSOLUTE (__AltU1RXInterrupt):DEFINED (__U1RXInterrupt)?ABSOLUTE (__U1RXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00012a          0x4 LONG 0x542 DEFINED (__AltU1RXInterrupt)?ABSOLUTE (__AltU1RXInterrupt):DEFINED (__U1RXInterrupt)?ABSOLUTE (__U1RXInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00012c          0x4 LONG 0x304 DEFINED (__AltU1TXInterrupt)?ABSOLUTE (__AltU1TXInterrupt):DEFINED (__U1TXInterrupt)?ABSOLUTE (__U1TXInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00012e          0x4 LONG 0x304 DEFINED (__AltADC1Interrupt)?ABSOLUTE (__AltADC1Interrupt):DEFINED (__ADC1Interrupt)?ABSOLUTE (__ADC1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000130          0x4 LONG 0x304 DEFINED (__AltDMA1Interrupt)?ABSOLUTE (__AltDMA1Interrupt):DEFINED (__DMA1Interrupt)?ABSOLUTE (__DMA1Interrupt):ABSOLUTE (__DefaultInterrupt)
@@ -1823,7 +1832,7 @@ LOAD default_isr
 LOAD data_init
 
 .debug_pubtypes
-                  0x0000d8        0x353
+                  0x0000d8        0x35d
  .debug_pubtypes
                   0x0000d8         0x31 build/sim/debug/_ext/506297139/sysconfig.o
  .debug_pubtypes
@@ -1839,46 +1848,46 @@ LOAD data_init
  .debug_pubtypes
                   0x000314         0xcd build/sim/debug/_ext/230937639/uart.o
  .debug_pubtypes
-                  0x0003e1         0x38 build/sim/debug/_ext/230937639/mcpwm.o
+                  0x0003e1         0x37 build/sim/debug/_ext/230937639/mcpwm.o
  .debug_pubtypes
-                  0x000419         0x12 build/sim/debug/main.o
+                  0x000418         0x1d build/sim/debug/main.o
 
 __c30_signature
-                  0x00042c         0x48
+                  0x000436         0x48
  __c30_signature
-                  0x00042c          0x6 build/sim/debug/_ext/506297139/sysconfig.o
+                  0x000436          0x6 build/sim/debug/_ext/506297139/sysconfig.o
  __c30_signature
-                  0x000432          0x6 build/sim/debug/_ext/230937639/adc.o
+                  0x00043c          0x6 build/sim/debug/_ext/230937639/adc.o
  __c30_signature
-                  0x000438          0x6 build/sim/debug/_ext/230937639/pps.o
+                  0x000442          0x6 build/sim/debug/_ext/230937639/pps.o
  __c30_signature
-                  0x00043e          0x6 build/sim/debug/_ext/230937639/qei.o
+                  0x000448          0x6 build/sim/debug/_ext/230937639/qei.o
  __c30_signature
-                  0x000444          0x6 build/sim/debug/_ext/230937639/spi.o
+                  0x00044e          0x6 build/sim/debug/_ext/230937639/spi.o
  __c30_signature
-                  0x00044a          0x6 build/sim/debug/_ext/230937639/timer.o
+                  0x000454          0x6 build/sim/debug/_ext/230937639/timer.o
  __c30_signature
-                  0x000450          0x6 build/sim/debug/_ext/230937639/uart.o
+                  0x00045a          0x6 build/sim/debug/_ext/230937639/uart.o
  __c30_signature
-                  0x000456          0x6 build/sim/debug/_ext/230937639/mcpwm.o
+                  0x000460          0x6 build/sim/debug/_ext/230937639/mcpwm.o
  __c30_signature
-                  0x00045c          0x6 build/sim/debug/main.o
+                  0x000466          0x6 build/sim/debug/main.o
  __c30_signature
-                  0x000462          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libpic30-elf.a(crt0_standard.o)
+                  0x00046c          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libpic30-elf.a(crt0_standard.o)
  __c30_signature
-                  0x000468          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libpic30-elf.a(data_init_standard.o)
+                  0x000472          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libpic30-elf.a(data_init_standard.o)
  __c30_signature
-                  0x00046e          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(udivsi3.eo)
+                  0x000478          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(udivsi3.eo)
 
-_0x1aab9b4530d46c3
+_0x19ab9b4530e3098
                     0x4780         0x30
- _0x1aab9b4530d46c3
+ _0x19ab9b4530e3098
                     0x4780         0x30 build/sim/debug/_ext/230937639/adc.o
                     0x4780                  _dmaBufferA
 
-_0x1aaba10530d46c3
+_0x19aba10530e3098
                     0x47c0         0x30
- _0x1aaba10530d46c3
+ _0x19aba10530e3098
                     0x47c0         0x30 build/sim/debug/_ext/230937639/adc.o
                     0x47c0                  _dmaBufferB
 
@@ -1917,76 +1926,79 @@ _0x1aaba10530d46c3
 .config_RBS       0xf80000          0x2
  .config_RBS      0xf80000          0x2 build/sim/debug/main.o
 
-.const              0x8328         0x68 load address 0x000328  
+.const              0x8328         0x64 load address 0x000328  
  .const             0x8328         0x34 build/sim/debug/_ext/230937639/pps.o
  .const             0x835c         0x24 build/sim/debug/_ext/230937639/timer.o
  .const             0x8380          0xc build/sim/debug/_ext/230937639/qei.o
- .const             0x838c          0x4 build/sim/debug/_ext/230937639/mcpwm.o
 
-.text             0x000390        0x4dc
- .text            0x000390        0x120 build/sim/debug/_ext/230937639/adc.o
-                  0x000406                  _adc_init
-                  0x00042e                  _adc_start
-                  0x000436                  _adc_stop
-                  0x00043c                  _adc_read
-                  0x000444                  __DMA0Interrupt
- .text            0x0004b0         0xda build/sim/debug/_ext/230937639/uart.o
-                  0x0004fe                  _uart_init
-                  0x00050c                  _uart_charReady
-                  0x000518                  _uart_getc
-                  0x000540                  _uart_putc
-                  0x000546                  __U1RXInterrupt
- .text            0x00058a         0xce build/sim/debug/_ext/230937639/timer.o
-                  0x00058a                  _timer_init
-                  0x0005a6                  _timer_set_ms
-                  0x0005ca                  _timer_set_us
-                  0x0005ee                  _timer_start
-                  0x000628                  _timer1_stop
- .text            0x000658         0xb0 build/sim/debug/_ext/230937639/pps.o
-                  0x000658                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP0
-                  0x00065e                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP1
-                  0x000664                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP2
-                  0x00066a                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP3
-                  0x000670                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP4
-                  0x000676                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP5
-                  0x00067c                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP6
-                  0x000682                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP7
-                  0x000688                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP8
-                  0x00068e                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP9
-                  0x000694                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP10
-                  0x00069a                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP11
-                  0x0006a6                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP12
-                  0x0006ac                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP13
-                  0x0006b2                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP14
-                  0x0006b8                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP15
-                  0x0006be                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP16
-                  0x0006c4                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP17
-                  0x0006ca                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP18
-                  0x0006d0                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP19
-                  0x0006d6                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP20
-                  0x0006dc                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP21
-                  0x0006e2                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP22
-                  0x0006e8                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP23
-                  0x0006ee                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP24
-                  0x0006f4                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP25
-                  0x0006fa                  _pps_mapRP
- .text            0x000708         0xa0 build/sim/debug/_ext/230937639/qei.o
-                  0x000708                  build/sim/debug/_ext/230937639/qei.o:_qei_pins2
-                  0x000742                  build/sim/debug/_ext/230937639/qei.o:_qei_pins1
-                  0x00077c                  _qei_init
-                  0x00079c                  _qei_setMode
-                  0x00079e                  _qei_getCNT
- .text            0x0007a8         0x68 build/sim/debug/_ext/230937639/spi.o
-                  0x0007fe                  _spi_init
-                  0x000804                  _spiWrite
- .text            0x000810         0x32 build/sim/debug/_ext/506297139/sysconfig.o
-                  0x00083c                  _sys_init
- .text            0x000842         0x2a build/sim/debug/_ext/230937639/mcpwm.o
-                  0x000866                  _mcpwm_init
+.text             0x00038c        0x530
+ .text            0x00038c        0x120 build/sim/debug/_ext/230937639/adc.o
+                  0x000402                  _adc_init
+                  0x00042a                  _adc_start
+                  0x000432                  _adc_stop
+                  0x000438                  _adc_read
+                  0x000440                  __DMA0Interrupt
+ .text            0x0004ac         0xda build/sim/debug/_ext/230937639/uart.o
+                  0x0004fa                  _uart_init
+                  0x000508                  _uart_charReady
+                  0x000514                  _uart_getc
+                  0x00053c                  _uart_putc
+                  0x000542                  __U1RXInterrupt
+ .text            0x000586         0xce build/sim/debug/_ext/230937639/timer.o
+                  0x000586                  _timer_init
+                  0x0005a2                  _timer_set_ms
+                  0x0005c6                  _timer_set_us
+                  0x0005ea                  _timer_start
+                  0x000624                  _timer1_stop
+ .text            0x000654         0xb0 build/sim/debug/_ext/230937639/pps.o
+                  0x000654                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP0
+                  0x00065a                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP1
+                  0x000660                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP2
+                  0x000666                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP3
+                  0x00066c                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP4
+                  0x000672                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP5
+                  0x000678                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP6
+                  0x00067e                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP7
+                  0x000684                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP8
+                  0x00068a                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP9
+                  0x000690                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP10
+                  0x000696                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP11
+                  0x0006a2                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP12
+                  0x0006a8                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP13
+                  0x0006ae                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP14
+                  0x0006b4                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP15
+                  0x0006ba                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP16
+                  0x0006c0                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP17
+                  0x0006c6                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP18
+                  0x0006cc                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP19
+                  0x0006d2                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP20
+                  0x0006d8                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP21
+                  0x0006de                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP22
+                  0x0006e4                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP23
+                  0x0006ea                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP24
+                  0x0006f0                  build/sim/debug/_ext/230937639/pps.o:_pps_mapRP25
+                  0x0006f6                  _pps_mapRP
+ .text            0x000704         0xa0 build/sim/debug/_ext/230937639/qei.o
+                  0x000704                  build/sim/debug/_ext/230937639/qei.o:_qei_pins2
+                  0x00073e                  build/sim/debug/_ext/230937639/qei.o:_qei_pins1
+                  0x000778                  _qei_init
+                  0x000798                  _qei_setMode
+                  0x00079a                  _qei_getCNT
+ .text            0x0007a4         0x7e build/sim/debug/_ext/230937639/mcpwm.o
+                  0x0007c0                  _mcpwm_init
+                  0x0007ce                  _mcpwm_setDC
+                  0x0007e4                  _mcpwm_setDCPC
+                  0x000818                  _mcpwm_start
+                  0x00081e                  _mcpwm_stop
+ .text            0x000822         0x68 build/sim/debug/_ext/230937639/spi.o
+                  0x000878                  _spi_init
+                  0x00087e                  _spiWrite
+ .text            0x00088a         0x32 build/sim/debug/_ext/506297139/sysconfig.o
+                  0x0008b6                  _sys_init
 
-.dinit            0x00086c         0x24
- .dinit           0x00086c         0x24 data_init
+.dinit            0x0008bc         0x24
+ .dinit           0x0008bc         0x24 data_init
 
-.text             0x000890          0x8
- .text            0x000890          0x8 build/sim/debug/main.o
-                  0x000890                  _main
+.text             0x0008e0         0x10
+ .text            0x0008e0         0x10 build/sim/debug/main.o
+                  0x0008e0                  _main

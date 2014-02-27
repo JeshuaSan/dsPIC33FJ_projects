@@ -8,8 +8,10 @@ int main()
 {
     sys_init();
 
-    mcpwm_init(10000U);
-
+    mcpwm_init(15000U);
+    mcpwm_setDCPC(MC_PWM1, 80);
+    mcpwm_setDCPC(MC_PWM2, 20);
+    mcpwm_start();
     while(1)
     {
 
