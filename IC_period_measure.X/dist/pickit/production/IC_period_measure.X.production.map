@@ -141,11 +141,11 @@ section                    address   length (PC units)   length (bytes) (dec)
 .const                      0x1d98               0x270           0x3a8  (936)
 .text                       0x2008               0x254           0x37e  (894)
 .dinit                      0x225c               0x1f2           0x2eb  (747)
-.text                       0x244e               0x8f0           0xd68  (3432)
-.init.delay32               0x2d3e                0x1c            0x2a  (42)
-.text                       0x2d5a                0x16            0x21  (33)
+.text                       0x244e               0x8f8           0xd74  (3444)
+.init.delay32               0x2d46                0x1c            0x2a  (42)
+.text                       0x2d62                0x16            0x21  (33)
 
-                     Total program memory used (bytes):         0x4128  (16680) 12%
+                     Total program memory used (bytes):         0x4134  (16692) 12%
 
 
 Data Memory  [Origin = 0x800, Length = 0x4000]
@@ -160,10 +160,10 @@ section                    address      alignment gaps    total length  (dec)
 .data.dpowers                0xdbc                   0            0xa0  (160)
 .data                        0xe5c                   0            0x2a  (42)
 .data._iob                   0xe86                   0            0x26  (38)
-_0x11a59b453128848          0x4780                   0            0x30  (48)
+_0x1aab9b453129562          0x4780                   0            0x30  (48)
 .bss                        0x47b0                   0             0x6  (6)
 .data.__C30_UART            0x47b6                   0             0x2  (2)
-_0x11a5a1053128848          0x47c0                   0            0x30  (48)
+_0x1aaba1053129562          0x47c0                   0            0x30  (48)
 
                         Total data memory used (bytes):          0x714  (1812) 11%
 
@@ -238,8 +238,8 @@ External Symbols in Program Memory (by address):
                   0x0017f6                  ___fixunsdfsi
                   0x001842                  ___floatundidf
                   0x001898                  ___floatunsidf
-                  0x00189c                  _frexpl
                   0x00189c                  _frexp
+                  0x00189c                  _frexpl
                   0x0018d6                  __funpack
                   0x001900                  ___muldf3
                   0x0019ea                  ___subdf3
@@ -314,7 +314,7 @@ External Symbols in Program Memory (by address):
                   0x0028e8                  _timer_set_ms
                   0x00290c                  _timer_set_us
                   0x002930                  _timer_start
-                  0x00296a                  _timer1_stop
+                  0x00296a                  _timer_stop
                   0x0029ca                  _oled_putc
                   0x002a1e                  _oled_puts
                   0x002a4e                  build/pickit/production/_ext/230937639/pps.o:_pps_mapRP0
@@ -355,12 +355,12 @@ External Symbols in Program Memory (by address):
                   0x002c12                  _mcpwm_start
                   0x002c18                  _mcpwm_stop
                   0x002c1c                  _main
-                  0x002c7e                  __T1Interrupt
-                  0x002ce4                  _spi_init
-                  0x002cea                  _spiWrite
-                  0x002d38                  _sys_init
-                  0x002d3e                  ___delay32
-                  0x002d5a                  _oled_putPixel
+                  0x002c86                  __T1Interrupt
+                  0x002cec                  _spi_init
+                  0x002cf2                  _spiWrite
+                  0x002d40                  _sys_init
+                  0x002d46                  ___delay32
+                  0x002d62                  _oled_putPixel
 
 External Symbols in Program Memory (by name):
 
@@ -368,10 +368,10 @@ External Symbols in Program Memory (by name):
                   0x000314                  __DefaultInterrupt
                   0x002556                  __IC1Interrupt
                   0x00258c                  __IC2Interrupt
-                  0x002c7e                  __T1Interrupt
+                  0x002c86                  __T1Interrupt
                   0x002888                  __U1RXInterrupt
                   0x001500                  ___adddf3
-                  0x002d3e                  ___delay32
+                  0x002d46                  ___delay32
                   0x00160e                  ___divdf3
                   0x001bb0                  ___divdi3
                   0x0015fa                  ___eqdf2
@@ -429,7 +429,7 @@ External Symbols in Program Memory (by name):
                   0x00275c                  _oled_printc
                   0x00279c                  _oled_printf
                   0x00276e                  _oled_prints
-                  0x002d5a                  _oled_putPixel
+                  0x002d62                  _oled_putPixel
                   0x0029ca                  _oled_putc
                   0x002a1e                  _oled_puts
                   0x002740                  _oled_render
@@ -438,8 +438,8 @@ External Symbols in Program Memory (by name):
                   0x002b94                  _qei_getCNT
                   0x002b72                  _qei_init
                   0x002b92                  _qei_setMode
-                  0x002cea                  _spiWrite
-                  0x002ce4                  _spi_init
+                  0x002cf2                  _spiWrite
+                  0x002cec                  _spi_init
                   0x002258                  _ssd1306_init
                   0x002030                  _ssd1306_send
                   0x00214a                  _ssd1306cmd_addrColumnAddress
@@ -469,12 +469,12 @@ External Symbols in Program Memory (by name):
                   0x002212                  _ssd1306cmd_setPrechargePeriod
                   0x002224                  _ssd1306cmd_setVDeselect
                   0x000338                  _strlen
-                  0x002d38                  _sys_init
-                  0x00296a                  _timer1_stop
+                  0x002d40                  _sys_init
                   0x0028cc                  _timer_init
                   0x0028e8                  _timer_set_ms
                   0x00290c                  _timer_set_us
                   0x002930                  _timer_start
+                  0x00296a                  _timer_stop
                   0x00284e                  _uart_charReady
                   0x00285a                  _uart_getc
                   0x002840                  _uart_init
@@ -748,7 +748,7 @@ __FUID3
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x5d91
+.debug_info       0x000000       0x5d86
  *(.debug_info)
  .debug_info      0x000000        0x7ab build/pickit/production/_ext/1321615235/oled.o
  .debug_info      0x0007ab        0x1ad build/pickit/production/_ext/1321615235/oled_draw.o
@@ -760,13 +760,13 @@ __FUID3
  .debug_info      0x002c28        0x809 build/pickit/production/_ext/230937639/pps.o
  .debug_info      0x003431        0x743 build/pickit/production/_ext/230937639/qei.o
  .debug_info      0x003b74        0x616 build/pickit/production/_ext/230937639/spi.o
- .debug_info      0x00418a        0x5a2 build/pickit/production/_ext/230937639/timer.o
- .debug_info      0x00472c        0xa10 build/pickit/production/_ext/230937639/uart.o
- .debug_info      0x00513c        0x96b build/pickit/production/_ext/230937639/ic.o
- .debug_info      0x005aa7        0x2ea build/pickit/production/main.o
+ .debug_info      0x00418a        0x594 build/pickit/production/_ext/230937639/timer.o
+ .debug_info      0x00471e        0xa10 build/pickit/production/_ext/230937639/uart.o
+ .debug_info      0x00512e        0x96b build/pickit/production/_ext/230937639/ic.o
+ .debug_info      0x005a99        0x2ed build/pickit/production/main.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0xe78
+.debug_abbrev     0x000000        0xe87
  *(.debug_abbrev)
  .debug_abbrev    0x000000        0x116 build/pickit/production/_ext/1321615235/oled.o
  .debug_abbrev    0x000116         0x5b build/pickit/production/_ext/1321615235/oled_draw.o
@@ -781,9 +781,9 @@ __FUID3
  .debug_abbrev    0x0009fc         0xc2 build/pickit/production/_ext/230937639/timer.o
  .debug_abbrev    0x000abe        0x183 build/pickit/production/_ext/230937639/uart.o
  .debug_abbrev    0x000c41        0x16c build/pickit/production/_ext/230937639/ic.o
- .debug_abbrev    0x000dad         0xcb build/pickit/production/main.o
+ .debug_abbrev    0x000dad         0xda build/pickit/production/main.o
 
-.debug_line       0x000000       0x2581
+.debug_line       0x000000       0x2589
  *(.debug_line)
  .debug_line      0x000000        0x318 build/pickit/production/_ext/1321615235/oled.o
  .debug_line      0x000318         0xaa build/pickit/production/_ext/1321615235/oled_draw.o
@@ -798,7 +798,7 @@ __FUID3
  .debug_line      0x001b71        0x272 build/pickit/production/_ext/230937639/timer.o
  .debug_line      0x001de3        0x27b build/pickit/production/_ext/230937639/uart.o
  .debug_line      0x00205e        0x346 build/pickit/production/_ext/230937639/ic.o
- .debug_line      0x0023a4        0x1dd build/pickit/production/main.o
+ .debug_line      0x0023a4        0x1e5 build/pickit/production/main.o
 
 .debug_frame      0x000000        0x8dc
  *(.debug_frame)
@@ -840,7 +840,7 @@ __FUID3
  *(.debug_macinfo)
 
 .debug_pubnames
-                  0x000000        0x757
+                  0x000000        0x756
  *(.debug_pubnames)
  .debug_pubnames
                   0x000000         0x98 build/pickit/production/_ext/1321615235/oled.o
@@ -863,13 +863,13 @@ __FUID3
  .debug_pubnames
                   0x0005bf         0x2c build/pickit/production/_ext/230937639/spi.o
  .debug_pubnames
-                  0x0005eb         0x63 build/pickit/production/_ext/230937639/timer.o
+                  0x0005eb         0x62 build/pickit/production/_ext/230937639/timer.o
  .debug_pubnames
-                  0x00064e         0x62 build/pickit/production/_ext/230937639/uart.o
+                  0x00064d         0x62 build/pickit/production/_ext/230937639/uart.o
  .debug_pubnames
-                  0x0006b0         0x6c build/pickit/production/_ext/230937639/ic.o
+                  0x0006af         0x6c build/pickit/production/_ext/230937639/ic.o
  .debug_pubnames
-                  0x00071c         0x3b build/pickit/production/main.o
+                  0x00071b         0x3b build/pickit/production/main.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -917,7 +917,7 @@ __FUID3
                   0x000014          0x4 LONG 0x314 DEFINED (__INT0Interrupt)?ABSOLUTE (__INT0Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000016          0x4 LONG 0x2556 DEFINED (__IC1Interrupt)?ABSOLUTE (__IC1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000018          0x4 LONG 0x314 DEFINED (__OC1Interrupt)?ABSOLUTE (__OC1Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00001a          0x4 LONG 0x2c7e DEFINED (__T1Interrupt)?ABSOLUTE (__T1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00001a          0x4 LONG 0x2c86 DEFINED (__T1Interrupt)?ABSOLUTE (__T1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00001c          0x4 LONG 0x2676 DEFINED (__DMA0Interrupt)?ABSOLUTE (__DMA0Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00001e          0x4 LONG 0x258c DEFINED (__IC2Interrupt)?ABSOLUTE (__IC2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000020          0x4 LONG 0x314 DEFINED (__OC2Interrupt)?ABSOLUTE (__OC2Interrupt):ABSOLUTE (__DefaultInterrupt)
@@ -1045,7 +1045,7 @@ __FUID3
                   0x000114          0x4 LONG 0x314 DEFINED (__AltINT0Interrupt)?ABSOLUTE (__AltINT0Interrupt):DEFINED (__INT0Interrupt)?ABSOLUTE (__INT0Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000116          0x4 LONG 0x2556 DEFINED (__AltIC1Interrupt)?ABSOLUTE (__AltIC1Interrupt):DEFINED (__IC1Interrupt)?ABSOLUTE (__IC1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000118          0x4 LONG 0x314 DEFINED (__AltOC1Interrupt)?ABSOLUTE (__AltOC1Interrupt):DEFINED (__OC1Interrupt)?ABSOLUTE (__OC1Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00011a          0x4 LONG 0x2c7e DEFINED (__AltT1Interrupt)?ABSOLUTE (__AltT1Interrupt):DEFINED (__T1Interrupt)?ABSOLUTE (__T1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00011a          0x4 LONG 0x2c86 DEFINED (__AltT1Interrupt)?ABSOLUTE (__AltT1Interrupt):DEFINED (__T1Interrupt)?ABSOLUTE (__T1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00011c          0x4 LONG 0x2676 DEFINED (__AltDMA0Interrupt)?ABSOLUTE (__AltDMA0Interrupt):DEFINED (__DMA0Interrupt)?ABSOLUTE (__DMA0Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00011e          0x4 LONG 0x258c DEFINED (__AltIC2Interrupt)?ABSOLUTE (__AltIC2Interrupt):DEFINED (__IC2Interrupt)?ABSOLUTE (__IC2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000120          0x4 LONG 0x314 DEFINED (__AltOC2Interrupt)?ABSOLUTE (__AltOC2Interrupt):DEFINED (__OC2Interrupt)?ABSOLUTE (__OC2Interrupt):ABSOLUTE (__DefaultInterrupt)
@@ -2252,7 +2252,7 @@ LOAD default_isr
 LOAD data_init
 
 .debug_pubtypes
-                  0x000150        0x54c
+                  0x000150        0x542
  .debug_pubtypes
                   0x000150         0x85 build/pickit/production/_ext/1321615235/oled.o
  .debug_pubtypes
@@ -2274,126 +2274,126 @@ LOAD data_init
  .debug_pubtypes
                   0x000444         0x94 build/pickit/production/_ext/230937639/spi.o
  .debug_pubtypes
-                  0x0004d8         0x3f build/pickit/production/_ext/230937639/timer.o
+                  0x0004d8         0x35 build/pickit/production/_ext/230937639/timer.o
  .debug_pubtypes
-                  0x000517         0xcd build/pickit/production/_ext/230937639/uart.o
+                  0x00050d         0xcd build/pickit/production/_ext/230937639/uart.o
  .debug_pubtypes
-                  0x0005e4         0x84 build/pickit/production/_ext/230937639/ic.o
+                  0x0005da         0x84 build/pickit/production/_ext/230937639/ic.o
  .debug_pubtypes
-                  0x000668         0x34 build/pickit/production/main.o
+                  0x00065e         0x34 build/pickit/production/main.o
 
 __c30_signature
-                  0x00069c        0x12c
+                  0x000692        0x12c
  __c30_signature
-                  0x00069c          0x6 build/pickit/production/_ext/1321615235/oled.o
+                  0x000692          0x6 build/pickit/production/_ext/1321615235/oled.o
  __c30_signature
-                  0x0006a2          0x6 build/pickit/production/_ext/1321615235/oled_draw.o
+                  0x000698          0x6 build/pickit/production/_ext/1321615235/oled_draw.o
  __c30_signature
-                  0x0006a8          0x6 build/pickit/production/_ext/1321615235/oled_print.o
+                  0x00069e          0x6 build/pickit/production/_ext/1321615235/oled_print.o
  __c30_signature
-                  0x0006ae          0x6 build/pickit/production/_ext/1321615235/SSD1306.o
+                  0x0006a4          0x6 build/pickit/production/_ext/1321615235/SSD1306.o
  __c30_signature
-                  0x0006b4          0x6 build/pickit/production/_ext/506297139/sysconfig.o
+                  0x0006aa          0x6 build/pickit/production/_ext/506297139/sysconfig.o
  __c30_signature
-                  0x0006ba          0x6 build/pickit/production/_ext/230937639/adc.o
+                  0x0006b0          0x6 build/pickit/production/_ext/230937639/adc.o
  __c30_signature
-                  0x0006c0          0x6 build/pickit/production/_ext/230937639/mcpwm.o
+                  0x0006b6          0x6 build/pickit/production/_ext/230937639/mcpwm.o
  __c30_signature
-                  0x0006c6          0x6 build/pickit/production/_ext/230937639/pps.o
+                  0x0006bc          0x6 build/pickit/production/_ext/230937639/pps.o
  __c30_signature
-                  0x0006cc          0x6 build/pickit/production/_ext/230937639/qei.o
+                  0x0006c2          0x6 build/pickit/production/_ext/230937639/qei.o
  __c30_signature
-                  0x0006d2          0x6 build/pickit/production/_ext/230937639/spi.o
+                  0x0006c8          0x6 build/pickit/production/_ext/230937639/spi.o
  __c30_signature
-                  0x0006d8          0x6 build/pickit/production/_ext/230937639/timer.o
+                  0x0006ce          0x6 build/pickit/production/_ext/230937639/timer.o
  __c30_signature
-                  0x0006de          0x6 build/pickit/production/_ext/230937639/uart.o
+                  0x0006d4          0x6 build/pickit/production/_ext/230937639/uart.o
  __c30_signature
-                  0x0006e4          0x6 build/pickit/production/_ext/230937639/ic.o
+                  0x0006da          0x6 build/pickit/production/_ext/230937639/ic.o
  __c30_signature
-                  0x0006ea          0x6 build/pickit/production/main.o
+                  0x0006e0          0x6 build/pickit/production/main.o
  __c30_signature
-                  0x0006f0          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libpic30-elf.a(crt0_standard.o)
+                  0x0006e6          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libpic30-elf.a(crt0_standard.o)
  __c30_signature
-                  0x0006f6          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libpic30-elf.a(data_init_standard.o)
+                  0x0006ec          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libpic30-elf.a(data_init_standard.o)
  __c30_signature
-                  0x0006fc          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libpic30-elf.a(delay32.eo)
+                  0x0006f2          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libpic30-elf.a(delay32.eo)
  __c30_signature
-                  0x000702          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(udivsi3.eo)
+                  0x0006f8          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(udivsi3.eo)
  __c30_signature
-                  0x000708          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(strlen.eo)
+                  0x0006fe          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(strlen.eo)
  __c30_signature
-                  0x00070e          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(vsnprintf.eo)
+                  0x000704          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(vsnprintf.eo)
  __c30_signature
-                  0x000714          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(doprnt.eo)
+                  0x00070a          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(doprnt.eo)
  __c30_signature
-                  0x00071a          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(fputc.eo)
+                  0x000710          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(fputc.eo)
  __c30_signature
-                  0x000720          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(powers.eo)
+                  0x000716          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(powers.eo)
  __c30_signature
-                  0x000726          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(_iob.eo)
+                  0x00071c          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(_iob.eo)
  __c30_signature
-                  0x00072c          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(flsbuf.eo)
+                  0x000722          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libc-elf.a(flsbuf.eo)
  __c30_signature
-                  0x000732          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libpic30-elf.a(write.eo)
+                  0x000728          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libpic30-elf.a(write.eo)
  __c30_signature
-                  0x000738          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libpic30-elf.a(c30_uart.eo)
+                  0x00072e          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libpic30-elf.a(c30_uart.eo)
  __c30_signature
-                  0x00073e          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(adddf3.eo)
+                  0x000734          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(adddf3.eo)
  __c30_signature
-                  0x000744          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(deqltle.eo)
+                  0x00073a          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(deqltle.eo)
  __c30_signature
-                  0x00074a          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(dgtge.eo)
+                  0x000740          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(dgtge.eo)
  __c30_signature
-                  0x000750          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(divdf3.eo)
+                  0x000746          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(divdf3.eo)
  __c30_signature
-                  0x000756          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(dne.eo)
+                  0x00074c          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(dne.eo)
  __c30_signature
-                  0x00075c          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(dpack.eo)
+                  0x000752          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(dpack.eo)
  __c30_signature
-                  0x000762          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(dunpack2.eo)
+                  0x000758          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(dunpack2.eo)
  __c30_signature
-                  0x000768          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(extendsfdf.eo)
+                  0x00075e          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(extendsfdf.eo)
  __c30_signature
-                  0x00076e          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(fixunsdfdi.eo)
+                  0x000764          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(fixunsdfdi.eo)
  __c30_signature
-                  0x000774          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(fixunsdfsi.eo)
+                  0x00076a          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(fixunsdfsi.eo)
  __c30_signature
-                  0x00077a          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(floatundidf.eo)
+                  0x000770          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(floatundidf.eo)
  __c30_signature
-                  0x000780          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(floatunsidf.eo)
+                  0x000776          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(floatunsidf.eo)
  __c30_signature
-                  0x000786          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(frexp.eo)
+                  0x00077c          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(frexp.eo)
  __c30_signature
-                  0x00078c          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(funpack.eo)
+                  0x000782          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(funpack.eo)
  __c30_signature
-                  0x000792          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(muldf3.eo)
+                  0x000788          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(muldf3.eo)
  __c30_signature
-                  0x000798          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(subdf3.eo)
+                  0x00078e          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(subdf3.eo)
  __c30_signature
-                  0x00079e          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(truncdfsf.eo)
+                  0x000794          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(truncdfsf.eo)
  __c30_signature
-                  0x0007a4          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(divmoddi3.eo)
+                  0x00079a          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(divmoddi3.eo)
  __c30_signature
-                  0x0007aa          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(dcompare.eo)
+                  0x0007a0          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(dcompare.eo)
  __c30_signature
-                  0x0007b0          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(dpropagateNaN.eo)
+                  0x0007a6          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(dpropagateNaN.eo)
  __c30_signature
-                  0x0007b6          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(dtype.eo)
+                  0x0007ac          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(dtype.eo)
  __c30_signature
-                  0x0007bc          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(dunpack.eo)
+                  0x0007b2          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(dunpack.eo)
  __c30_signature
-                  0x0007c2          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(fpack.eo)
+                  0x0007b8          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(fpack.eo)
 
-_0x11a59b453128848
+_0x1aab9b453129562
                     0x4780         0x30
- _0x11a59b453128848
+ _0x1aab9b453129562
                     0x4780         0x30 build/pickit/production/_ext/230937639/adc.o
                     0x4780                  _dmaBufferA
 
-_0x11a5a1053128848
+_0x1aaba1053129562
                     0x47c0         0x30
- _0x11a5a1053128848
+ _0x1aaba1053129562
                     0x47c0         0x30 build/pickit/production/_ext/230937639/adc.o
                     0x47c0                  _dmaBufferB
 
@@ -2512,7 +2512,7 @@ _0x11a5a1053128848
 .dinit            0x00225c        0x1f2
  .dinit           0x00225c        0x1f2 data_init
 
-.text             0x00244e        0x8f0
+.text             0x00244e        0x8f8
  .text            0x00244e        0x174 build/pickit/production/_ext/230937639/ic.o
                   0x00244e                  build/pickit/production/_ext/230937639/ic.o:_ic_pins8
                   0x00247c                  build/pickit/production/_ext/230937639/ic.o:_ic_pins7
@@ -2550,7 +2550,7 @@ _0x11a5a1053128848
                   0x0028e8                  _timer_set_ms
                   0x00290c                  _timer_set_us
                   0x002930                  _timer_start
-                  0x00296a                  _timer1_stop
+                  0x00296a                  _timer_stop
  .text            0x00299a         0xb4 build/pickit/production/_ext/1321615235/oled_print.o
                   0x0029ca                  _oled_putc
                   0x002a1e                  _oled_puts
@@ -2594,19 +2594,19 @@ _0x11a5a1053128848
                   0x002bde                  _mcpwm_setDCPC
                   0x002c12                  _mcpwm_start
                   0x002c18                  _mcpwm_stop
- .text            0x002c1c         0x72 build/pickit/production/main.o
+ .text            0x002c1c         0x7a build/pickit/production/main.o
                   0x002c1c                  _main
-                  0x002c7e                  __T1Interrupt
- .text            0x002c8e         0x68 build/pickit/production/_ext/230937639/spi.o
-                  0x002ce4                  _spi_init
-                  0x002cea                  _spiWrite
- .text            0x002cf6         0x48 build/pickit/production/_ext/506297139/sysconfig.o
-                  0x002d38                  _sys_init
+                  0x002c86                  __T1Interrupt
+ .text            0x002c96         0x68 build/pickit/production/_ext/230937639/spi.o
+                  0x002cec                  _spi_init
+                  0x002cf2                  _spiWrite
+ .text            0x002cfe         0x48 build/pickit/production/_ext/506297139/sysconfig.o
+                  0x002d40                  _sys_init
 
-.init.delay32     0x002d3e         0x1c
- .init.delay32    0x002d3e         0x1c /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libpic30-elf.a(delay32.eo)
-                  0x002d3e                  ___delay32
+.init.delay32     0x002d46         0x1c
+ .init.delay32    0x002d46         0x1c /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libpic30-elf.a(delay32.eo)
+                  0x002d46                  ___delay32
 
-.text             0x002d5a         0x16
- .text            0x002d5a         0x16 build/pickit/production/_ext/1321615235/oled_draw.o
-                  0x002d5a                  _oled_putPixel
+.text             0x002d62         0x16
+ .text            0x002d62         0x16 build/pickit/production/_ext/1321615235/oled_draw.o
+                  0x002d62                  _oled_putPixel
