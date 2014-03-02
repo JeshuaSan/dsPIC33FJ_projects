@@ -19,8 +19,8 @@ int main(void)
 
     ic_init(_IC_1, IC_1);
     ic_start(_IC_1,_IC_EVERY_RISING);
-    uint16_t period[2];
-    uint16_t freq[2];
+    uint16_t period[] = {0, 0};
+    uint16_t freq[] = {0, 0};
 
     oled_init();
     oled_clearDisplay();
