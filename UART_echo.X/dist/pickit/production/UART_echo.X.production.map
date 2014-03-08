@@ -67,10 +67,10 @@ section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200               0x128           0x1bc  (444)
 .const                       0x328                0x64            0x96  (150)
-.text                        0x38c               0x4f8           0x774  (1908)
-.dinit                       0x884                0x24            0x36  (54)
+.text                        0x38c               0x4f2           0x76b  (1899)
+.dinit                       0x87e                0x24            0x36  (54)
 
-                     Total program memory used (bytes):          0x9fc  (2556) 1%
+                     Total program memory used (bytes):          0x9f3  (2547) 1%
 
 
 Data Memory  [Origin = 0x800, Length = 0x4000]
@@ -79,8 +79,8 @@ section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
 .nbss                        0x800                   0            0x42  (66)
 .ndata                       0x842                   0             0xe  (14)
-_0x22ab9b4531a79fb          0x4780                   0            0x30  (48)
-_0x22aba10531a79fb          0x47c0                   0            0x30  (48)
+_0x12ab9b4531a85a7          0x4780                   0            0x30  (48)
+_0x12aba10531a85a7          0x47c0                   0            0x30  (48)
 
                         Total data memory used (bytes):           0xb0  (176) 1%
 
@@ -379,7 +379,7 @@ __FUID3
  .debug_abbrev    0x000665        0x183 build/pickit/production/_ext/230937639/uart.o
  .debug_abbrev    0x0007e8         0xa4 build/pickit/production/main.o
 
-.debug_line       0x000000       0x13da
+.debug_line       0x000000       0x13ca
  *(.debug_line)
  .debug_line      0x000000        0x157 build/pickit/production/_ext/506297139/sysconfig.o
  .debug_line      0x000157        0x3b6 build/pickit/production/_ext/230937639/adc.o
@@ -388,7 +388,7 @@ __FUID3
  .debug_line      0x000bcd        0x1fc build/pickit/production/_ext/230937639/spi.o
  .debug_line      0x000dc9        0x272 build/pickit/production/_ext/230937639/timer.o
  .debug_line      0x00103b        0x27b build/pickit/production/_ext/230937639/uart.o
- .debug_line      0x0012b6        0x124 build/pickit/production/main.o
+ .debug_line      0x0012b6        0x114 build/pickit/production/main.o
 
 .debug_frame      0x000000        0x460
  *(.debug_frame)
@@ -1850,15 +1850,15 @@ __c30_signature
  __c30_signature
                   0x000458          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(udivsi3.eo)
 
-_0x22ab9b4531a79fb
+_0x12ab9b4531a85a7
                     0x4780         0x30
- _0x22ab9b4531a79fb
+ _0x12ab9b4531a85a7
                     0x4780         0x30 build/pickit/production/_ext/230937639/adc.o
                     0x4780                  _dmaBufferA
 
-_0x22aba10531a79fb
+_0x12aba10531a85a7
                     0x47c0         0x30
- _0x22aba10531a79fb
+ _0x12aba10531a85a7
                     0x47c0         0x30 build/pickit/production/_ext/230937639/adc.o
                     0x47c0                  _dmaBufferB
 
@@ -1902,7 +1902,7 @@ _0x22aba10531a79fb
  .const             0x835c         0x24 build/pickit/production/_ext/230937639/timer.o
  .const             0x8380          0xc build/pickit/production/_ext/230937639/qei.o
 
-.text             0x00038c        0x4f8
+.text             0x00038c        0x4f2
  .text            0x00038c        0x120 build/pickit/production/_ext/230937639/adc.o
                   0x000402                  _adc_init
                   0x00042a                  _adc_start
@@ -1960,8 +1960,8 @@ _0x22aba10531a79fb
                   0x000800                  _spiWrite
  .text            0x00080c         0x48 build/pickit/production/_ext/506297139/sysconfig.o
                   0x00084e                  _sys_init
- .text            0x000854         0x30 build/pickit/production/main.o
+ .text            0x000854         0x2a build/pickit/production/main.o
                   0x000854                  _main
 
-.dinit            0x000884         0x24
- .dinit           0x000884         0x24 data_init
+.dinit            0x00087e         0x24
+ .dinit           0x00087e         0x24 data_init
