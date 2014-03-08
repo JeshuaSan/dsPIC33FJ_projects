@@ -9,6 +9,11 @@ int main(void)
 {
     sys_init();
     uart_init(115200U);
+
+    uart_putc('c');
+    uart_putc('a');
+    uart_putc('t');
+
     while(1)
     {
         if (uart_charReady())
