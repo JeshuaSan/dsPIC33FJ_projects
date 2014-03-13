@@ -19,7 +19,7 @@ int main(void)
 
     cobs_encode(rawBuffer, 14, encodedBuffer);
     cobs_decode(encodedBuffer, 15, decodedBuffer);
-    uint8_t *ptrBuffer = rawBuffer;
+    uint8_t *ptrBuffer = encodedBuffer;
 
     while(1)
     {
@@ -27,14 +27,14 @@ int main(void)
         {
             uint8_t echo = uart_getc();
             uint8_t i = SIZE+1;
-            for(i=0; i<14; ++i)
+            for(; i > 0; --i)
             {
                 uart_putc(*ptrBuffer);
                 ++ptrBuffer;
             }
             LED ^= 1;
         }
-        ptrBuffer = rawBuffer;
+        ptrBuffer = encodedBuffer;
     }
     return (0);
 }
