@@ -17,8 +17,8 @@ int main(void)
     uint8_t decodedBuffer[SIZE] = {0};
 
 
-    cobs_encode(rawBuffer, 14, encodedBuffer);
-    cobs_decode(encodedBuffer, 15, decodedBuffer);
+    cobs_encode(rawBuffer, SIZE, encodedBuffer);
+    cobs_decode(encodedBuffer, (SIZE+1), decodedBuffer);
     uint8_t *ptrBuffer = encodedBuffer;
 
     while(1)

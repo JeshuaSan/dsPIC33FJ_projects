@@ -70,10 +70,10 @@ section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200               0x138           0x1d4  (468)
 .const                       0x338                0x84            0xc6  (198)
-.text                        0x3bc               0x7f6           0xbf1  (3057)
-.dinit                       0xbb2                0x2a            0x3f  (63)
+.text                        0x3bc               0x7fa           0xbf7  (3063)
+.dinit                       0xbb6                0x2a            0x3f  (63)
 
-                     Total program memory used (bytes):          0xeca  (3786) 2%
+                     Total program memory used (bytes):          0xed0  (3792) 2%
 
 
 Data Memory  [Origin = 0x800, Length = 0x4000]
@@ -83,8 +83,8 @@ section                    address      alignment gaps    total length  (dec)
 .nbss                        0x800                   0            0x84  (132)
 .ndata                       0x884                   0             0xe  (14)
 .nbss                        0x892                   0             0x8  (8)
-_0x11a59b45325e3b7          0x4780                   0            0x30  (48)
-_0x11a5a105325e3b7          0x47c0                   0            0x30  (48)
+_0x19ab9b45325eb04          0x4780                   0            0x30  (48)
+_0x19aba105325eb04          0x47c0                   0            0x30  (48)
 
                         Total data memory used (bytes):           0xfa  (250) 1%
 
@@ -136,60 +136,60 @@ External Symbols in Program Memory (by address):
                   0x0005d6                  _adc_stop
                   0x0005dc                  _adc_read
                   0x0005e4                  __DMA0Interrupt
-                  0x00069e                  _uart_init
-                  0x0006ac                  _uart_charReady
-                  0x0006b8                  _uart_getc
-                  0x0006d6                  _uart_putc
-                  0x0006fa                  __U1RXInterrupt
-                  0x00073e                  __U1TXInterrupt
-                  0x000766                  _timer_init
-                  0x000782                  _timer_set_ms
-                  0x0007a6                  _timer_set_us
-                  0x0007ca                  _timer_start
-                  0x000804                  _timer_stop
-                  0x000834                  build/default/production/_ext/230937639/pps.o:_pps_mapRP0
-                  0x00083a                  build/default/production/_ext/230937639/pps.o:_pps_mapRP1
-                  0x000840                  build/default/production/_ext/230937639/pps.o:_pps_mapRP2
-                  0x000846                  build/default/production/_ext/230937639/pps.o:_pps_mapRP3
-                  0x00084c                  build/default/production/_ext/230937639/pps.o:_pps_mapRP4
-                  0x000852                  build/default/production/_ext/230937639/pps.o:_pps_mapRP5
-                  0x000858                  build/default/production/_ext/230937639/pps.o:_pps_mapRP6
-                  0x00085e                  build/default/production/_ext/230937639/pps.o:_pps_mapRP7
-                  0x000864                  build/default/production/_ext/230937639/pps.o:_pps_mapRP8
-                  0x00086a                  build/default/production/_ext/230937639/pps.o:_pps_mapRP9
-                  0x000870                  build/default/production/_ext/230937639/pps.o:_pps_mapRP10
-                  0x000876                  build/default/production/_ext/230937639/pps.o:_pps_mapRP11
-                  0x000882                  build/default/production/_ext/230937639/pps.o:_pps_mapRP12
-                  0x000888                  build/default/production/_ext/230937639/pps.o:_pps_mapRP13
-                  0x00088e                  build/default/production/_ext/230937639/pps.o:_pps_mapRP14
-                  0x000894                  build/default/production/_ext/230937639/pps.o:_pps_mapRP15
-                  0x00089a                  build/default/production/_ext/230937639/pps.o:_pps_mapRP16
-                  0x0008a0                  build/default/production/_ext/230937639/pps.o:_pps_mapRP17
-                  0x0008a6                  build/default/production/_ext/230937639/pps.o:_pps_mapRP18
-                  0x0008ac                  build/default/production/_ext/230937639/pps.o:_pps_mapRP19
-                  0x0008b2                  build/default/production/_ext/230937639/pps.o:_pps_mapRP20
-                  0x0008b8                  build/default/production/_ext/230937639/pps.o:_pps_mapRP21
-                  0x0008be                  build/default/production/_ext/230937639/pps.o:_pps_mapRP22
-                  0x0008c4                  build/default/production/_ext/230937639/pps.o:_pps_mapRP23
-                  0x0008ca                  build/default/production/_ext/230937639/pps.o:_pps_mapRP24
-                  0x0008d0                  build/default/production/_ext/230937639/pps.o:_pps_mapRP25
-                  0x0008d6                  _pps_mapRP
-                  0x0008e4                  build/default/production/_ext/230937639/qei.o:_qei_pins2
-                  0x00091e                  build/default/production/_ext/230937639/qei.o:_qei_pins1
-                  0x000958                  _qei_init
-                  0x000978                  _qei_setMode
-                  0x00097a                  _qei_getCNT
-                  0x000984                  _cobs_encode
-                  0x0009bc                  _cobs_decode
-                  0x000a38                  _mcpwm_init
-                  0x000a46                  _mcpwm_setDC
-                  0x000a5c                  _mcpwm_setDCPC
-                  0x000a90                  _mcpwm_start
-                  0x000a96                  _mcpwm_stop
-                  0x000af0                  _spi_init
-                  0x000af6                  _spiWrite
-                  0x000b02                  _main
-                  0x000bac                  _sys_init
+                  0x0006a6                  _uart_init
+                  0x0006b4                  _uart_charReady
+                  0x0006c0                  _uart_getc
+                  0x0006de                  _uart_putc
+                  0x0006fe                  __U1RXInterrupt
+                  0x000742                  __U1TXInterrupt
+                  0x00076a                  _timer_init
+                  0x000786                  _timer_set_ms
+                  0x0007aa                  _timer_set_us
+                  0x0007ce                  _timer_start
+                  0x000808                  _timer_stop
+                  0x000838                  build/default/production/_ext/230937639/pps.o:_pps_mapRP0
+                  0x00083e                  build/default/production/_ext/230937639/pps.o:_pps_mapRP1
+                  0x000844                  build/default/production/_ext/230937639/pps.o:_pps_mapRP2
+                  0x00084a                  build/default/production/_ext/230937639/pps.o:_pps_mapRP3
+                  0x000850                  build/default/production/_ext/230937639/pps.o:_pps_mapRP4
+                  0x000856                  build/default/production/_ext/230937639/pps.o:_pps_mapRP5
+                  0x00085c                  build/default/production/_ext/230937639/pps.o:_pps_mapRP6
+                  0x000862                  build/default/production/_ext/230937639/pps.o:_pps_mapRP7
+                  0x000868                  build/default/production/_ext/230937639/pps.o:_pps_mapRP8
+                  0x00086e                  build/default/production/_ext/230937639/pps.o:_pps_mapRP9
+                  0x000874                  build/default/production/_ext/230937639/pps.o:_pps_mapRP10
+                  0x00087a                  build/default/production/_ext/230937639/pps.o:_pps_mapRP11
+                  0x000886                  build/default/production/_ext/230937639/pps.o:_pps_mapRP12
+                  0x00088c                  build/default/production/_ext/230937639/pps.o:_pps_mapRP13
+                  0x000892                  build/default/production/_ext/230937639/pps.o:_pps_mapRP14
+                  0x000898                  build/default/production/_ext/230937639/pps.o:_pps_mapRP15
+                  0x00089e                  build/default/production/_ext/230937639/pps.o:_pps_mapRP16
+                  0x0008a4                  build/default/production/_ext/230937639/pps.o:_pps_mapRP17
+                  0x0008aa                  build/default/production/_ext/230937639/pps.o:_pps_mapRP18
+                  0x0008b0                  build/default/production/_ext/230937639/pps.o:_pps_mapRP19
+                  0x0008b6                  build/default/production/_ext/230937639/pps.o:_pps_mapRP20
+                  0x0008bc                  build/default/production/_ext/230937639/pps.o:_pps_mapRP21
+                  0x0008c2                  build/default/production/_ext/230937639/pps.o:_pps_mapRP22
+                  0x0008c8                  build/default/production/_ext/230937639/pps.o:_pps_mapRP23
+                  0x0008ce                  build/default/production/_ext/230937639/pps.o:_pps_mapRP24
+                  0x0008d4                  build/default/production/_ext/230937639/pps.o:_pps_mapRP25
+                  0x0008da                  _pps_mapRP
+                  0x0008e8                  build/default/production/_ext/230937639/qei.o:_qei_pins2
+                  0x000922                  build/default/production/_ext/230937639/qei.o:_qei_pins1
+                  0x00095c                  _qei_init
+                  0x00097c                  _qei_setMode
+                  0x00097e                  _qei_getCNT
+                  0x000988                  _cobs_encode
+                  0x0009c0                  _cobs_decode
+                  0x000a3c                  _mcpwm_init
+                  0x000a4a                  _mcpwm_setDC
+                  0x000a60                  _mcpwm_setDCPC
+                  0x000a94                  _mcpwm_start
+                  0x000a9a                  _mcpwm_stop
+                  0x000af4                  _spi_init
+                  0x000afa                  _spiWrite
+                  0x000b06                  _main
+                  0x000bb0                  _sys_init
 
 External Symbols in Program Memory (by name):
 
@@ -197,8 +197,8 @@ External Symbols in Program Memory (by name):
                   0x000314                  __DefaultInterrupt
                   0x0004c4                  __IC1Interrupt
                   0x0004fa                  __IC2Interrupt
-                  0x0006fa                  __U1RXInterrupt
-                  0x00073e                  __U1TXInterrupt
+                  0x0006fe                  __U1RXInterrupt
+                  0x000742                  __U1TXInterrupt
                   0x000318                  ___udivsi3
                   0x000236                  __data_init
                   0x000236                  __data_init_standard
@@ -208,66 +208,66 @@ External Symbols in Program Memory (by name):
                   0x0005dc                  _adc_read
                   0x0005ce                  _adc_start
                   0x0005d6                  _adc_stop
-                  0x0009bc                  _cobs_decode
-                  0x000984                  _cobs_encode
+                  0x0009c0                  _cobs_decode
+                  0x000988                  _cobs_encode
                   0x0004bc                  _ic_getPeriod
                   0x00046c                  _ic_init
                   0x000488                  _ic_start
                   0x0004aa                  _ic_stop
-                  0x000b02                  _main
-                  0x000a38                  _mcpwm_init
-                  0x000a46                  _mcpwm_setDC
-                  0x000a5c                  _mcpwm_setDCPC
-                  0x000a90                  _mcpwm_start
-                  0x000a96                  _mcpwm_stop
-                  0x0008d6                  _pps_mapRP
-                  0x00097a                  _qei_getCNT
-                  0x000958                  _qei_init
-                  0x000978                  _qei_setMode
-                  0x000af6                  _spiWrite
-                  0x000af0                  _spi_init
-                  0x000bac                  _sys_init
-                  0x000766                  _timer_init
-                  0x000782                  _timer_set_ms
-                  0x0007a6                  _timer_set_us
-                  0x0007ca                  _timer_start
-                  0x000804                  _timer_stop
-                  0x0006ac                  _uart_charReady
-                  0x0006b8                  _uart_getc
-                  0x00069e                  _uart_init
-                  0x0006d6                  _uart_putc
+                  0x000b06                  _main
+                  0x000a3c                  _mcpwm_init
+                  0x000a4a                  _mcpwm_setDC
+                  0x000a60                  _mcpwm_setDCPC
+                  0x000a94                  _mcpwm_start
+                  0x000a9a                  _mcpwm_stop
+                  0x0008da                  _pps_mapRP
+                  0x00097e                  _qei_getCNT
+                  0x00095c                  _qei_init
+                  0x00097c                  _qei_setMode
+                  0x000afa                  _spiWrite
+                  0x000af4                  _spi_init
+                  0x000bb0                  _sys_init
+                  0x00076a                  _timer_init
+                  0x000786                  _timer_set_ms
+                  0x0007aa                  _timer_set_us
+                  0x0007ce                  _timer_start
+                  0x000808                  _timer_stop
+                  0x0006b4                  _uart_charReady
+                  0x0006c0                  _uart_getc
+                  0x0006a6                  _uart_init
+                  0x0006de                  _uart_putc
                   0x000442                  build/default/production/_ext/230937639/ic.o:_ic_pins1
                   0x000414                  build/default/production/_ext/230937639/ic.o:_ic_pins2
                   0x0003ea                  build/default/production/_ext/230937639/ic.o:_ic_pins7
                   0x0003bc                  build/default/production/_ext/230937639/ic.o:_ic_pins8
-                  0x000834                  build/default/production/_ext/230937639/pps.o:_pps_mapRP0
-                  0x00083a                  build/default/production/_ext/230937639/pps.o:_pps_mapRP1
-                  0x000870                  build/default/production/_ext/230937639/pps.o:_pps_mapRP10
-                  0x000876                  build/default/production/_ext/230937639/pps.o:_pps_mapRP11
-                  0x000882                  build/default/production/_ext/230937639/pps.o:_pps_mapRP12
-                  0x000888                  build/default/production/_ext/230937639/pps.o:_pps_mapRP13
-                  0x00088e                  build/default/production/_ext/230937639/pps.o:_pps_mapRP14
-                  0x000894                  build/default/production/_ext/230937639/pps.o:_pps_mapRP15
-                  0x00089a                  build/default/production/_ext/230937639/pps.o:_pps_mapRP16
-                  0x0008a0                  build/default/production/_ext/230937639/pps.o:_pps_mapRP17
-                  0x0008a6                  build/default/production/_ext/230937639/pps.o:_pps_mapRP18
-                  0x0008ac                  build/default/production/_ext/230937639/pps.o:_pps_mapRP19
-                  0x000840                  build/default/production/_ext/230937639/pps.o:_pps_mapRP2
-                  0x0008b2                  build/default/production/_ext/230937639/pps.o:_pps_mapRP20
-                  0x0008b8                  build/default/production/_ext/230937639/pps.o:_pps_mapRP21
-                  0x0008be                  build/default/production/_ext/230937639/pps.o:_pps_mapRP22
-                  0x0008c4                  build/default/production/_ext/230937639/pps.o:_pps_mapRP23
-                  0x0008ca                  build/default/production/_ext/230937639/pps.o:_pps_mapRP24
-                  0x0008d0                  build/default/production/_ext/230937639/pps.o:_pps_mapRP25
-                  0x000846                  build/default/production/_ext/230937639/pps.o:_pps_mapRP3
-                  0x00084c                  build/default/production/_ext/230937639/pps.o:_pps_mapRP4
-                  0x000852                  build/default/production/_ext/230937639/pps.o:_pps_mapRP5
-                  0x000858                  build/default/production/_ext/230937639/pps.o:_pps_mapRP6
-                  0x00085e                  build/default/production/_ext/230937639/pps.o:_pps_mapRP7
-                  0x000864                  build/default/production/_ext/230937639/pps.o:_pps_mapRP8
-                  0x00086a                  build/default/production/_ext/230937639/pps.o:_pps_mapRP9
-                  0x00091e                  build/default/production/_ext/230937639/qei.o:_qei_pins1
-                  0x0008e4                  build/default/production/_ext/230937639/qei.o:_qei_pins2
+                  0x000838                  build/default/production/_ext/230937639/pps.o:_pps_mapRP0
+                  0x00083e                  build/default/production/_ext/230937639/pps.o:_pps_mapRP1
+                  0x000874                  build/default/production/_ext/230937639/pps.o:_pps_mapRP10
+                  0x00087a                  build/default/production/_ext/230937639/pps.o:_pps_mapRP11
+                  0x000886                  build/default/production/_ext/230937639/pps.o:_pps_mapRP12
+                  0x00088c                  build/default/production/_ext/230937639/pps.o:_pps_mapRP13
+                  0x000892                  build/default/production/_ext/230937639/pps.o:_pps_mapRP14
+                  0x000898                  build/default/production/_ext/230937639/pps.o:_pps_mapRP15
+                  0x00089e                  build/default/production/_ext/230937639/pps.o:_pps_mapRP16
+                  0x0008a4                  build/default/production/_ext/230937639/pps.o:_pps_mapRP17
+                  0x0008aa                  build/default/production/_ext/230937639/pps.o:_pps_mapRP18
+                  0x0008b0                  build/default/production/_ext/230937639/pps.o:_pps_mapRP19
+                  0x000844                  build/default/production/_ext/230937639/pps.o:_pps_mapRP2
+                  0x0008b6                  build/default/production/_ext/230937639/pps.o:_pps_mapRP20
+                  0x0008bc                  build/default/production/_ext/230937639/pps.o:_pps_mapRP21
+                  0x0008c2                  build/default/production/_ext/230937639/pps.o:_pps_mapRP22
+                  0x0008c8                  build/default/production/_ext/230937639/pps.o:_pps_mapRP23
+                  0x0008ce                  build/default/production/_ext/230937639/pps.o:_pps_mapRP24
+                  0x0008d4                  build/default/production/_ext/230937639/pps.o:_pps_mapRP25
+                  0x00084a                  build/default/production/_ext/230937639/pps.o:_pps_mapRP3
+                  0x000850                  build/default/production/_ext/230937639/pps.o:_pps_mapRP4
+                  0x000856                  build/default/production/_ext/230937639/pps.o:_pps_mapRP5
+                  0x00085c                  build/default/production/_ext/230937639/pps.o:_pps_mapRP6
+                  0x000862                  build/default/production/_ext/230937639/pps.o:_pps_mapRP7
+                  0x000868                  build/default/production/_ext/230937639/pps.o:_pps_mapRP8
+                  0x00086e                  build/default/production/_ext/230937639/pps.o:_pps_mapRP9
+                  0x000922                  build/default/production/_ext/230937639/qei.o:_qei_pins1
+                  0x0008e8                  build/default/production/_ext/230937639/qei.o:_qei_pins2
 
 Memory Configuration
 
@@ -399,7 +399,7 @@ __FUID3
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x4604
+.debug_info       0x000000       0x463e
  *(.debug_info)
  .debug_info      0x000000        0x2a5 build/default/production/_ext/1321969922/cobs.o
  .debug_info      0x0002a5        0x3f2 build/default/production/_ext/506297139/sysconfig.o
@@ -410,11 +410,11 @@ __FUID3
  .debug_info      0x002644        0x73b build/default/production/_ext/230937639/qei.o
  .debug_info      0x002d7f        0x60e build/default/production/_ext/230937639/spi.o
  .debug_info      0x00338d        0x58c build/default/production/_ext/230937639/timer.o
- .debug_info      0x003919        0xa2e build/default/production/_ext/230937639/uart.o
- .debug_info      0x004347        0x2bd build/default/production/main.o
+ .debug_info      0x003919        0xa68 build/default/production/_ext/230937639/uart.o
+ .debug_info      0x004381        0x2bd build/default/production/main.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0xbdc
+.debug_abbrev     0x000000        0xbfc
  *(.debug_abbrev)
  .debug_abbrev    0x000000         0x91 build/default/production/_ext/1321969922/cobs.o
  .debug_abbrev    0x000091         0xcb build/default/production/_ext/506297139/sysconfig.o
@@ -425,10 +425,10 @@ __FUID3
  .debug_abbrev    0x000657        0x15d build/default/production/_ext/230937639/qei.o
  .debug_abbrev    0x0007b4        0x100 build/default/production/_ext/230937639/spi.o
  .debug_abbrev    0x0008b4         0xc2 build/default/production/_ext/230937639/timer.o
- .debug_abbrev    0x000976        0x198 build/default/production/_ext/230937639/uart.o
- .debug_abbrev    0x000b0e         0xce build/default/production/main.o
+ .debug_abbrev    0x000976        0x1b8 build/default/production/_ext/230937639/uart.o
+ .debug_abbrev    0x000b2e         0xce build/default/production/main.o
 
-.debug_line       0x000000       0x1bf9
+.debug_line       0x000000       0x1c1b
  *(.debug_line)
  .debug_line      0x000000        0x1f7 build/default/production/_ext/1321969922/cobs.o
  .debug_line      0x0001f7        0x157 build/default/production/_ext/506297139/sysconfig.o
@@ -439,10 +439,10 @@ __FUID3
  .debug_line      0x001142        0x22e build/default/production/_ext/230937639/qei.o
  .debug_line      0x001370        0x1fc build/default/production/_ext/230937639/spi.o
  .debug_line      0x00156c        0x272 build/default/production/_ext/230937639/timer.o
- .debug_line      0x0017de        0x2cd build/default/production/_ext/230937639/uart.o
- .debug_line      0x001aab        0x14e build/default/production/main.o
+ .debug_line      0x0017de        0x2ef build/default/production/_ext/230937639/uart.o
+ .debug_line      0x001acd        0x14e build/default/production/main.o
 
-.debug_frame      0x000000        0x5dc
+.debug_frame      0x000000        0x5ec
  *(.debug_frame)
  .debug_frame     0x000000         0x34 build/default/production/_ext/1321969922/cobs.o
  .debug_frame     0x000034         0x44 build/default/production/_ext/506297139/sysconfig.o
@@ -453,8 +453,8 @@ __FUID3
  .debug_frame     0x000408         0x64 build/default/production/_ext/230937639/qei.o
  .debug_frame     0x00046c         0x54 build/default/production/_ext/230937639/spi.o
  .debug_frame     0x0004c0         0x64 build/default/production/_ext/230937639/timer.o
- .debug_frame     0x000524         0x94 build/default/production/_ext/230937639/uart.o
- .debug_frame     0x0005b8         0x24 build/default/production/main.o
+ .debug_frame     0x000524         0xa4 build/default/production/_ext/230937639/uart.o
+ .debug_frame     0x0005c8         0x24 build/default/production/main.o
 
 .debug_str        0x000000        0x147
  *(.debug_str)
@@ -549,8 +549,8 @@ __FUID3
                   0x000024          0x4 LONG 0x314 DEFINED (__T3Interrupt)?ABSOLUTE (__T3Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000026          0x4 LONG 0x314 DEFINED (__SPI1ErrInterrupt)?ABSOLUTE (__SPI1ErrInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000028          0x4 LONG 0x314 DEFINED (__SPI1Interrupt)?ABSOLUTE (__SPI1Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00002a          0x4 LONG 0x6fa DEFINED (__U1RXInterrupt)?ABSOLUTE (__U1RXInterrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00002c          0x4 LONG 0x73e DEFINED (__U1TXInterrupt)?ABSOLUTE (__U1TXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00002a          0x4 LONG 0x6fe DEFINED (__U1RXInterrupt)?ABSOLUTE (__U1RXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00002c          0x4 LONG 0x742 DEFINED (__U1TXInterrupt)?ABSOLUTE (__U1TXInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00002e          0x4 LONG 0x314 DEFINED (__ADC1Interrupt)?ABSOLUTE (__ADC1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000030          0x4 LONG 0x314 DEFINED (__DMA1Interrupt)?ABSOLUTE (__DMA1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000032          0x4 LONG 0x314 DEFINED (__Interrupt15)?ABSOLUTE (__Interrupt15):ABSOLUTE (__DefaultInterrupt)
@@ -677,8 +677,8 @@ __FUID3
                   0x000124          0x4 LONG 0x314 DEFINED (__AltT3Interrupt)?ABSOLUTE (__AltT3Interrupt):DEFINED (__T3Interrupt)?ABSOLUTE (__T3Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000126          0x4 LONG 0x314 DEFINED (__AltSPI1ErrInterrupt)?ABSOLUTE (__AltSPI1ErrInterrupt):DEFINED (__SPI1ErrInterrupt)?ABSOLUTE (__SPI1ErrInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000128          0x4 LONG 0x314 DEFINED (__AltSPI1Interrupt)?ABSOLUTE (__AltSPI1Interrupt):DEFINED (__SPI1Interrupt)?ABSOLUTE (__SPI1Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00012a          0x4 LONG 0x6fa DEFINED (__AltU1RXInterrupt)?ABSOLUTE (__AltU1RXInterrupt):DEFINED (__U1RXInterrupt)?ABSOLUTE (__U1RXInterrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00012c          0x4 LONG 0x73e DEFINED (__AltU1TXInterrupt)?ABSOLUTE (__AltU1TXInterrupt):DEFINED (__U1TXInterrupt)?ABSOLUTE (__U1TXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00012a          0x4 LONG 0x6fe DEFINED (__AltU1RXInterrupt)?ABSOLUTE (__AltU1RXInterrupt):DEFINED (__U1RXInterrupt)?ABSOLUTE (__U1RXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00012c          0x4 LONG 0x742 DEFINED (__AltU1TXInterrupt)?ABSOLUTE (__AltU1TXInterrupt):DEFINED (__U1TXInterrupt)?ABSOLUTE (__U1TXInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00012e          0x4 LONG 0x314 DEFINED (__AltADC1Interrupt)?ABSOLUTE (__AltADC1Interrupt):DEFINED (__ADC1Interrupt)?ABSOLUTE (__ADC1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000130          0x4 LONG 0x314 DEFINED (__AltDMA1Interrupt)?ABSOLUTE (__AltDMA1Interrupt):DEFINED (__DMA1Interrupt)?ABSOLUTE (__DMA1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000132          0x4 LONG 0x314 DEFINED (__AltInterrupt15)?ABSOLUTE (__AltInterrupt15):DEFINED (__Interrupt15)?ABSOLUTE (__Interrupt15):ABSOLUTE (__DefaultInterrupt)
@@ -1931,15 +1931,15 @@ __c30_signature
  __c30_signature
                   0x00059e          0x6 /Applications/microchip/xc16/v1.21/bin/bin/../../lib/libm-elf.a(udivsi3.eo)
 
-_0x11a59b45325e3b7
+_0x19ab9b45325eb04
                     0x4780         0x30
- _0x11a59b45325e3b7
+ _0x19ab9b45325eb04
                     0x4780         0x30 build/default/production/_ext/230937639/adc.o
                     0x4780                  _dmaBufferA
 
-_0x11a5a105325e3b7
+_0x19aba105325eb04
                     0x47c0         0x30
- _0x11a5a105325e3b7
+ _0x19aba105325eb04
                     0x47c0         0x30 build/default/production/_ext/230937639/adc.o
                     0x47c0                  _dmaBufferB
 
@@ -1988,7 +1988,7 @@ _0x11a5a105325e3b7
  .const             0x83a2          0xe build/default/production/main.o
  .const             0x83b0          0xc build/default/production/_ext/230937639/qei.o
 
-.text             0x0003bc        0x7f6
+.text             0x0003bc        0x7fa
  .text            0x0003bc        0x174 build/default/production/_ext/230937639/ic.o
                   0x0003bc                  build/default/production/_ext/230937639/ic.o:_ic_pins8
                   0x0003ea                  build/default/production/_ext/230937639/ic.o:_ic_pins7
@@ -2006,69 +2006,69 @@ _0x11a5a105325e3b7
                   0x0005d6                  _adc_stop
                   0x0005dc                  _adc_read
                   0x0005e4                  __DMA0Interrupt
- .text            0x000650        0x116 build/default/production/_ext/230937639/uart.o
-                  0x00069e                  _uart_init
-                  0x0006ac                  _uart_charReady
-                  0x0006b8                  _uart_getc
-                  0x0006d6                  _uart_putc
-                  0x0006fa                  __U1RXInterrupt
-                  0x00073e                  __U1TXInterrupt
- .text            0x000766         0xce build/default/production/_ext/230937639/timer.o
-                  0x000766                  _timer_init
-                  0x000782                  _timer_set_ms
-                  0x0007a6                  _timer_set_us
-                  0x0007ca                  _timer_start
-                  0x000804                  _timer_stop
- .text            0x000834         0xb0 build/default/production/_ext/230937639/pps.o
-                  0x000834                  build/default/production/_ext/230937639/pps.o:_pps_mapRP0
-                  0x00083a                  build/default/production/_ext/230937639/pps.o:_pps_mapRP1
-                  0x000840                  build/default/production/_ext/230937639/pps.o:_pps_mapRP2
-                  0x000846                  build/default/production/_ext/230937639/pps.o:_pps_mapRP3
-                  0x00084c                  build/default/production/_ext/230937639/pps.o:_pps_mapRP4
-                  0x000852                  build/default/production/_ext/230937639/pps.o:_pps_mapRP5
-                  0x000858                  build/default/production/_ext/230937639/pps.o:_pps_mapRP6
-                  0x00085e                  build/default/production/_ext/230937639/pps.o:_pps_mapRP7
-                  0x000864                  build/default/production/_ext/230937639/pps.o:_pps_mapRP8
-                  0x00086a                  build/default/production/_ext/230937639/pps.o:_pps_mapRP9
-                  0x000870                  build/default/production/_ext/230937639/pps.o:_pps_mapRP10
-                  0x000876                  build/default/production/_ext/230937639/pps.o:_pps_mapRP11
-                  0x000882                  build/default/production/_ext/230937639/pps.o:_pps_mapRP12
-                  0x000888                  build/default/production/_ext/230937639/pps.o:_pps_mapRP13
-                  0x00088e                  build/default/production/_ext/230937639/pps.o:_pps_mapRP14
-                  0x000894                  build/default/production/_ext/230937639/pps.o:_pps_mapRP15
-                  0x00089a                  build/default/production/_ext/230937639/pps.o:_pps_mapRP16
-                  0x0008a0                  build/default/production/_ext/230937639/pps.o:_pps_mapRP17
-                  0x0008a6                  build/default/production/_ext/230937639/pps.o:_pps_mapRP18
-                  0x0008ac                  build/default/production/_ext/230937639/pps.o:_pps_mapRP19
-                  0x0008b2                  build/default/production/_ext/230937639/pps.o:_pps_mapRP20
-                  0x0008b8                  build/default/production/_ext/230937639/pps.o:_pps_mapRP21
-                  0x0008be                  build/default/production/_ext/230937639/pps.o:_pps_mapRP22
-                  0x0008c4                  build/default/production/_ext/230937639/pps.o:_pps_mapRP23
-                  0x0008ca                  build/default/production/_ext/230937639/pps.o:_pps_mapRP24
-                  0x0008d0                  build/default/production/_ext/230937639/pps.o:_pps_mapRP25
-                  0x0008d6                  _pps_mapRP
- .text            0x0008e4         0xa0 build/default/production/_ext/230937639/qei.o
-                  0x0008e4                  build/default/production/_ext/230937639/qei.o:_qei_pins2
-                  0x00091e                  build/default/production/_ext/230937639/qei.o:_qei_pins1
-                  0x000958                  _qei_init
-                  0x000978                  _qei_setMode
-                  0x00097a                  _qei_getCNT
- .text            0x000984         0x98 build/default/production/_ext/1321969922/cobs.o
-                  0x000984                  _cobs_encode
-                  0x0009bc                  _cobs_decode
- .text            0x000a1c         0x7e build/default/production/_ext/230937639/mcpwm.o
-                  0x000a38                  _mcpwm_init
-                  0x000a46                  _mcpwm_setDC
-                  0x000a5c                  _mcpwm_setDCPC
-                  0x000a90                  _mcpwm_start
-                  0x000a96                  _mcpwm_stop
- .text            0x000a9a         0x68 build/default/production/_ext/230937639/spi.o
-                  0x000af0                  _spi_init
-                  0x000af6                  _spiWrite
- .text            0x000b02         0x68 build/default/production/main.o
-                  0x000b02                  _main
- .text            0x000b6a         0x48 build/default/production/_ext/506297139/sysconfig.o
-                  0x000bac                  _sys_init
+ .text            0x000650        0x11a build/default/production/_ext/230937639/uart.o
+                  0x0006a6                  _uart_init
+                  0x0006b4                  _uart_charReady
+                  0x0006c0                  _uart_getc
+                  0x0006de                  _uart_putc
+                  0x0006fe                  __U1RXInterrupt
+                  0x000742                  __U1TXInterrupt
+ .text            0x00076a         0xce build/default/production/_ext/230937639/timer.o
+                  0x00076a                  _timer_init
+                  0x000786                  _timer_set_ms
+                  0x0007aa                  _timer_set_us
+                  0x0007ce                  _timer_start
+                  0x000808                  _timer_stop
+ .text            0x000838         0xb0 build/default/production/_ext/230937639/pps.o
+                  0x000838                  build/default/production/_ext/230937639/pps.o:_pps_mapRP0
+                  0x00083e                  build/default/production/_ext/230937639/pps.o:_pps_mapRP1
+                  0x000844                  build/default/production/_ext/230937639/pps.o:_pps_mapRP2
+                  0x00084a                  build/default/production/_ext/230937639/pps.o:_pps_mapRP3
+                  0x000850                  build/default/production/_ext/230937639/pps.o:_pps_mapRP4
+                  0x000856                  build/default/production/_ext/230937639/pps.o:_pps_mapRP5
+                  0x00085c                  build/default/production/_ext/230937639/pps.o:_pps_mapRP6
+                  0x000862                  build/default/production/_ext/230937639/pps.o:_pps_mapRP7
+                  0x000868                  build/default/production/_ext/230937639/pps.o:_pps_mapRP8
+                  0x00086e                  build/default/production/_ext/230937639/pps.o:_pps_mapRP9
+                  0x000874                  build/default/production/_ext/230937639/pps.o:_pps_mapRP10
+                  0x00087a                  build/default/production/_ext/230937639/pps.o:_pps_mapRP11
+                  0x000886                  build/default/production/_ext/230937639/pps.o:_pps_mapRP12
+                  0x00088c                  build/default/production/_ext/230937639/pps.o:_pps_mapRP13
+                  0x000892                  build/default/production/_ext/230937639/pps.o:_pps_mapRP14
+                  0x000898                  build/default/production/_ext/230937639/pps.o:_pps_mapRP15
+                  0x00089e                  build/default/production/_ext/230937639/pps.o:_pps_mapRP16
+                  0x0008a4                  build/default/production/_ext/230937639/pps.o:_pps_mapRP17
+                  0x0008aa                  build/default/production/_ext/230937639/pps.o:_pps_mapRP18
+                  0x0008b0                  build/default/production/_ext/230937639/pps.o:_pps_mapRP19
+                  0x0008b6                  build/default/production/_ext/230937639/pps.o:_pps_mapRP20
+                  0x0008bc                  build/default/production/_ext/230937639/pps.o:_pps_mapRP21
+                  0x0008c2                  build/default/production/_ext/230937639/pps.o:_pps_mapRP22
+                  0x0008c8                  build/default/production/_ext/230937639/pps.o:_pps_mapRP23
+                  0x0008ce                  build/default/production/_ext/230937639/pps.o:_pps_mapRP24
+                  0x0008d4                  build/default/production/_ext/230937639/pps.o:_pps_mapRP25
+                  0x0008da                  _pps_mapRP
+ .text            0x0008e8         0xa0 build/default/production/_ext/230937639/qei.o
+                  0x0008e8                  build/default/production/_ext/230937639/qei.o:_qei_pins2
+                  0x000922                  build/default/production/_ext/230937639/qei.o:_qei_pins1
+                  0x00095c                  _qei_init
+                  0x00097c                  _qei_setMode
+                  0x00097e                  _qei_getCNT
+ .text            0x000988         0x98 build/default/production/_ext/1321969922/cobs.o
+                  0x000988                  _cobs_encode
+                  0x0009c0                  _cobs_decode
+ .text            0x000a20         0x7e build/default/production/_ext/230937639/mcpwm.o
+                  0x000a3c                  _mcpwm_init
+                  0x000a4a                  _mcpwm_setDC
+                  0x000a60                  _mcpwm_setDCPC
+                  0x000a94                  _mcpwm_start
+                  0x000a9a                  _mcpwm_stop
+ .text            0x000a9e         0x68 build/default/production/_ext/230937639/spi.o
+                  0x000af4                  _spi_init
+                  0x000afa                  _spiWrite
+ .text            0x000b06         0x68 build/default/production/main.o
+                  0x000b06                  _main
+ .text            0x000b6e         0x48 build/default/production/_ext/506297139/sysconfig.o
+                  0x000bb0                  _sys_init
 
-.dinit            0x000bb2         0x2a
- .dinit           0x000bb2         0x2a data_init
+.dinit            0x000bb6         0x2a
+ .dinit           0x000bb6         0x2a data_init
