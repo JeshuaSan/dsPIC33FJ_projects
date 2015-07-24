@@ -27,7 +27,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 PROJECTNAME=TIMER_simple_interrupt.X
 
 # Active Configuration
-DEFAULTCONF=mplabsim
+DEFAULTCONF=pickit2
 CONF=${DEFAULTCONF}
 
 # All Configurations
