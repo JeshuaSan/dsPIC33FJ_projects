@@ -17,9 +17,20 @@
                    displayName="Linker Files"
                    projectFiles="true">
     </logicalFolder>
+    <logicalFolder name="f1" displayName="New Folder 1" projectFiles="true">
+    </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <logicalFolder name="oled" displayName="oled" projectFiles="true">
+        <itemPath>../../libs/oled/oled.c</itemPath>
+        <itemPath>../../libs/oled/oled_draw.c</itemPath>
+        <itemPath>../../libs/oled/oled_print.c</itemPath>
+        <itemPath>../../libs/oled/SSD1306.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="servo" displayName="servo" projectFiles="true">
+        <itemPath>../../libs/servo/servo.c</itemPath>
+      </logicalFolder>
       <logicalFolder name="src" displayName="src" projectFiles="true">
         <logicalFolder name="device" displayName="device" projectFiles="true">
           <itemPath>../../libs/dspic33f_pic24h_corelibs/src/device/sysconfig.c</itemPath>
@@ -46,6 +57,8 @@
   <sourceRootList>
     <Elem>../../libs/dspic33f_pic24h_corelibs/include</Elem>
     <Elem>../../libs/dspic33f_pic24h_corelibs/src</Elem>
+    <Elem>../../libs/oled</Elem>
+    <Elem>../../libs/servo</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -58,7 +71,7 @@
         <platformTool>PICkit2PlatformTool</platformTool>
         <languageToolchain>XC16</languageToolchain>
         <languageToolchainVersion>1.24</languageToolchainVersion>
-        <platform>3</platform>
+        <platform>4</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -98,7 +111,7 @@
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="extra-include-directories"
-                  value="../../libs/dspic33f_pic24h_corelibs/include"/>
+                  value="../../libs/dspic33f_pic24h_corelibs/include;../../libs"/>
         <property key="isolate-each-function" value="false"/>
         <property key="keep-inline" value="false"/>
         <property key="oXC16gcc-align-arr" value="false"/>
@@ -185,7 +198,7 @@
       <PICkit2PlatformTool>
         <property key="pk2settings.3state" value="false"/>
         <property key="pk2settings.preserveee" value="false"/>
-        <property key="pk2settings.setvddvoltage" value=""/>
+        <property key="pk2settings.setvddvoltage" value="3.25"/>
         <property key="pk2settings.userpgmexec" value="true"/>
         <property key="pk2settings.usetargetpower" value="false"/>
       </PICkit2PlatformTool>

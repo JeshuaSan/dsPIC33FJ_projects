@@ -6,4 +6,5 @@ main.c  \
  ../../libs/dspic33f_pic24h_corelibs/include/device/pinconfig.h  \
  ../../libs/dspic33f_pic24h_corelibs/include/device/sysconfig.h  \
  ../../libs/dspic33f_pic24h_corelibs/include/peripheral/timer.h  \
- ../../libs/dspic33f_pic24h_corelibs/include/peripheral/mcpwm.h 
+ ../../libs/servo/servo.h  \
+../../libs/oled/oled.h 
