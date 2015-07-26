@@ -17,7 +17,6 @@ volatile uint8_t oledUpdate = 0;
 
 int main(void)
 {
-    uint16_t i = 0;
     sys_init();
     oled_init();
     
@@ -26,25 +25,13 @@ int main(void)
     timer_start(TIMER1);
     
     servo_init(50U, PTCKPS_64);
-    //mcpwm_setDCPC(MC_PWM1, 50);
-    //mcpwm_setDC(MC_PWM1, 5570U);
-    //mcpwm_setDC(MC_PWM1, 1024U);
-    //mcpwm_setDC(MC_PWM1, 4915U);
-    //mcpwm_setDCPC(MC_PWM2, 0);
+    //servo_setDCPC(SERVO_1, 0);
+    //servo_setDC(SERVO_1, 1695U);
+    servo_setDCPC(SERVO_2, -50);
+    //servo_setDC(SERVO_2, 1937U);
+    servo_setDC(SERVO_1, 1866U);
     servo_start();
-    
 
-    
-    i = 0xFFFF;
-    for(i = 2048; i < 4096; i+=10)
-    {
-        P1DC1 = i;
-        __delay_ms(1000);
-        oled_clearDisplay();
-        oled_printf(1,1,"DC: %i", i);
-        oled_render();
-    }
-    P1DC1 = 0;
     while(1)
     {
         if (_ms > 1000)
@@ -61,10 +48,5 @@ void _ISR_NOPSV _T1Interrupt(void)
 {
     BIT_CLR(IFS0, TMR1_INT);      // Clear Timer1 interrupt flag
     ++_ms;
-    if (_ms == 33)
-    {
-        oledUpdate = 1;
-        _ms = 0;
-    }
 }
 

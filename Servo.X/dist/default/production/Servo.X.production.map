@@ -21,6 +21,11 @@ Command:
   -L/Applications/microchip/xc16/v1.24/bin/bin/../../support/dsPIC33E/gld \
   -L/Applications/microchip/xc16/v1.24/bin/bin/../../lib/dsPIC33F \
   -L/Applications/microchip/xc16/v1.24/bin/bin/../../support/dsPIC33F/gld \
+  build/default/production/_ext/1321615235/oled.o \
+  build/default/production/_ext/1321615235/oled_draw.o \
+  build/default/production/_ext/1321615235/oled_print.o \
+  build/default/production/_ext/1321615235/SSD1306.o \
+  build/default/production/_ext/1983099384/servo.o \
   build/default/production/_ext/506297139/sysconfig.o \
   build/default/production/_ext/230937639/adc.o \
   build/default/production/_ext/230937639/ic.o \
@@ -31,11 +36,6 @@ Command:
   build/default/production/_ext/230937639/timer.o \
   build/default/production/_ext/230937639/uart.o \
   build/default/production/main.o \
-  build/default/production/_ext/1321615235/oled.o \
-  build/default/production/_ext/1321615235/oled_draw.o \
-  build/default/production/_ext/1321615235/oled_print.o \
-  build/default/production/_ext/1321615235/SSD1306.o \
-  build/default/production/_ext/1983099384/servo.o \
   --defsym=__MPLAB_BUILD=1 \
   -Tp33FJ128MC802.gld.00 \
   --stack=16 \
@@ -64,9 +64,9 @@ Archive member included because of file (symbol)
 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libpic30-elf.a(data_init_standard.o)
                               /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libpic30-elf.a(crt0_standard.o) (__data_init_standard)
 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libpic30-elf.a(delay32.eo)
-                              build/default/production/main.o (___delay32)
+                              build/default/production/_ext/1321615235/oled.o (___delay32)
 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(udivsi3.eo)
-                              build/default/production/_ext/230937639/mcpwm.o (___udivsi3)
+                              build/default/production/_ext/1983099384/servo.o (___udivsi3)
 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libc-elf.a(memset.eo)
                               build/default/production/_ext/1321615235/oled.o (_memset)
 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libc-elf.a(strlen.eo)
@@ -158,13 +158,13 @@ Program Memory  [Origin = 0x200, Length = 0x15600]
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200              0x2056          0x3081  (12417)
-.const                      0x2256               0x220           0x330  (816)
-.text                       0x2476               0x2fc           0x47a  (1146)
-.dinit                      0x2772               0x23c           0x35a  (858)
-.text                       0x29ae              0x1112          0x199b  (6555)
-.init.delay32               0x3ac0                0x1c            0x2a  (42)
+.const                      0x2256               0x218           0x324  (804)
+.text                       0x246e               0x2fc           0x47a  (1146)
+.dinit                      0x276a               0x23c           0x35a  (858)
+.text                       0x29a6              0x10ae          0x1905  (6405)
+.init.delay32               0x3a54                0x1c            0x2a  (42)
 
-                     Total program memory used (bytes):         0x554a  (21834) 16%
+                     Total program memory used (bytes):         0x54a8  (21672) 16%
 
 
 Data Memory  [Origin = 0x800, Length = 0x4000]
@@ -181,13 +181,13 @@ section                    address      alignment gaps    total length  (dec)
 .data.dpowers                0xe42                   0            0xa0  (160)
 .data                        0xee2                   0            0x2a  (42)
 .data._iob                   0xf0c                   0            0x24  (36)
-_0x12ab9b455b3fcb9          0x4780                   0            0x30  (48)
+_0x22ab9b455b41b2f          0x4780                   0            0x30  (48)
 .data._Files                0x47b0                   0             0x2  (2)
 .bss._outdone               0x47b2                   0             0x2  (2)
 .bss._sibuf                 0x47b4                   0             0x2  (2)
 .bss._sobuf                 0x47b6                   0             0x2  (2)
 .data.__C30_UART            0x47b8                   0             0x2  (2)
-_0x12aba1055b3fcb9          0x47c0                   0            0x30  (48)
+_0x22aba1055b41b2f          0x47c0                   0            0x30  (48)
 
                         Total data memory used (bytes):          0x79a  (1946) 11%
 
@@ -284,137 +284,137 @@ External Symbols in Program Memory (by address):
                   0x0021a0                  __dtype
                   0x0021c4                  __dunpack
                   0x002212                  ___umuldi3
-                  0x0024a8                  _ssd1306_send
-                  0x0024da                  _ssd1306cmd_contrast
-                  0x0024f0                  _ssd1306cmd_entireDisplayOn
-                  0x002506                  _ssd1306cmd_displayNormalInverse
-                  0x00251c                  _ssd1306cmd_displayOnOff
-                  0x002532                  _ssd1306cmd_scrollHorizontal
-                  0x002566                  _ssd1306cmd_scrollVerticalAndHorizontal
-                  0x002598                  _ssd1306cmd_scrollOn
-                  0x0025a8                  _ssd1306cmd_scrollOff
-                  0x0025b8                  _ssd1306cmd_scrollVerticalarea
-                  0x0025d4                  _ssd1306cmd_addrLowerColumn
-                  0x0025e8                  _ssd1306cmd_addrHigherColumn
-                  0x0025fe                  _ssd1306cmd_addrMemoryAddressingMode
-                  0x002616                  _ssd1306cmd_addrColumnAddress
-                  0x002638                  _ssd1306cmd_addrPageAddress
-                  0x002658                  _ssd1306cmd_addrPageStartAddress
-                  0x00266e                  _ssd1306cmd_displayStartLine
-                  0x002684                  _ssd1306cmd_displaySegmentRemap
-                  0x00269a                  _ssd1306cmd_displayMultiplexRatio
-                  0x0026b2                  _ssd1306cmd_displayComDirection
-                  0x0026c8                  _ssd1306cmd_displayOffset
-                  0x0026e0                  _ssd1306cmd_displayComPins
-                  0x0026f6                  _ssd1306cmd_setClock
-                  0x002718                  _ssd1306cmd_setPrechargePeriod
-                  0x00272e                  _ssd1306cmd_setVDeselect
-                  0x002744                  _ssd1306cmd_nop
-                  0x002754                  _ssd1306cmd_chargePump
-                  0x00276a                  _ssd1306_init
-                  0x0029ae                  _ic_init
-                  0x0029d8                  _ic_start
-                  0x002a28                  _ic_stop
-                  0x002a5c                  _ic_getPeriod
-                  0x002a72                  __IC1Interrupt
-                  0x002aae                  __IC2Interrupt
-                  0x002aea                  build/default/production/_ext/230937639/ic.o:_ic_pins1
-                  0x002b28                  build/default/production/_ext/230937639/ic.o:_ic_pins2
-                  0x002b68                  build/default/production/_ext/230937639/ic.o:_ic_pins7
-                  0x002ba6                  build/default/production/_ext/230937639/ic.o:_ic_pins8
-                  0x002be6                  _pps_mapRP
-                  0x002c00                  build/default/production/_ext/230937639/pps.o:_pps_mapRP0
-                  0x002c12                  build/default/production/_ext/230937639/pps.o:_pps_mapRP1
-                  0x002c28                  build/default/production/_ext/230937639/pps.o:_pps_mapRP2
-                  0x002c3a                  build/default/production/_ext/230937639/pps.o:_pps_mapRP3
-                  0x002c50                  build/default/production/_ext/230937639/pps.o:_pps_mapRP4
-                  0x002c62                  build/default/production/_ext/230937639/pps.o:_pps_mapRP5
-                  0x002c78                  build/default/production/_ext/230937639/pps.o:_pps_mapRP6
-                  0x002c8a                  build/default/production/_ext/230937639/pps.o:_pps_mapRP7
-                  0x002ca0                  build/default/production/_ext/230937639/pps.o:_pps_mapRP8
-                  0x002cb2                  build/default/production/_ext/230937639/pps.o:_pps_mapRP9
-                  0x002cc8                  build/default/production/_ext/230937639/pps.o:_pps_mapRP10
-                  0x002cda                  build/default/production/_ext/230937639/pps.o:_pps_mapRP11
-                  0x002cf4                  build/default/production/_ext/230937639/pps.o:_pps_mapRP12
-                  0x002d06                  build/default/production/_ext/230937639/pps.o:_pps_mapRP13
-                  0x002d1c                  build/default/production/_ext/230937639/pps.o:_pps_mapRP14
-                  0x002d2e                  build/default/production/_ext/230937639/pps.o:_pps_mapRP15
-                  0x002d44                  build/default/production/_ext/230937639/pps.o:_pps_mapRP16
-                  0x002d56                  build/default/production/_ext/230937639/pps.o:_pps_mapRP17
-                  0x002d6c                  build/default/production/_ext/230937639/pps.o:_pps_mapRP18
-                  0x002d7e                  build/default/production/_ext/230937639/pps.o:_pps_mapRP19
-                  0x002d94                  build/default/production/_ext/230937639/pps.o:_pps_mapRP20
-                  0x002da6                  build/default/production/_ext/230937639/pps.o:_pps_mapRP21
-                  0x002dbc                  build/default/production/_ext/230937639/pps.o:_pps_mapRP22
-                  0x002dce                  build/default/production/_ext/230937639/pps.o:_pps_mapRP23
-                  0x002de4                  build/default/production/_ext/230937639/pps.o:_pps_mapRP24
-                  0x002df6                  build/default/production/_ext/230937639/pps.o:_pps_mapRP25
-                  0x002e0c                  _timer_init
-                  0x002e44                  _timer_set_ms
-                  0x002e98                  _timer_set_us
-                  0x002eec                  _timer_start
-                  0x002f6c                  _timer_stop
-                  0x002ff0                  _adc_init
-                  0x00304c                  _adc_start
-                  0x00305c                  _adc_stop
-                  0x00306c                  _adc_read
-                  0x0030de                  __DMA0Interrupt
-                  0x0031bc                  _uart_init
-                  0x0031ca                  _uart_charReady
-                  0x0031e4                  _uart_getc
-                  0x003204                  _uart_putc
-                  0x003284                  __U1RXInterrupt
-                  0x0032d6                  __U1TXInterrupt
-                  0x003386                  _oled_init
-                  0x003390                  _oled_reset
-                  0x0033e2                  _oled_render
-                  0x0033fa                  _oled_clearDisplay
-                  0x003408                  _oled_printc
-                  0x003430                  _oled_prints
-                  0x003472                  _oled_printf
-                  0x0034c6                  _oled_drawPixel
-                  0x00350c                  _oled_putc
-                  0x00356e                  _oled_puts
-                  0x003618                  _qei_init
-                  0x00364a                  _qei_setMode
-                  0x003654                  _qei_getCNT
-                  0x00366a                  build/default/production/_ext/230937639/qei.o:_qei_pins1
-                  0x0036be                  build/default/production/_ext/230937639/qei.o:_qei_pins2
-                  0x003712                  _mcpwm_init
-                  0x003726                  _mcpwm_setDC
-                  0x003742                  _mcpwm_setDCPC
-                  0x003788                  _mcpwm_start
-                  0x003796                  _mcpwm_stop
-                  0x003802                  _servo_init
-                  0x003816                  _servo_setDC
-                  0x003832                  _servo_setDCPC
-                  0x003878                  _servo_start
-                  0x003886                  _servo_stop
-                  0x0038f2                  _main
-                  0x003960                  __T1Interrupt
-                  0x0039f8                  _spi_init
-                  0x003a02                  _spiWrite
-                  0x003a1e                  _sys_init
-                  0x003a78                  _oled_putPixel
-                  0x003ac0                  ___delay32
+                  0x0024a0                  _ssd1306_send
+                  0x0024d2                  _ssd1306cmd_contrast
+                  0x0024e8                  _ssd1306cmd_entireDisplayOn
+                  0x0024fe                  _ssd1306cmd_displayNormalInverse
+                  0x002514                  _ssd1306cmd_displayOnOff
+                  0x00252a                  _ssd1306cmd_scrollHorizontal
+                  0x00255e                  _ssd1306cmd_scrollVerticalAndHorizontal
+                  0x002590                  _ssd1306cmd_scrollOn
+                  0x0025a0                  _ssd1306cmd_scrollOff
+                  0x0025b0                  _ssd1306cmd_scrollVerticalarea
+                  0x0025cc                  _ssd1306cmd_addrLowerColumn
+                  0x0025e0                  _ssd1306cmd_addrHigherColumn
+                  0x0025f6                  _ssd1306cmd_addrMemoryAddressingMode
+                  0x00260e                  _ssd1306cmd_addrColumnAddress
+                  0x002630                  _ssd1306cmd_addrPageAddress
+                  0x002650                  _ssd1306cmd_addrPageStartAddress
+                  0x002666                  _ssd1306cmd_displayStartLine
+                  0x00267c                  _ssd1306cmd_displaySegmentRemap
+                  0x002692                  _ssd1306cmd_displayMultiplexRatio
+                  0x0026aa                  _ssd1306cmd_displayComDirection
+                  0x0026c0                  _ssd1306cmd_displayOffset
+                  0x0026d8                  _ssd1306cmd_displayComPins
+                  0x0026ee                  _ssd1306cmd_setClock
+                  0x002710                  _ssd1306cmd_setPrechargePeriod
+                  0x002726                  _ssd1306cmd_setVDeselect
+                  0x00273c                  _ssd1306cmd_nop
+                  0x00274c                  _ssd1306cmd_chargePump
+                  0x002762                  _ssd1306_init
+                  0x0029a6                  _ic_init
+                  0x0029d0                  _ic_start
+                  0x002a20                  _ic_stop
+                  0x002a54                  _ic_getPeriod
+                  0x002a6a                  __IC1Interrupt
+                  0x002aa6                  __IC2Interrupt
+                  0x002ae2                  build/default/production/_ext/230937639/ic.o:_ic_pins1
+                  0x002b20                  build/default/production/_ext/230937639/ic.o:_ic_pins2
+                  0x002b60                  build/default/production/_ext/230937639/ic.o:_ic_pins7
+                  0x002b9e                  build/default/production/_ext/230937639/ic.o:_ic_pins8
+                  0x002bde                  _pps_mapRP
+                  0x002bf8                  build/default/production/_ext/230937639/pps.o:_pps_mapRP0
+                  0x002c0a                  build/default/production/_ext/230937639/pps.o:_pps_mapRP1
+                  0x002c20                  build/default/production/_ext/230937639/pps.o:_pps_mapRP2
+                  0x002c32                  build/default/production/_ext/230937639/pps.o:_pps_mapRP3
+                  0x002c48                  build/default/production/_ext/230937639/pps.o:_pps_mapRP4
+                  0x002c5a                  build/default/production/_ext/230937639/pps.o:_pps_mapRP5
+                  0x002c70                  build/default/production/_ext/230937639/pps.o:_pps_mapRP6
+                  0x002c82                  build/default/production/_ext/230937639/pps.o:_pps_mapRP7
+                  0x002c98                  build/default/production/_ext/230937639/pps.o:_pps_mapRP8
+                  0x002caa                  build/default/production/_ext/230937639/pps.o:_pps_mapRP9
+                  0x002cc0                  build/default/production/_ext/230937639/pps.o:_pps_mapRP10
+                  0x002cd2                  build/default/production/_ext/230937639/pps.o:_pps_mapRP11
+                  0x002cec                  build/default/production/_ext/230937639/pps.o:_pps_mapRP12
+                  0x002cfe                  build/default/production/_ext/230937639/pps.o:_pps_mapRP13
+                  0x002d14                  build/default/production/_ext/230937639/pps.o:_pps_mapRP14
+                  0x002d26                  build/default/production/_ext/230937639/pps.o:_pps_mapRP15
+                  0x002d3c                  build/default/production/_ext/230937639/pps.o:_pps_mapRP16
+                  0x002d4e                  build/default/production/_ext/230937639/pps.o:_pps_mapRP17
+                  0x002d64                  build/default/production/_ext/230937639/pps.o:_pps_mapRP18
+                  0x002d76                  build/default/production/_ext/230937639/pps.o:_pps_mapRP19
+                  0x002d8c                  build/default/production/_ext/230937639/pps.o:_pps_mapRP20
+                  0x002d9e                  build/default/production/_ext/230937639/pps.o:_pps_mapRP21
+                  0x002db4                  build/default/production/_ext/230937639/pps.o:_pps_mapRP22
+                  0x002dc6                  build/default/production/_ext/230937639/pps.o:_pps_mapRP23
+                  0x002ddc                  build/default/production/_ext/230937639/pps.o:_pps_mapRP24
+                  0x002dee                  build/default/production/_ext/230937639/pps.o:_pps_mapRP25
+                  0x002e04                  _timer_init
+                  0x002e3c                  _timer_set_ms
+                  0x002e90                  _timer_set_us
+                  0x002ee4                  _timer_start
+                  0x002f64                  _timer_stop
+                  0x002fe8                  _adc_init
+                  0x003044                  _adc_start
+                  0x003054                  _adc_stop
+                  0x003064                  _adc_read
+                  0x0030d6                  __DMA0Interrupt
+                  0x0031b4                  _uart_init
+                  0x0031c2                  _uart_charReady
+                  0x0031dc                  _uart_getc
+                  0x0031fc                  _uart_putc
+                  0x00327c                  __U1RXInterrupt
+                  0x0032ce                  __U1TXInterrupt
+                  0x00337e                  _oled_init
+                  0x003388                  _oled_reset
+                  0x0033da                  _oled_render
+                  0x0033f2                  _oled_clearDisplay
+                  0x003400                  _oled_printc
+                  0x003428                  _oled_prints
+                  0x00346a                  _oled_printf
+                  0x0034be                  _oled_drawPixel
+                  0x003504                  _oled_putc
+                  0x003566                  _oled_puts
+                  0x003610                  _qei_init
+                  0x003642                  _qei_setMode
+                  0x00364c                  _qei_getCNT
+                  0x003662                  build/default/production/_ext/230937639/qei.o:_qei_pins1
+                  0x0036b6                  build/default/production/_ext/230937639/qei.o:_qei_pins2
+                  0x00370a                  _mcpwm_init
+                  0x00371e                  _mcpwm_setDC
+                  0x00373a                  _mcpwm_setDCPC
+                  0x003780                  _mcpwm_start
+                  0x00378e                  _mcpwm_stop
+                  0x0037fa                  _servo_init
+                  0x00380e                  _servo_setDC
+                  0x00382a                  _servo_setDCPC
+                  0x003852                  _servo_start
+                  0x003860                  _servo_stop
+                  0x003934                  _spi_init
+                  0x00393e                  _spiWrite
+                  0x00395a                  _sys_init
+                  0x0039b4                  _main
+                  0x0039f4                  __T1Interrupt
+                  0x003a0c                  _oled_putPixel
+                  0x003a54                  ___delay32
                   0xf80000                  __FBS.sec
                   0xf80002                  __FSS.sec
                   0xf80004                  __FGS.sec
 
 External Symbols in Program Memory (by name):
 
-                  0x0030de                  __DMA0Interrupt
+                  0x0030d6                  __DMA0Interrupt
                   0x00031a                  __DefaultInterrupt
                   0xf80000                  __FBS.sec
                   0xf80004                  __FGS.sec
                   0xf80002                  __FSS.sec
-                  0x002a72                  __IC1Interrupt
-                  0x002aae                  __IC2Interrupt
-                  0x003960                  __T1Interrupt
-                  0x003284                  __U1RXInterrupt
-                  0x0032d6                  __U1TXInterrupt
+                  0x002a6a                  __IC1Interrupt
+                  0x002aa6                  __IC2Interrupt
+                  0x0039f4                  __T1Interrupt
+                  0x00327c                  __U1RXInterrupt
+                  0x0032ce                  __U1TXInterrupt
                   0x0019be                  ___adddf3
-                  0x003ac0                  ___delay32
+                  0x003a54                  ___delay32
                   0x001acc                  ___divdf3
                   0x002024                  ___divdi3
                   0x001ab8                  ___eqdf2
@@ -453,118 +453,118 @@ External Symbols in Program Memory (by name):
                   0x001d94                  __funpack
                   0x00022c                  __psv_init
                   0x000200                  __resetPRI
-                  0x002ff0                  _adc_init
-                  0x00306c                  _adc_read
-                  0x00304c                  _adc_start
-                  0x00305c                  _adc_stop
+                  0x002fe8                  _adc_init
+                  0x003064                  _adc_read
+                  0x003044                  _adc_start
+                  0x003054                  _adc_stop
                   0x001d5a                  _frexp
                   0x001d5a                  _frexpl
-                  0x002a5c                  _ic_getPeriod
-                  0x0029ae                  _ic_init
-                  0x0029d8                  _ic_start
-                  0x002a28                  _ic_stop
-                  0x0038f2                  _main
-                  0x003712                  _mcpwm_init
-                  0x003726                  _mcpwm_setDC
-                  0x003742                  _mcpwm_setDCPC
-                  0x003788                  _mcpwm_start
-                  0x003796                  _mcpwm_stop
+                  0x002a54                  _ic_getPeriod
+                  0x0029a6                  _ic_init
+                  0x0029d0                  _ic_start
+                  0x002a20                  _ic_stop
+                  0x0039b4                  _main
+                  0x00370a                  _mcpwm_init
+                  0x00371e                  _mcpwm_setDC
+                  0x00373a                  _mcpwm_setDCPC
+                  0x003780                  _mcpwm_start
+                  0x00378e                  _mcpwm_stop
                   0x00039e                  _memset
-                  0x0033fa                  _oled_clearDisplay
-                  0x0034c6                  _oled_drawPixel
-                  0x003386                  _oled_init
-                  0x003408                  _oled_printc
-                  0x003472                  _oled_printf
-                  0x003430                  _oled_prints
-                  0x003a78                  _oled_putPixel
-                  0x00350c                  _oled_putc
-                  0x00356e                  _oled_puts
-                  0x0033e2                  _oled_render
-                  0x003390                  _oled_reset
-                  0x002be6                  _pps_mapRP
-                  0x003654                  _qei_getCNT
-                  0x003618                  _qei_init
-                  0x00364a                  _qei_setMode
-                  0x003802                  _servo_init
-                  0x003816                  _servo_setDC
-                  0x003832                  _servo_setDCPC
-                  0x003878                  _servo_start
-                  0x003886                  _servo_stop
-                  0x003a02                  _spiWrite
-                  0x0039f8                  _spi_init
-                  0x00276a                  _ssd1306_init
-                  0x0024a8                  _ssd1306_send
-                  0x002616                  _ssd1306cmd_addrColumnAddress
-                  0x0025e8                  _ssd1306cmd_addrHigherColumn
-                  0x0025d4                  _ssd1306cmd_addrLowerColumn
-                  0x0025fe                  _ssd1306cmd_addrMemoryAddressingMode
-                  0x002638                  _ssd1306cmd_addrPageAddress
-                  0x002658                  _ssd1306cmd_addrPageStartAddress
-                  0x002754                  _ssd1306cmd_chargePump
-                  0x0024da                  _ssd1306cmd_contrast
-                  0x0026b2                  _ssd1306cmd_displayComDirection
-                  0x0026e0                  _ssd1306cmd_displayComPins
-                  0x00269a                  _ssd1306cmd_displayMultiplexRatio
-                  0x002506                  _ssd1306cmd_displayNormalInverse
-                  0x0026c8                  _ssd1306cmd_displayOffset
-                  0x00251c                  _ssd1306cmd_displayOnOff
-                  0x002684                  _ssd1306cmd_displaySegmentRemap
-                  0x00266e                  _ssd1306cmd_displayStartLine
-                  0x0024f0                  _ssd1306cmd_entireDisplayOn
-                  0x002744                  _ssd1306cmd_nop
-                  0x002532                  _ssd1306cmd_scrollHorizontal
-                  0x0025a8                  _ssd1306cmd_scrollOff
-                  0x002598                  _ssd1306cmd_scrollOn
-                  0x002566                  _ssd1306cmd_scrollVerticalAndHorizontal
-                  0x0025b8                  _ssd1306cmd_scrollVerticalarea
-                  0x0026f6                  _ssd1306cmd_setClock
-                  0x002718                  _ssd1306cmd_setPrechargePeriod
-                  0x00272e                  _ssd1306cmd_setVDeselect
+                  0x0033f2                  _oled_clearDisplay
+                  0x0034be                  _oled_drawPixel
+                  0x00337e                  _oled_init
+                  0x003400                  _oled_printc
+                  0x00346a                  _oled_printf
+                  0x003428                  _oled_prints
+                  0x003a0c                  _oled_putPixel
+                  0x003504                  _oled_putc
+                  0x003566                  _oled_puts
+                  0x0033da                  _oled_render
+                  0x003388                  _oled_reset
+                  0x002bde                  _pps_mapRP
+                  0x00364c                  _qei_getCNT
+                  0x003610                  _qei_init
+                  0x003642                  _qei_setMode
+                  0x0037fa                  _servo_init
+                  0x00380e                  _servo_setDC
+                  0x00382a                  _servo_setDCPC
+                  0x003852                  _servo_start
+                  0x003860                  _servo_stop
+                  0x00393e                  _spiWrite
+                  0x003934                  _spi_init
+                  0x002762                  _ssd1306_init
+                  0x0024a0                  _ssd1306_send
+                  0x00260e                  _ssd1306cmd_addrColumnAddress
+                  0x0025e0                  _ssd1306cmd_addrHigherColumn
+                  0x0025cc                  _ssd1306cmd_addrLowerColumn
+                  0x0025f6                  _ssd1306cmd_addrMemoryAddressingMode
+                  0x002630                  _ssd1306cmd_addrPageAddress
+                  0x002650                  _ssd1306cmd_addrPageStartAddress
+                  0x00274c                  _ssd1306cmd_chargePump
+                  0x0024d2                  _ssd1306cmd_contrast
+                  0x0026aa                  _ssd1306cmd_displayComDirection
+                  0x0026d8                  _ssd1306cmd_displayComPins
+                  0x002692                  _ssd1306cmd_displayMultiplexRatio
+                  0x0024fe                  _ssd1306cmd_displayNormalInverse
+                  0x0026c0                  _ssd1306cmd_displayOffset
+                  0x002514                  _ssd1306cmd_displayOnOff
+                  0x00267c                  _ssd1306cmd_displaySegmentRemap
+                  0x002666                  _ssd1306cmd_displayStartLine
+                  0x0024e8                  _ssd1306cmd_entireDisplayOn
+                  0x00273c                  _ssd1306cmd_nop
+                  0x00252a                  _ssd1306cmd_scrollHorizontal
+                  0x0025a0                  _ssd1306cmd_scrollOff
+                  0x002590                  _ssd1306cmd_scrollOn
+                  0x00255e                  _ssd1306cmd_scrollVerticalAndHorizontal
+                  0x0025b0                  _ssd1306cmd_scrollVerticalarea
+                  0x0026ee                  _ssd1306cmd_setClock
+                  0x002710                  _ssd1306cmd_setPrechargePeriod
+                  0x002726                  _ssd1306cmd_setVDeselect
                   0x0003ac                  _strlen
-                  0x003a1e                  _sys_init
-                  0x002e0c                  _timer_init
-                  0x002e44                  _timer_set_ms
-                  0x002e98                  _timer_set_us
-                  0x002eec                  _timer_start
-                  0x002f6c                  _timer_stop
-                  0x0031ca                  _uart_charReady
-                  0x0031e4                  _uart_getc
-                  0x0031bc                  _uart_init
-                  0x003204                  _uart_putc
+                  0x00395a                  _sys_init
+                  0x002e04                  _timer_init
+                  0x002e3c                  _timer_set_ms
+                  0x002e90                  _timer_set_us
+                  0x002ee4                  _timer_start
+                  0x002f64                  _timer_stop
+                  0x0031c2                  _uart_charReady
+                  0x0031dc                  _uart_getc
+                  0x0031b4                  _uart_init
+                  0x0031fc                  _uart_putc
                   0x00055e                  _vfprintf
                   0x0003ba                  _vsnprintf
-                  0x002aea                  build/default/production/_ext/230937639/ic.o:_ic_pins1
-                  0x002b28                  build/default/production/_ext/230937639/ic.o:_ic_pins2
-                  0x002b68                  build/default/production/_ext/230937639/ic.o:_ic_pins7
-                  0x002ba6                  build/default/production/_ext/230937639/ic.o:_ic_pins8
-                  0x002c00                  build/default/production/_ext/230937639/pps.o:_pps_mapRP0
-                  0x002c12                  build/default/production/_ext/230937639/pps.o:_pps_mapRP1
-                  0x002cc8                  build/default/production/_ext/230937639/pps.o:_pps_mapRP10
-                  0x002cda                  build/default/production/_ext/230937639/pps.o:_pps_mapRP11
-                  0x002cf4                  build/default/production/_ext/230937639/pps.o:_pps_mapRP12
-                  0x002d06                  build/default/production/_ext/230937639/pps.o:_pps_mapRP13
-                  0x002d1c                  build/default/production/_ext/230937639/pps.o:_pps_mapRP14
-                  0x002d2e                  build/default/production/_ext/230937639/pps.o:_pps_mapRP15
-                  0x002d44                  build/default/production/_ext/230937639/pps.o:_pps_mapRP16
-                  0x002d56                  build/default/production/_ext/230937639/pps.o:_pps_mapRP17
-                  0x002d6c                  build/default/production/_ext/230937639/pps.o:_pps_mapRP18
-                  0x002d7e                  build/default/production/_ext/230937639/pps.o:_pps_mapRP19
-                  0x002c28                  build/default/production/_ext/230937639/pps.o:_pps_mapRP2
-                  0x002d94                  build/default/production/_ext/230937639/pps.o:_pps_mapRP20
-                  0x002da6                  build/default/production/_ext/230937639/pps.o:_pps_mapRP21
-                  0x002dbc                  build/default/production/_ext/230937639/pps.o:_pps_mapRP22
-                  0x002dce                  build/default/production/_ext/230937639/pps.o:_pps_mapRP23
-                  0x002de4                  build/default/production/_ext/230937639/pps.o:_pps_mapRP24
-                  0x002df6                  build/default/production/_ext/230937639/pps.o:_pps_mapRP25
-                  0x002c3a                  build/default/production/_ext/230937639/pps.o:_pps_mapRP3
-                  0x002c50                  build/default/production/_ext/230937639/pps.o:_pps_mapRP4
-                  0x002c62                  build/default/production/_ext/230937639/pps.o:_pps_mapRP5
-                  0x002c78                  build/default/production/_ext/230937639/pps.o:_pps_mapRP6
-                  0x002c8a                  build/default/production/_ext/230937639/pps.o:_pps_mapRP7
-                  0x002ca0                  build/default/production/_ext/230937639/pps.o:_pps_mapRP8
-                  0x002cb2                  build/default/production/_ext/230937639/pps.o:_pps_mapRP9
-                  0x00366a                  build/default/production/_ext/230937639/qei.o:_qei_pins1
-                  0x0036be                  build/default/production/_ext/230937639/qei.o:_qei_pins2
+                  0x002ae2                  build/default/production/_ext/230937639/ic.o:_ic_pins1
+                  0x002b20                  build/default/production/_ext/230937639/ic.o:_ic_pins2
+                  0x002b60                  build/default/production/_ext/230937639/ic.o:_ic_pins7
+                  0x002b9e                  build/default/production/_ext/230937639/ic.o:_ic_pins8
+                  0x002bf8                  build/default/production/_ext/230937639/pps.o:_pps_mapRP0
+                  0x002c0a                  build/default/production/_ext/230937639/pps.o:_pps_mapRP1
+                  0x002cc0                  build/default/production/_ext/230937639/pps.o:_pps_mapRP10
+                  0x002cd2                  build/default/production/_ext/230937639/pps.o:_pps_mapRP11
+                  0x002cec                  build/default/production/_ext/230937639/pps.o:_pps_mapRP12
+                  0x002cfe                  build/default/production/_ext/230937639/pps.o:_pps_mapRP13
+                  0x002d14                  build/default/production/_ext/230937639/pps.o:_pps_mapRP14
+                  0x002d26                  build/default/production/_ext/230937639/pps.o:_pps_mapRP15
+                  0x002d3c                  build/default/production/_ext/230937639/pps.o:_pps_mapRP16
+                  0x002d4e                  build/default/production/_ext/230937639/pps.o:_pps_mapRP17
+                  0x002d64                  build/default/production/_ext/230937639/pps.o:_pps_mapRP18
+                  0x002d76                  build/default/production/_ext/230937639/pps.o:_pps_mapRP19
+                  0x002c20                  build/default/production/_ext/230937639/pps.o:_pps_mapRP2
+                  0x002d8c                  build/default/production/_ext/230937639/pps.o:_pps_mapRP20
+                  0x002d9e                  build/default/production/_ext/230937639/pps.o:_pps_mapRP21
+                  0x002db4                  build/default/production/_ext/230937639/pps.o:_pps_mapRP22
+                  0x002dc6                  build/default/production/_ext/230937639/pps.o:_pps_mapRP23
+                  0x002ddc                  build/default/production/_ext/230937639/pps.o:_pps_mapRP24
+                  0x002dee                  build/default/production/_ext/230937639/pps.o:_pps_mapRP25
+                  0x002c32                  build/default/production/_ext/230937639/pps.o:_pps_mapRP3
+                  0x002c48                  build/default/production/_ext/230937639/pps.o:_pps_mapRP4
+                  0x002c5a                  build/default/production/_ext/230937639/pps.o:_pps_mapRP5
+                  0x002c70                  build/default/production/_ext/230937639/pps.o:_pps_mapRP6
+                  0x002c82                  build/default/production/_ext/230937639/pps.o:_pps_mapRP7
+                  0x002c98                  build/default/production/_ext/230937639/pps.o:_pps_mapRP8
+                  0x002caa                  build/default/production/_ext/230937639/pps.o:_pps_mapRP9
+                  0x003662                  build/default/production/_ext/230937639/qei.o:_qei_pins1
+                  0x0036b6                  build/default/production/_ext/230937639/qei.o:_qei_pins2
 
 Memory Configuration
 
@@ -591,6 +591,11 @@ FUID3            0xf80016           0x000002
 
 Linker script and memory map
 
+LOAD build/default/production/_ext/1321615235/oled.o
+LOAD build/default/production/_ext/1321615235/oled_draw.o
+LOAD build/default/production/_ext/1321615235/oled_print.o
+LOAD build/default/production/_ext/1321615235/SSD1306.o
+LOAD build/default/production/_ext/1983099384/servo.o
 LOAD build/default/production/_ext/506297139/sysconfig.o
 LOAD build/default/production/_ext/230937639/adc.o
 LOAD build/default/production/_ext/230937639/ic.o
@@ -601,11 +606,6 @@ LOAD build/default/production/_ext/230937639/spi.o
 LOAD build/default/production/_ext/230937639/timer.o
 LOAD build/default/production/_ext/230937639/uart.o
 LOAD build/default/production/main.o
-LOAD build/default/production/_ext/1321615235/oled.o
-LOAD build/default/production/_ext/1321615235/oled_draw.o
-LOAD build/default/production/_ext/1321615235/oled_print.o
-LOAD build/default/production/_ext/1321615235/SSD1306.o
-LOAD build/default/production/_ext/1983099384/servo.o
                     0x0001                  __MPLAB_BUILD = 0x1
 LOAD /Applications/microchip/xc16/v1.24/bin/bin/../../lib/dsPIC33F/libp33FJ128MC802-elf.a
 LOAD /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libfx-elf.a
@@ -808,95 +808,94 @@ __FUID3
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x6141
+.debug_info       0x000000       0x6121
  *(.debug_info)
- .debug_info      0x000000        0x3d8 build/default/production/_ext/506297139/sysconfig.o
- .debug_info      0x0003d8        0xa4e build/default/production/_ext/230937639/adc.o
- .debug_info      0x000e26        0x945 build/default/production/_ext/230937639/ic.o
- .debug_info      0x00176b        0x48b build/default/production/_ext/230937639/mcpwm.o
- .debug_info      0x001bf6        0x803 build/default/production/_ext/230937639/pps.o
- .debug_info      0x0023f9        0x71d build/default/production/_ext/230937639/qei.o
- .debug_info      0x002b16        0x5f5 build/default/production/_ext/230937639/spi.o
- .debug_info      0x00310b        0x565 build/default/production/_ext/230937639/timer.o
- .debug_info      0x003670        0xaa9 build/default/production/_ext/230937639/uart.o
- .debug_info      0x004119        0x299 build/default/production/main.o
- .debug_info      0x0043b2        0x79d build/default/production/_ext/1321615235/oled.o
- .debug_info      0x004b4f        0x18e build/default/production/_ext/1321615235/oled_draw.o
- .debug_info      0x004cdd        0x30c build/default/production/_ext/1321615235/oled_print.o
- .debug_info      0x004fe9        0xcf9 build/default/production/_ext/1321615235/SSD1306.o
- .debug_info      0x005ce2        0x45f build/default/production/_ext/1983099384/servo.o
+ .debug_info      0x000000        0x79d build/default/production/_ext/1321615235/oled.o
+ .debug_info      0x00079d        0x18e build/default/production/_ext/1321615235/oled_draw.o
+ .debug_info      0x00092b        0x30c build/default/production/_ext/1321615235/oled_print.o
+ .debug_info      0x000c37        0xcf9 build/default/production/_ext/1321615235/SSD1306.o
+ .debug_info      0x001930        0x459 build/default/production/_ext/1983099384/servo.o
+ .debug_info      0x001d89        0x3d8 build/default/production/_ext/506297139/sysconfig.o
+ .debug_info      0x002161        0xa4e build/default/production/_ext/230937639/adc.o
+ .debug_info      0x002baf        0x945 build/default/production/_ext/230937639/ic.o
+ .debug_info      0x0034f4        0x48b build/default/production/_ext/230937639/mcpwm.o
+ .debug_info      0x00397f        0x803 build/default/production/_ext/230937639/pps.o
+ .debug_info      0x004182        0x71d build/default/production/_ext/230937639/qei.o
+ .debug_info      0x00489f        0x5f5 build/default/production/_ext/230937639/spi.o
+ .debug_info      0x004e94        0x565 build/default/production/_ext/230937639/timer.o
+ .debug_info      0x0053f9        0xaa9 build/default/production/_ext/230937639/uart.o
+ .debug_info      0x005ea2        0x27f build/default/production/main.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0xf84
+.debug_abbrev     0x000000        0xf51
  *(.debug_abbrev)
- .debug_abbrev    0x000000         0xcb build/default/production/_ext/506297139/sysconfig.o
- .debug_abbrev    0x0000cb        0x19f build/default/production/_ext/230937639/adc.o
- .debug_abbrev    0x00026a        0x165 build/default/production/_ext/230937639/ic.o
- .debug_abbrev    0x0003cf        0x112 build/default/production/_ext/230937639/mcpwm.o
- .debug_abbrev    0x0004e1         0xcf build/default/production/_ext/230937639/pps.o
- .debug_abbrev    0x0005b0        0x156 build/default/production/_ext/230937639/qei.o
- .debug_abbrev    0x000706        0x100 build/default/production/_ext/230937639/spi.o
- .debug_abbrev    0x000806         0xbb build/default/production/_ext/230937639/timer.o
- .debug_abbrev    0x0008c1        0x1b8 build/default/production/_ext/230937639/uart.o
- .debug_abbrev    0x000a79         0xea build/default/production/main.o
- .debug_abbrev    0x000b63        0x109 build/default/production/_ext/1321615235/oled.o
- .debug_abbrev    0x000c6c         0x5b build/default/production/_ext/1321615235/oled_draw.o
- .debug_abbrev    0x000cc7         0xbe build/default/production/_ext/1321615235/oled_print.o
- .debug_abbrev    0x000d85         0xfc build/default/production/_ext/1321615235/SSD1306.o
- .debug_abbrev    0x000e81        0x103 build/default/production/_ext/1983099384/servo.o
+ .debug_abbrev    0x000000        0x109 build/default/production/_ext/1321615235/oled.o
+ .debug_abbrev    0x000109         0x5b build/default/production/_ext/1321615235/oled_draw.o
+ .debug_abbrev    0x000164         0xbe build/default/production/_ext/1321615235/oled_print.o
+ .debug_abbrev    0x000222         0xfc build/default/production/_ext/1321615235/SSD1306.o
+ .debug_abbrev    0x00031e        0x103 build/default/production/_ext/1983099384/servo.o
+ .debug_abbrev    0x000421         0xcb build/default/production/_ext/506297139/sysconfig.o
+ .debug_abbrev    0x0004ec        0x19f build/default/production/_ext/230937639/adc.o
+ .debug_abbrev    0x00068b        0x165 build/default/production/_ext/230937639/ic.o
+ .debug_abbrev    0x0007f0        0x112 build/default/production/_ext/230937639/mcpwm.o
+ .debug_abbrev    0x000902         0xcf build/default/production/_ext/230937639/pps.o
+ .debug_abbrev    0x0009d1        0x156 build/default/production/_ext/230937639/qei.o
+ .debug_abbrev    0x000b27        0x100 build/default/production/_ext/230937639/spi.o
+ .debug_abbrev    0x000c27         0xbb build/default/production/_ext/230937639/timer.o
+ .debug_abbrev    0x000ce2        0x1b8 build/default/production/_ext/230937639/uart.o
+ .debug_abbrev    0x000e9a         0xb7 build/default/production/main.o
 
-.debug_line       0x000000       0x291f
+.debug_line       0x000000       0x28bf
  *(.debug_line)
- .debug_line      0x000000        0x157 build/default/production/_ext/506297139/sysconfig.o
- .debug_line      0x000157        0x3b6 build/default/production/_ext/230937639/adc.o
- .debug_line      0x00050d        0x34e build/default/production/_ext/230937639/ic.o
- .debug_line      0x00085b        0x276 build/default/production/_ext/230937639/mcpwm.o
- .debug_line      0x000ad1        0x492 build/default/production/_ext/230937639/pps.o
- .debug_line      0x000f63        0x22e build/default/production/_ext/230937639/qei.o
- .debug_line      0x001191        0x1fc build/default/production/_ext/230937639/spi.o
- .debug_line      0x00138d        0x292 build/default/production/_ext/230937639/timer.o
- .debug_line      0x00161f        0x33b build/default/production/_ext/230937639/uart.o
- .debug_line      0x00195a        0x22c build/default/production/main.o
- .debug_line      0x001b86        0x338 build/default/production/_ext/1321615235/oled.o
- .debug_line      0x001ebe         0xaa build/default/production/_ext/1321615235/oled_draw.o
- .debug_line      0x001f68        0x1a3 build/default/production/_ext/1321615235/oled_print.o
- .debug_line      0x00210b        0x5f7 build/default/production/_ext/1321615235/SSD1306.o
- .debug_line      0x002702        0x21d build/default/production/_ext/1983099384/servo.o
+ .debug_line      0x000000        0x338 build/default/production/_ext/1321615235/oled.o
+ .debug_line      0x000338         0xaa build/default/production/_ext/1321615235/oled_draw.o
+ .debug_line      0x0003e2        0x1a3 build/default/production/_ext/1321615235/oled_print.o
+ .debug_line      0x000585        0x5f7 build/default/production/_ext/1321615235/SSD1306.o
+ .debug_line      0x000b7c        0x215 build/default/production/_ext/1983099384/servo.o
+ .debug_line      0x000d91        0x157 build/default/production/_ext/506297139/sysconfig.o
+ .debug_line      0x000ee8        0x3b6 build/default/production/_ext/230937639/adc.o
+ .debug_line      0x00129e        0x34e build/default/production/_ext/230937639/ic.o
+ .debug_line      0x0015ec        0x276 build/default/production/_ext/230937639/mcpwm.o
+ .debug_line      0x001862        0x492 build/default/production/_ext/230937639/pps.o
+ .debug_line      0x001cf4        0x22e build/default/production/_ext/230937639/qei.o
+ .debug_line      0x001f22        0x1fc build/default/production/_ext/230937639/spi.o
+ .debug_line      0x00211e        0x292 build/default/production/_ext/230937639/timer.o
+ .debug_line      0x0023b0        0x33b build/default/production/_ext/230937639/uart.o
+ .debug_line      0x0026eb        0x1d4 build/default/production/main.o
 
-.debug_frame      0x000000        0x990
+.debug_frame      0x000000        0x96c
  *(.debug_frame)
- .debug_frame     0x000000         0x44 build/default/production/_ext/506297139/sysconfig.o
- .debug_frame     0x000044         0x94 build/default/production/_ext/230937639/adc.o
- .debug_frame     0x0000d8         0xb4 build/default/production/_ext/230937639/ic.o
- .debug_frame     0x00018c         0x84 build/default/production/_ext/230937639/mcpwm.o
- .debug_frame     0x000210        0x1c4 build/default/production/_ext/230937639/pps.o
- .debug_frame     0x0003d4         0x64 build/default/production/_ext/230937639/qei.o
- .debug_frame     0x000438         0x54 build/default/production/_ext/230937639/spi.o
- .debug_frame     0x00048c         0x64 build/default/production/_ext/230937639/timer.o
- .debug_frame     0x0004f0         0xc4 build/default/production/_ext/230937639/uart.o
- .debug_frame     0x0005b4         0x58 build/default/production/main.o
- .debug_frame     0x00060c         0xa4 build/default/production/_ext/1321615235/oled.o
- .debug_frame     0x0006b0         0x24 build/default/production/_ext/1321615235/oled_draw.o
- .debug_frame     0x0006d4         0x54 build/default/production/_ext/1321615235/oled_print.o
- .debug_frame     0x000728        0x1e4 build/default/production/_ext/1321615235/SSD1306.o
- .debug_frame     0x00090c         0x84 build/default/production/_ext/1983099384/servo.o
+ .debug_frame     0x000000         0xa4 build/default/production/_ext/1321615235/oled.o
+ .debug_frame     0x0000a4         0x24 build/default/production/_ext/1321615235/oled_draw.o
+ .debug_frame     0x0000c8         0x54 build/default/production/_ext/1321615235/oled_print.o
+ .debug_frame     0x00011c        0x1e4 build/default/production/_ext/1321615235/SSD1306.o
+ .debug_frame     0x000300         0x84 build/default/production/_ext/1983099384/servo.o
+ .debug_frame     0x000384         0x44 build/default/production/_ext/506297139/sysconfig.o
+ .debug_frame     0x0003c8         0x94 build/default/production/_ext/230937639/adc.o
+ .debug_frame     0x00045c         0xb4 build/default/production/_ext/230937639/ic.o
+ .debug_frame     0x000510         0x84 build/default/production/_ext/230937639/mcpwm.o
+ .debug_frame     0x000594        0x1c4 build/default/production/_ext/230937639/pps.o
+ .debug_frame     0x000758         0x64 build/default/production/_ext/230937639/qei.o
+ .debug_frame     0x0007bc         0x54 build/default/production/_ext/230937639/spi.o
+ .debug_frame     0x000810         0x64 build/default/production/_ext/230937639/timer.o
+ .debug_frame     0x000874         0xc4 build/default/production/_ext/230937639/uart.o
+ .debug_frame     0x000938         0x34 build/default/production/main.o
 
-.debug_str        0x000000        0x1be
+.debug_str        0x000000        0x1b3
  *(.debug_str)
- .debug_str       0x000000         0x1e build/default/production/_ext/506297139/sysconfig.o
- .debug_str       0x00001e         0x69 build/default/production/_ext/230937639/adc.o
- .debug_str       0x000087         0x1d build/default/production/_ext/230937639/ic.o
- .debug_str       0x0000a4         0x1c build/default/production/_ext/230937639/mcpwm.o
- .debug_str       0x0000c0          0xb build/default/production/_ext/230937639/pps.o
- .debug_str       0x0000cb         0x18 build/default/production/_ext/230937639/qei.o
- .debug_str       0x0000e3         0x24 build/default/production/_ext/230937639/spi.o
- .debug_str       0x000107          0x6 build/default/production/_ext/230937639/timer.o
- .debug_str       0x00010d         0x3c build/default/production/_ext/230937639/uart.o
- .debug_str       0x000149          0xb build/default/production/main.o
- .debug_str       0x000154         0x1d build/default/production/_ext/1321615235/oled.o
- .debug_str       0x000171          0x7 build/default/production/_ext/1321615235/oled_print.o
- .debug_str       0x000178         0x2a build/default/production/_ext/1321615235/SSD1306.o
- .debug_str       0x0001a2         0x1c build/default/production/_ext/1983099384/servo.o
+ .debug_str       0x000000         0x1d build/default/production/_ext/1321615235/oled.o
+ .debug_str       0x00001d          0x7 build/default/production/_ext/1321615235/oled_print.o
+ .debug_str       0x000024         0x2a build/default/production/_ext/1321615235/SSD1306.o
+ .debug_str       0x00004e         0x1c build/default/production/_ext/1983099384/servo.o
+ .debug_str       0x00006a         0x1e build/default/production/_ext/506297139/sysconfig.o
+ .debug_str       0x000088         0x69 build/default/production/_ext/230937639/adc.o
+ .debug_str       0x0000f1         0x1d build/default/production/_ext/230937639/ic.o
+ .debug_str       0x00010e         0x1c build/default/production/_ext/230937639/mcpwm.o
+ .debug_str       0x00012a          0xb build/default/production/_ext/230937639/pps.o
+ .debug_str       0x000135         0x18 build/default/production/_ext/230937639/qei.o
+ .debug_str       0x00014d         0x24 build/default/production/_ext/230937639/spi.o
+ .debug_str       0x000171          0x6 build/default/production/_ext/230937639/timer.o
+ .debug_str       0x000177         0x3c build/default/production/_ext/230937639/uart.o
 
 .debug_loc
  *(.debug_loc)
@@ -908,35 +907,35 @@ __FUID3
                   0x000000        0x7d3
  *(.debug_pubnames)
  .debug_pubnames
-                  0x000000         0x1f build/default/production/_ext/506297139/sysconfig.o
+                  0x000000         0x98 build/default/production/_ext/1321615235/oled.o
  .debug_pubnames
-                  0x00001f         0x99 build/default/production/_ext/230937639/adc.o
+                  0x000098         0x24 build/default/production/_ext/1321615235/oled_draw.o
  .debug_pubnames
-                  0x0000b8         0x6c build/default/production/_ext/230937639/ic.o
+                  0x0000bc         0x2e build/default/production/_ext/1321615235/oled_print.o
  .debug_pubnames
-                  0x000124         0x62 build/default/production/_ext/230937639/mcpwm.o
+                  0x0000ea        0x35d build/default/production/_ext/1321615235/SSD1306.o
  .debug_pubnames
-                  0x000186         0x20 build/default/production/_ext/230937639/pps.o
+                  0x000447         0x62 build/default/production/_ext/1983099384/servo.o
  .debug_pubnames
-                  0x0001a6         0x3e build/default/production/_ext/230937639/qei.o
+                  0x0004a9         0x1f build/default/production/_ext/506297139/sysconfig.o
  .debug_pubnames
-                  0x0001e4         0x2c build/default/production/_ext/230937639/spi.o
+                  0x0004c8         0x99 build/default/production/_ext/230937639/adc.o
  .debug_pubnames
-                  0x000210         0x62 build/default/production/_ext/230937639/timer.o
+                  0x000561         0x6c build/default/production/_ext/230937639/ic.o
  .debug_pubnames
-                  0x000272         0x75 build/default/production/_ext/230937639/uart.o
+                  0x0005cd         0x62 build/default/production/_ext/230937639/mcpwm.o
  .debug_pubnames
-                  0x0002e7         0x43 build/default/production/main.o
+                  0x00062f         0x20 build/default/production/_ext/230937639/pps.o
  .debug_pubnames
-                  0x00032a         0x98 build/default/production/_ext/1321615235/oled.o
+                  0x00064f         0x3e build/default/production/_ext/230937639/qei.o
  .debug_pubnames
-                  0x0003c2         0x24 build/default/production/_ext/1321615235/oled_draw.o
+                  0x00068d         0x2c build/default/production/_ext/230937639/spi.o
  .debug_pubnames
-                  0x0003e6         0x2e build/default/production/_ext/1321615235/oled_print.o
+                  0x0006b9         0x62 build/default/production/_ext/230937639/timer.o
  .debug_pubnames
-                  0x000414        0x35d build/default/production/_ext/1321615235/SSD1306.o
+                  0x00071b         0x75 build/default/production/_ext/230937639/uart.o
  .debug_pubnames
-                  0x000771         0x62 build/default/production/_ext/1983099384/servo.o
+                  0x000790         0x43 build/default/production/main.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -944,35 +943,35 @@ __FUID3
 .debug_aranges    0x000000        0x168
  *(.debug_aranges)
  .debug_aranges
-                  0x000000         0x18 build/default/production/_ext/506297139/sysconfig.o
+                  0x000000         0x18 build/default/production/_ext/1321615235/oled.o
  .debug_aranges
-                  0x000018         0x18 build/default/production/_ext/230937639/adc.o
+                  0x000018         0x18 build/default/production/_ext/1321615235/oled_draw.o
  .debug_aranges
-                  0x000030         0x18 build/default/production/_ext/230937639/ic.o
+                  0x000030         0x18 build/default/production/_ext/1321615235/oled_print.o
  .debug_aranges
-                  0x000048         0x18 build/default/production/_ext/230937639/mcpwm.o
+                  0x000048         0x18 build/default/production/_ext/1321615235/SSD1306.o
  .debug_aranges
-                  0x000060         0x18 build/default/production/_ext/230937639/pps.o
+                  0x000060         0x18 build/default/production/_ext/1983099384/servo.o
  .debug_aranges
-                  0x000078         0x18 build/default/production/_ext/230937639/qei.o
+                  0x000078         0x18 build/default/production/_ext/506297139/sysconfig.o
  .debug_aranges
-                  0x000090         0x18 build/default/production/_ext/230937639/spi.o
+                  0x000090         0x18 build/default/production/_ext/230937639/adc.o
  .debug_aranges
-                  0x0000a8         0x18 build/default/production/_ext/230937639/timer.o
+                  0x0000a8         0x18 build/default/production/_ext/230937639/ic.o
  .debug_aranges
-                  0x0000c0         0x18 build/default/production/_ext/230937639/uart.o
+                  0x0000c0         0x18 build/default/production/_ext/230937639/mcpwm.o
  .debug_aranges
-                  0x0000d8         0x18 build/default/production/main.o
+                  0x0000d8         0x18 build/default/production/_ext/230937639/pps.o
  .debug_aranges
-                  0x0000f0         0x18 build/default/production/_ext/1321615235/oled.o
+                  0x0000f0         0x18 build/default/production/_ext/230937639/qei.o
  .debug_aranges
-                  0x000108         0x18 build/default/production/_ext/1321615235/oled_draw.o
+                  0x000108         0x18 build/default/production/_ext/230937639/spi.o
  .debug_aranges
-                  0x000120         0x18 build/default/production/_ext/1321615235/oled_print.o
+                  0x000120         0x18 build/default/production/_ext/230937639/timer.o
  .debug_aranges
-                  0x000138         0x18 build/default/production/_ext/1321615235/SSD1306.o
+                  0x000138         0x18 build/default/production/_ext/230937639/uart.o
  .debug_aranges
-                  0x000150         0x18 build/default/production/_ext/1983099384/servo.o
+                  0x000150         0x18 build/default/production/main.o
 
 .ivt              0x000004         0xfc
                   0x000004          0x4 LONG 0x31a DEFINED (__ReservedTrap0)?ABSOLUTE (__ReservedTrap0):ABSOLUTE (__DefaultInterrupt)
@@ -984,18 +983,18 @@ __FUID3
                   0x000010          0x4 LONG 0x31a DEFINED (__ReservedTrap6)?ABSOLUTE (__ReservedTrap6):ABSOLUTE (__DefaultInterrupt)
                   0x000012          0x4 LONG 0x31a DEFINED (__ReservedTrap7)?ABSOLUTE (__ReservedTrap7):ABSOLUTE (__DefaultInterrupt)
                   0x000014          0x4 LONG 0x31a DEFINED (__INT0Interrupt)?ABSOLUTE (__INT0Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000016          0x4 LONG 0x2a72 DEFINED (__IC1Interrupt)?ABSOLUTE (__IC1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000016          0x4 LONG 0x2a6a DEFINED (__IC1Interrupt)?ABSOLUTE (__IC1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000018          0x4 LONG 0x31a DEFINED (__OC1Interrupt)?ABSOLUTE (__OC1Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00001a          0x4 LONG 0x3960 DEFINED (__T1Interrupt)?ABSOLUTE (__T1Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00001c          0x4 LONG 0x30de DEFINED (__DMA0Interrupt)?ABSOLUTE (__DMA0Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00001e          0x4 LONG 0x2aae DEFINED (__IC2Interrupt)?ABSOLUTE (__IC2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00001a          0x4 LONG 0x39f4 DEFINED (__T1Interrupt)?ABSOLUTE (__T1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00001c          0x4 LONG 0x30d6 DEFINED (__DMA0Interrupt)?ABSOLUTE (__DMA0Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00001e          0x4 LONG 0x2aa6 DEFINED (__IC2Interrupt)?ABSOLUTE (__IC2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000020          0x4 LONG 0x31a DEFINED (__OC2Interrupt)?ABSOLUTE (__OC2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000022          0x4 LONG 0x31a DEFINED (__T2Interrupt)?ABSOLUTE (__T2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000024          0x4 LONG 0x31a DEFINED (__T3Interrupt)?ABSOLUTE (__T3Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000026          0x4 LONG 0x31a DEFINED (__SPI1ErrInterrupt)?ABSOLUTE (__SPI1ErrInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000028          0x4 LONG 0x31a DEFINED (__SPI1Interrupt)?ABSOLUTE (__SPI1Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00002a          0x4 LONG 0x3284 DEFINED (__U1RXInterrupt)?ABSOLUTE (__U1RXInterrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00002c          0x4 LONG 0x32d6 DEFINED (__U1TXInterrupt)?ABSOLUTE (__U1TXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00002a          0x4 LONG 0x327c DEFINED (__U1RXInterrupt)?ABSOLUTE (__U1RXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00002c          0x4 LONG 0x32ce DEFINED (__U1TXInterrupt)?ABSOLUTE (__U1TXInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00002e          0x4 LONG 0x31a DEFINED (__ADC1Interrupt)?ABSOLUTE (__ADC1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000030          0x4 LONG 0x31a DEFINED (__DMA1Interrupt)?ABSOLUTE (__DMA1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000032          0x4 LONG 0x31a DEFINED (__Interrupt15)?ABSOLUTE (__Interrupt15):ABSOLUTE (__DefaultInterrupt)
@@ -1112,18 +1111,18 @@ __FUID3
                   0x000110          0x4 LONG 0x31a DEFINED (__AltReservedTrap6)?ABSOLUTE (__AltReservedTrap6):DEFINED (__ReservedTrap6)?ABSOLUTE (__ReservedTrap6):ABSOLUTE (__DefaultInterrupt)
                   0x000112          0x4 LONG 0x31a DEFINED (__AltReservedTrap7)?ABSOLUTE (__AltReservedTrap7):DEFINED (__ReservedTrap7)?ABSOLUTE (__ReservedTrap7):ABSOLUTE (__DefaultInterrupt)
                   0x000114          0x4 LONG 0x31a DEFINED (__AltINT0Interrupt)?ABSOLUTE (__AltINT0Interrupt):DEFINED (__INT0Interrupt)?ABSOLUTE (__INT0Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000116          0x4 LONG 0x2a72 DEFINED (__AltIC1Interrupt)?ABSOLUTE (__AltIC1Interrupt):DEFINED (__IC1Interrupt)?ABSOLUTE (__IC1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000116          0x4 LONG 0x2a6a DEFINED (__AltIC1Interrupt)?ABSOLUTE (__AltIC1Interrupt):DEFINED (__IC1Interrupt)?ABSOLUTE (__IC1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000118          0x4 LONG 0x31a DEFINED (__AltOC1Interrupt)?ABSOLUTE (__AltOC1Interrupt):DEFINED (__OC1Interrupt)?ABSOLUTE (__OC1Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00011a          0x4 LONG 0x3960 DEFINED (__AltT1Interrupt)?ABSOLUTE (__AltT1Interrupt):DEFINED (__T1Interrupt)?ABSOLUTE (__T1Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00011c          0x4 LONG 0x30de DEFINED (__AltDMA0Interrupt)?ABSOLUTE (__AltDMA0Interrupt):DEFINED (__DMA0Interrupt)?ABSOLUTE (__DMA0Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00011e          0x4 LONG 0x2aae DEFINED (__AltIC2Interrupt)?ABSOLUTE (__AltIC2Interrupt):DEFINED (__IC2Interrupt)?ABSOLUTE (__IC2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00011a          0x4 LONG 0x39f4 DEFINED (__AltT1Interrupt)?ABSOLUTE (__AltT1Interrupt):DEFINED (__T1Interrupt)?ABSOLUTE (__T1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00011c          0x4 LONG 0x30d6 DEFINED (__AltDMA0Interrupt)?ABSOLUTE (__AltDMA0Interrupt):DEFINED (__DMA0Interrupt)?ABSOLUTE (__DMA0Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00011e          0x4 LONG 0x2aa6 DEFINED (__AltIC2Interrupt)?ABSOLUTE (__AltIC2Interrupt):DEFINED (__IC2Interrupt)?ABSOLUTE (__IC2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000120          0x4 LONG 0x31a DEFINED (__AltOC2Interrupt)?ABSOLUTE (__AltOC2Interrupt):DEFINED (__OC2Interrupt)?ABSOLUTE (__OC2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000122          0x4 LONG 0x31a DEFINED (__AltT2Interrupt)?ABSOLUTE (__AltT2Interrupt):DEFINED (__T2Interrupt)?ABSOLUTE (__T2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000124          0x4 LONG 0x31a DEFINED (__AltT3Interrupt)?ABSOLUTE (__AltT3Interrupt):DEFINED (__T3Interrupt)?ABSOLUTE (__T3Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000126          0x4 LONG 0x31a DEFINED (__AltSPI1ErrInterrupt)?ABSOLUTE (__AltSPI1ErrInterrupt):DEFINED (__SPI1ErrInterrupt)?ABSOLUTE (__SPI1ErrInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000128          0x4 LONG 0x31a DEFINED (__AltSPI1Interrupt)?ABSOLUTE (__AltSPI1Interrupt):DEFINED (__SPI1Interrupt)?ABSOLUTE (__SPI1Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00012a          0x4 LONG 0x3284 DEFINED (__AltU1RXInterrupt)?ABSOLUTE (__AltU1RXInterrupt):DEFINED (__U1RXInterrupt)?ABSOLUTE (__U1RXInterrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00012c          0x4 LONG 0x32d6 DEFINED (__AltU1TXInterrupt)?ABSOLUTE (__AltU1TXInterrupt):DEFINED (__U1TXInterrupt)?ABSOLUTE (__U1TXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00012a          0x4 LONG 0x327c DEFINED (__AltU1RXInterrupt)?ABSOLUTE (__AltU1RXInterrupt):DEFINED (__U1RXInterrupt)?ABSOLUTE (__U1RXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00012c          0x4 LONG 0x32ce DEFINED (__AltU1TXInterrupt)?ABSOLUTE (__AltU1TXInterrupt):DEFINED (__U1TXInterrupt)?ABSOLUTE (__U1TXInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00012e          0x4 LONG 0x31a DEFINED (__AltADC1Interrupt)?ABSOLUTE (__AltADC1Interrupt):DEFINED (__ADC1Interrupt)?ABSOLUTE (__ADC1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000130          0x4 LONG 0x31a DEFINED (__AltDMA1Interrupt)?ABSOLUTE (__AltDMA1Interrupt):DEFINED (__DMA1Interrupt)?ABSOLUTE (__DMA1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000132          0x4 LONG 0x31a DEFINED (__AltInterrupt15)?ABSOLUTE (__AltInterrupt15):DEFINED (__Interrupt15)?ABSOLUTE (__Interrupt15):ABSOLUTE (__DefaultInterrupt)
@@ -2323,156 +2322,156 @@ LOAD default_isr
 LOAD data_init
 
 .debug_pubtypes
-                  0x000168        0x5b5
+                  0x000168        0x5c1
  .debug_pubtypes
-                  0x000168         0x52 build/default/production/_ext/506297139/sysconfig.o
+                  0x000168         0x85 build/default/production/_ext/1321615235/oled.o
  .debug_pubtypes
-                  0x0001ba         0x94 build/default/production/_ext/230937639/adc.o
+                  0x0001ed         0x1e build/default/production/_ext/1321615235/oled_draw.o
  .debug_pubtypes
-                  0x00024e         0x84 build/default/production/_ext/230937639/ic.o
+                  0x00020b         0x2b build/default/production/_ext/1321615235/oled_print.o
  .debug_pubtypes
-                  0x0002d2         0x5d build/default/production/_ext/230937639/mcpwm.o
+                  0x000236         0x65 build/default/production/_ext/1321615235/SSD1306.o
  .debug_pubtypes
-                  0x00032f         0x1e build/default/production/_ext/230937639/pps.o
+                  0x00029b         0x5b build/default/production/_ext/1983099384/servo.o
  .debug_pubtypes
-                  0x00034d         0x86 build/default/production/_ext/230937639/qei.o
+                  0x0002f6         0x52 build/default/production/_ext/506297139/sysconfig.o
  .debug_pubtypes
-                  0x0003d3         0x94 build/default/production/_ext/230937639/spi.o
+                  0x000348         0x94 build/default/production/_ext/230937639/adc.o
  .debug_pubtypes
-                  0x000467         0x35 build/default/production/_ext/230937639/timer.o
+                  0x0003dc         0x84 build/default/production/_ext/230937639/ic.o
  .debug_pubtypes
-                  0x00049c         0xca build/default/production/_ext/230937639/uart.o
+                  0x000460         0x5d build/default/production/_ext/230937639/mcpwm.o
  .debug_pubtypes
-                  0x000566         0x35 build/default/production/main.o
+                  0x0004bd         0x1e build/default/production/_ext/230937639/pps.o
  .debug_pubtypes
-                  0x00059b         0x85 build/default/production/_ext/1321615235/oled.o
+                  0x0004db         0x86 build/default/production/_ext/230937639/qei.o
  .debug_pubtypes
-                  0x000620         0x1e build/default/production/_ext/1321615235/oled_draw.o
+                  0x000561         0x94 build/default/production/_ext/230937639/spi.o
  .debug_pubtypes
-                  0x00063e         0x2b build/default/production/_ext/1321615235/oled_print.o
+                  0x0005f5         0x35 build/default/production/_ext/230937639/timer.o
  .debug_pubtypes
-                  0x000669         0x65 build/default/production/_ext/1321615235/SSD1306.o
+                  0x00062a         0xca build/default/production/_ext/230937639/uart.o
  .debug_pubtypes
-                  0x0006ce         0x4f build/default/production/_ext/1983099384/servo.o
+                  0x0006f4         0x35 build/default/production/main.o
 
 __c30_signature
-                  0x00071d        0x13e
+                  0x000729        0x13e
  __c30_signature
-                  0x00071d          0x6 build/default/production/_ext/506297139/sysconfig.o
+                  0x000729          0x6 build/default/production/_ext/1321615235/oled.o
  __c30_signature
-                  0x000723          0x6 build/default/production/_ext/230937639/adc.o
+                  0x00072f          0x6 build/default/production/_ext/1321615235/oled_draw.o
  __c30_signature
-                  0x000729          0x6 build/default/production/_ext/230937639/ic.o
+                  0x000735          0x6 build/default/production/_ext/1321615235/oled_print.o
  __c30_signature
-                  0x00072f          0x6 build/default/production/_ext/230937639/mcpwm.o
+                  0x00073b          0x6 build/default/production/_ext/1321615235/SSD1306.o
  __c30_signature
-                  0x000735          0x6 build/default/production/_ext/230937639/pps.o
+                  0x000741          0x6 build/default/production/_ext/1983099384/servo.o
  __c30_signature
-                  0x00073b          0x6 build/default/production/_ext/230937639/qei.o
+                  0x000747          0x6 build/default/production/_ext/506297139/sysconfig.o
  __c30_signature
-                  0x000741          0x6 build/default/production/_ext/230937639/spi.o
+                  0x00074d          0x6 build/default/production/_ext/230937639/adc.o
  __c30_signature
-                  0x000747          0x6 build/default/production/_ext/230937639/timer.o
+                  0x000753          0x6 build/default/production/_ext/230937639/ic.o
  __c30_signature
-                  0x00074d          0x6 build/default/production/_ext/230937639/uart.o
+                  0x000759          0x6 build/default/production/_ext/230937639/mcpwm.o
  __c30_signature
-                  0x000753          0x6 build/default/production/main.o
+                  0x00075f          0x6 build/default/production/_ext/230937639/pps.o
  __c30_signature
-                  0x000759          0x6 build/default/production/_ext/1321615235/oled.o
+                  0x000765          0x6 build/default/production/_ext/230937639/qei.o
  __c30_signature
-                  0x00075f          0x6 build/default/production/_ext/1321615235/oled_draw.o
+                  0x00076b          0x6 build/default/production/_ext/230937639/spi.o
  __c30_signature
-                  0x000765          0x6 build/default/production/_ext/1321615235/oled_print.o
+                  0x000771          0x6 build/default/production/_ext/230937639/timer.o
  __c30_signature
-                  0x00076b          0x6 build/default/production/_ext/1321615235/SSD1306.o
+                  0x000777          0x6 build/default/production/_ext/230937639/uart.o
  __c30_signature
-                  0x000771          0x6 build/default/production/_ext/1983099384/servo.o
+                  0x00077d          0x6 build/default/production/main.o
  __c30_signature
-                  0x000777          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libpic30-elf.a(crt0_standard.o)
+                  0x000783          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libpic30-elf.a(crt0_standard.o)
  __c30_signature
-                  0x00077d          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libpic30-elf.a(data_init_standard.o)
+                  0x000789          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libpic30-elf.a(data_init_standard.o)
  __c30_signature
-                  0x000783          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libpic30-elf.a(delay32.eo)
+                  0x00078f          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libpic30-elf.a(delay32.eo)
  __c30_signature
-                  0x000789          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(udivsi3.eo)
+                  0x000795          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(udivsi3.eo)
  __c30_signature
-                  0x00078f          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libc-elf.a(memset.eo)
+                  0x00079b          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libc-elf.a(memset.eo)
  __c30_signature
-                  0x000795          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libc-elf.a(strlen.eo)
+                  0x0007a1          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libc-elf.a(strlen.eo)
  __c30_signature
-                  0x00079b          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libc-elf.a(vsnprintf.eo)
+                  0x0007a7          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libc-elf.a(vsnprintf.eo)
  __c30_signature
-                  0x0007a1          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libc-elf.a(doprnt.eo)
+                  0x0007ad          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libc-elf.a(doprnt.eo)
  __c30_signature
-                  0x0007a7          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libc-elf.a(fputc.eo)
+                  0x0007b3          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libc-elf.a(fputc.eo)
  __c30_signature
-                  0x0007ad          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libc-elf.a(powers.eo)
+                  0x0007b9          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libc-elf.a(powers.eo)
  __c30_signature
-                  0x0007b3          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libc-elf.a(_iob.eo)
+                  0x0007bf          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libc-elf.a(_iob.eo)
  __c30_signature
-                  0x0007b9          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libc-elf.a(flsbuf.eo)
+                  0x0007c5          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libc-elf.a(flsbuf.eo)
  __c30_signature
-                  0x0007bf          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libpic30-elf.a(write.eo)
+                  0x0007cb          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libpic30-elf.a(write.eo)
  __c30_signature
-                  0x0007c5          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libpic30-elf.a(c30_uart.eo)
+                  0x0007d1          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libpic30-elf.a(c30_uart.eo)
  __c30_signature
-                  0x0007cb          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(adddf3.eo)
+                  0x0007d7          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(adddf3.eo)
  __c30_signature
-                  0x0007d1          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(deqltle.eo)
+                  0x0007dd          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(deqltle.eo)
  __c30_signature
-                  0x0007d7          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(dgtge.eo)
+                  0x0007e3          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(dgtge.eo)
  __c30_signature
-                  0x0007dd          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(divdf3.eo)
+                  0x0007e9          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(divdf3.eo)
  __c30_signature
-                  0x0007e3          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(dne.eo)
+                  0x0007ef          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(dne.eo)
  __c30_signature
-                  0x0007e9          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(dpack.eo)
+                  0x0007f5          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(dpack.eo)
  __c30_signature
-                  0x0007ef          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(dunpack2.eo)
+                  0x0007fb          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(dunpack2.eo)
  __c30_signature
-                  0x0007f5          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(extendsfdf.eo)
+                  0x000801          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(extendsfdf.eo)
  __c30_signature
-                  0x0007fb          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(fixunsdfdi.eo)
+                  0x000807          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(fixunsdfdi.eo)
  __c30_signature
-                  0x000801          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(fixunsdfsi.eo)
+                  0x00080d          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(fixunsdfsi.eo)
  __c30_signature
-                  0x000807          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(floatundidf.eo)
+                  0x000813          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(floatundidf.eo)
  __c30_signature
-                  0x00080d          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(floatunsidf.eo)
+                  0x000819          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(floatunsidf.eo)
  __c30_signature
-                  0x000813          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(frexp.eo)
+                  0x00081f          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(frexp.eo)
  __c30_signature
-                  0x000819          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(funpack.eo)
+                  0x000825          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(funpack.eo)
  __c30_signature
-                  0x00081f          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(muldf3.eo)
+                  0x00082b          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(muldf3.eo)
  __c30_signature
-                  0x000825          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(subdf3.eo)
+                  0x000831          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(subdf3.eo)
  __c30_signature
-                  0x00082b          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(mulsi3.eo)
+                  0x000837          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(mulsi3.eo)
  __c30_signature
-                  0x000831          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(divmoddi3.eo)
+                  0x00083d          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(divmoddi3.eo)
  __c30_signature
-                  0x000837          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(muldi3.eo)
+                  0x000843          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(muldi3.eo)
  __c30_signature
-                  0x00083d          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(dcompare.eo)
+                  0x000849          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(dcompare.eo)
  __c30_signature
-                  0x000843          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(dpropagateNaN.eo)
+                  0x00084f          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(dpropagateNaN.eo)
  __c30_signature
-                  0x000849          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(dtype.eo)
+                  0x000855          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(dtype.eo)
  __c30_signature
-                  0x00084f          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(dunpack.eo)
+                  0x00085b          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(dunpack.eo)
  __c30_signature
-                  0x000855          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(umuldi3.eo)
+                  0x000861          0x6 /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libm-elf.a(umuldi3.eo)
 
-_0x12ab9b455b3fcb9
+_0x22ab9b455b41b2f
                     0x4780         0x30
- _0x12ab9b455b3fcb9
+ _0x22ab9b455b41b2f
                     0x4780         0x30 build/default/production/_ext/230937639/adc.o
                     0x4780                  _dmaBufferA
 
-_0x12aba1055b3fcb9
+_0x22aba1055b41b2f
                     0x47c0         0x30
- _0x12aba1055b3fcb9
+ _0x22aba1055b41b2f
                     0x47c0         0x30 build/default/production/_ext/230937639/adc.o
                     0x47c0                  _dmaBufferB
 
@@ -2560,147 +2559,146 @@ _0x12aba1055b3fcb9
 .config_IESO      0xf80006          0x2
  .config_IESO     0xf80006          0x2 build/default/production/main.o
 
-.const              0xa256        0x220 load address 0x002256  
+.const              0xa256        0x218 load address 0x002256  
  .const             0xa256        0x1dc build/default/production/_ext/1321615235/oled_print.o
  .const             0xa432         0x34 build/default/production/_ext/230937639/pps.o
- .const             0xa466          0x8 build/default/production/main.o
- .const             0xa46e          0x4 build/default/production/_ext/230937639/mcpwm.o
- .const             0xa472          0x4 build/default/production/_ext/1983099384/servo.o
+ .const             0xa466          0x4 build/default/production/_ext/1983099384/servo.o
+ .const             0xa46a          0x4 build/default/production/_ext/230937639/mcpwm.o
 
-.text             0x002476        0x2fc
- .text            0x002476        0x2fc build/default/production/_ext/1321615235/SSD1306.o
-                  0x0024a8                  _ssd1306_send
-                  0x0024da                  _ssd1306cmd_contrast
-                  0x0024f0                  _ssd1306cmd_entireDisplayOn
-                  0x002506                  _ssd1306cmd_displayNormalInverse
-                  0x00251c                  _ssd1306cmd_displayOnOff
-                  0x002532                  _ssd1306cmd_scrollHorizontal
-                  0x002566                  _ssd1306cmd_scrollVerticalAndHorizontal
-                  0x002598                  _ssd1306cmd_scrollOn
-                  0x0025a8                  _ssd1306cmd_scrollOff
-                  0x0025b8                  _ssd1306cmd_scrollVerticalarea
-                  0x0025d4                  _ssd1306cmd_addrLowerColumn
-                  0x0025e8                  _ssd1306cmd_addrHigherColumn
-                  0x0025fe                  _ssd1306cmd_addrMemoryAddressingMode
-                  0x002616                  _ssd1306cmd_addrColumnAddress
-                  0x002638                  _ssd1306cmd_addrPageAddress
-                  0x002658                  _ssd1306cmd_addrPageStartAddress
-                  0x00266e                  _ssd1306cmd_displayStartLine
-                  0x002684                  _ssd1306cmd_displaySegmentRemap
-                  0x00269a                  _ssd1306cmd_displayMultiplexRatio
-                  0x0026b2                  _ssd1306cmd_displayComDirection
-                  0x0026c8                  _ssd1306cmd_displayOffset
-                  0x0026e0                  _ssd1306cmd_displayComPins
-                  0x0026f6                  _ssd1306cmd_setClock
-                  0x002718                  _ssd1306cmd_setPrechargePeriod
-                  0x00272e                  _ssd1306cmd_setVDeselect
-                  0x002744                  _ssd1306cmd_nop
-                  0x002754                  _ssd1306cmd_chargePump
-                  0x00276a                  _ssd1306_init
+.text             0x00246e        0x2fc
+ .text            0x00246e        0x2fc build/default/production/_ext/1321615235/SSD1306.o
+                  0x0024a0                  _ssd1306_send
+                  0x0024d2                  _ssd1306cmd_contrast
+                  0x0024e8                  _ssd1306cmd_entireDisplayOn
+                  0x0024fe                  _ssd1306cmd_displayNormalInverse
+                  0x002514                  _ssd1306cmd_displayOnOff
+                  0x00252a                  _ssd1306cmd_scrollHorizontal
+                  0x00255e                  _ssd1306cmd_scrollVerticalAndHorizontal
+                  0x002590                  _ssd1306cmd_scrollOn
+                  0x0025a0                  _ssd1306cmd_scrollOff
+                  0x0025b0                  _ssd1306cmd_scrollVerticalarea
+                  0x0025cc                  _ssd1306cmd_addrLowerColumn
+                  0x0025e0                  _ssd1306cmd_addrHigherColumn
+                  0x0025f6                  _ssd1306cmd_addrMemoryAddressingMode
+                  0x00260e                  _ssd1306cmd_addrColumnAddress
+                  0x002630                  _ssd1306cmd_addrPageAddress
+                  0x002650                  _ssd1306cmd_addrPageStartAddress
+                  0x002666                  _ssd1306cmd_displayStartLine
+                  0x00267c                  _ssd1306cmd_displaySegmentRemap
+                  0x002692                  _ssd1306cmd_displayMultiplexRatio
+                  0x0026aa                  _ssd1306cmd_displayComDirection
+                  0x0026c0                  _ssd1306cmd_displayOffset
+                  0x0026d8                  _ssd1306cmd_displayComPins
+                  0x0026ee                  _ssd1306cmd_setClock
+                  0x002710                  _ssd1306cmd_setPrechargePeriod
+                  0x002726                  _ssd1306cmd_setVDeselect
+                  0x00273c                  _ssd1306cmd_nop
+                  0x00274c                  _ssd1306cmd_chargePump
+                  0x002762                  _ssd1306_init
 
-.dinit            0x002772        0x23c
- .dinit           0x002772        0x23c data_init
+.dinit            0x00276a        0x23c
+ .dinit           0x00276a        0x23c data_init
 
-.text             0x0029ae       0x1112
- .text            0x0029ae        0x238 build/default/production/_ext/230937639/ic.o
-                  0x0029ae                  _ic_init
-                  0x0029d8                  _ic_start
-                  0x002a28                  _ic_stop
-                  0x002a5c                  _ic_getPeriod
-                  0x002a72                  __IC1Interrupt
-                  0x002aae                  __IC2Interrupt
-                  0x002aea                  build/default/production/_ext/230937639/ic.o:_ic_pins1
-                  0x002b28                  build/default/production/_ext/230937639/ic.o:_ic_pins2
-                  0x002b68                  build/default/production/_ext/230937639/ic.o:_ic_pins7
-                  0x002ba6                  build/default/production/_ext/230937639/ic.o:_ic_pins8
- .text            0x002be6        0x226 build/default/production/_ext/230937639/pps.o
-                  0x002be6                  _pps_mapRP
-                  0x002c00                  build/default/production/_ext/230937639/pps.o:_pps_mapRP0
-                  0x002c12                  build/default/production/_ext/230937639/pps.o:_pps_mapRP1
-                  0x002c28                  build/default/production/_ext/230937639/pps.o:_pps_mapRP2
-                  0x002c3a                  build/default/production/_ext/230937639/pps.o:_pps_mapRP3
-                  0x002c50                  build/default/production/_ext/230937639/pps.o:_pps_mapRP4
-                  0x002c62                  build/default/production/_ext/230937639/pps.o:_pps_mapRP5
-                  0x002c78                  build/default/production/_ext/230937639/pps.o:_pps_mapRP6
-                  0x002c8a                  build/default/production/_ext/230937639/pps.o:_pps_mapRP7
-                  0x002ca0                  build/default/production/_ext/230937639/pps.o:_pps_mapRP8
-                  0x002cb2                  build/default/production/_ext/230937639/pps.o:_pps_mapRP9
-                  0x002cc8                  build/default/production/_ext/230937639/pps.o:_pps_mapRP10
-                  0x002cda                  build/default/production/_ext/230937639/pps.o:_pps_mapRP11
-                  0x002cf4                  build/default/production/_ext/230937639/pps.o:_pps_mapRP12
-                  0x002d06                  build/default/production/_ext/230937639/pps.o:_pps_mapRP13
-                  0x002d1c                  build/default/production/_ext/230937639/pps.o:_pps_mapRP14
-                  0x002d2e                  build/default/production/_ext/230937639/pps.o:_pps_mapRP15
-                  0x002d44                  build/default/production/_ext/230937639/pps.o:_pps_mapRP16
-                  0x002d56                  build/default/production/_ext/230937639/pps.o:_pps_mapRP17
-                  0x002d6c                  build/default/production/_ext/230937639/pps.o:_pps_mapRP18
-                  0x002d7e                  build/default/production/_ext/230937639/pps.o:_pps_mapRP19
-                  0x002d94                  build/default/production/_ext/230937639/pps.o:_pps_mapRP20
-                  0x002da6                  build/default/production/_ext/230937639/pps.o:_pps_mapRP21
-                  0x002dbc                  build/default/production/_ext/230937639/pps.o:_pps_mapRP22
-                  0x002dce                  build/default/production/_ext/230937639/pps.o:_pps_mapRP23
-                  0x002de4                  build/default/production/_ext/230937639/pps.o:_pps_mapRP24
-                  0x002df6                  build/default/production/_ext/230937639/pps.o:_pps_mapRP25
- .text            0x002e0c        0x1e4 build/default/production/_ext/230937639/timer.o
-                  0x002e0c                  _timer_init
-                  0x002e44                  _timer_set_ms
-                  0x002e98                  _timer_set_us
-                  0x002eec                  _timer_start
-                  0x002f6c                  _timer_stop
- .text            0x002ff0        0x1cc build/default/production/_ext/230937639/adc.o
-                  0x002ff0                  _adc_init
-                  0x00304c                  _adc_start
-                  0x00305c                  _adc_stop
-                  0x00306c                  _adc_read
-                  0x0030de                  __DMA0Interrupt
- .text            0x0031bc        0x1bc build/default/production/_ext/230937639/uart.o
-                  0x0031bc                  _uart_init
-                  0x0031ca                  _uart_charReady
-                  0x0031e4                  _uart_getc
-                  0x003204                  _uart_putc
-                  0x003284                  __U1RXInterrupt
-                  0x0032d6                  __U1TXInterrupt
- .text            0x003378        0x194 build/default/production/_ext/1321615235/oled.o
-                  0x003386                  _oled_init
-                  0x003390                  _oled_reset
-                  0x0033e2                  _oled_render
-                  0x0033fa                  _oled_clearDisplay
-                  0x003408                  _oled_printc
-                  0x003430                  _oled_prints
-                  0x003472                  _oled_printf
-                  0x0034c6                  _oled_drawPixel
- .text            0x00350c        0x10c build/default/production/_ext/1321615235/oled_print.o
-                  0x00350c                  _oled_putc
-                  0x00356e                  _oled_puts
- .text            0x003618         0xfa build/default/production/_ext/230937639/qei.o
-                  0x003618                  _qei_init
-                  0x00364a                  _qei_setMode
-                  0x003654                  _qei_getCNT
-                  0x00366a                  build/default/production/_ext/230937639/qei.o:_qei_pins1
-                  0x0036be                  build/default/production/_ext/230937639/qei.o:_qei_pins2
- .text            0x003712         0xf0 build/default/production/_ext/230937639/mcpwm.o
-                  0x003712                  _mcpwm_init
-                  0x003726                  _mcpwm_setDC
-                  0x003742                  _mcpwm_setDCPC
-                  0x003788                  _mcpwm_start
-                  0x003796                  _mcpwm_stop
- .text            0x003802         0xf0 build/default/production/_ext/1983099384/servo.o
-                  0x003802                  _servo_init
-                  0x003816                  _servo_setDC
-                  0x003832                  _servo_setDCPC
-                  0x003878                  _servo_start
-                  0x003886                  _servo_stop
- .text            0x0038f2         0x9e build/default/production/main.o
-                  0x0038f2                  _main
-                  0x003960                  __T1Interrupt
- .text            0x003990         0x8e build/default/production/_ext/230937639/spi.o
-                  0x0039f8                  _spi_init
-                  0x003a02                  _spiWrite
- .text            0x003a1e         0x5a build/default/production/_ext/506297139/sysconfig.o
-                  0x003a1e                  _sys_init
- .text            0x003a78         0x48 build/default/production/_ext/1321615235/oled_draw.o
-                  0x003a78                  _oled_putPixel
+.text             0x0029a6       0x10ae
+ .text            0x0029a6        0x238 build/default/production/_ext/230937639/ic.o
+                  0x0029a6                  _ic_init
+                  0x0029d0                  _ic_start
+                  0x002a20                  _ic_stop
+                  0x002a54                  _ic_getPeriod
+                  0x002a6a                  __IC1Interrupt
+                  0x002aa6                  __IC2Interrupt
+                  0x002ae2                  build/default/production/_ext/230937639/ic.o:_ic_pins1
+                  0x002b20                  build/default/production/_ext/230937639/ic.o:_ic_pins2
+                  0x002b60                  build/default/production/_ext/230937639/ic.o:_ic_pins7
+                  0x002b9e                  build/default/production/_ext/230937639/ic.o:_ic_pins8
+ .text            0x002bde        0x226 build/default/production/_ext/230937639/pps.o
+                  0x002bde                  _pps_mapRP
+                  0x002bf8                  build/default/production/_ext/230937639/pps.o:_pps_mapRP0
+                  0x002c0a                  build/default/production/_ext/230937639/pps.o:_pps_mapRP1
+                  0x002c20                  build/default/production/_ext/230937639/pps.o:_pps_mapRP2
+                  0x002c32                  build/default/production/_ext/230937639/pps.o:_pps_mapRP3
+                  0x002c48                  build/default/production/_ext/230937639/pps.o:_pps_mapRP4
+                  0x002c5a                  build/default/production/_ext/230937639/pps.o:_pps_mapRP5
+                  0x002c70                  build/default/production/_ext/230937639/pps.o:_pps_mapRP6
+                  0x002c82                  build/default/production/_ext/230937639/pps.o:_pps_mapRP7
+                  0x002c98                  build/default/production/_ext/230937639/pps.o:_pps_mapRP8
+                  0x002caa                  build/default/production/_ext/230937639/pps.o:_pps_mapRP9
+                  0x002cc0                  build/default/production/_ext/230937639/pps.o:_pps_mapRP10
+                  0x002cd2                  build/default/production/_ext/230937639/pps.o:_pps_mapRP11
+                  0x002cec                  build/default/production/_ext/230937639/pps.o:_pps_mapRP12
+                  0x002cfe                  build/default/production/_ext/230937639/pps.o:_pps_mapRP13
+                  0x002d14                  build/default/production/_ext/230937639/pps.o:_pps_mapRP14
+                  0x002d26                  build/default/production/_ext/230937639/pps.o:_pps_mapRP15
+                  0x002d3c                  build/default/production/_ext/230937639/pps.o:_pps_mapRP16
+                  0x002d4e                  build/default/production/_ext/230937639/pps.o:_pps_mapRP17
+                  0x002d64                  build/default/production/_ext/230937639/pps.o:_pps_mapRP18
+                  0x002d76                  build/default/production/_ext/230937639/pps.o:_pps_mapRP19
+                  0x002d8c                  build/default/production/_ext/230937639/pps.o:_pps_mapRP20
+                  0x002d9e                  build/default/production/_ext/230937639/pps.o:_pps_mapRP21
+                  0x002db4                  build/default/production/_ext/230937639/pps.o:_pps_mapRP22
+                  0x002dc6                  build/default/production/_ext/230937639/pps.o:_pps_mapRP23
+                  0x002ddc                  build/default/production/_ext/230937639/pps.o:_pps_mapRP24
+                  0x002dee                  build/default/production/_ext/230937639/pps.o:_pps_mapRP25
+ .text            0x002e04        0x1e4 build/default/production/_ext/230937639/timer.o
+                  0x002e04                  _timer_init
+                  0x002e3c                  _timer_set_ms
+                  0x002e90                  _timer_set_us
+                  0x002ee4                  _timer_start
+                  0x002f64                  _timer_stop
+ .text            0x002fe8        0x1cc build/default/production/_ext/230937639/adc.o
+                  0x002fe8                  _adc_init
+                  0x003044                  _adc_start
+                  0x003054                  _adc_stop
+                  0x003064                  _adc_read
+                  0x0030d6                  __DMA0Interrupt
+ .text            0x0031b4        0x1bc build/default/production/_ext/230937639/uart.o
+                  0x0031b4                  _uart_init
+                  0x0031c2                  _uart_charReady
+                  0x0031dc                  _uart_getc
+                  0x0031fc                  _uart_putc
+                  0x00327c                  __U1RXInterrupt
+                  0x0032ce                  __U1TXInterrupt
+ .text            0x003370        0x194 build/default/production/_ext/1321615235/oled.o
+                  0x00337e                  _oled_init
+                  0x003388                  _oled_reset
+                  0x0033da                  _oled_render
+                  0x0033f2                  _oled_clearDisplay
+                  0x003400                  _oled_printc
+                  0x003428                  _oled_prints
+                  0x00346a                  _oled_printf
+                  0x0034be                  _oled_drawPixel
+ .text            0x003504        0x10c build/default/production/_ext/1321615235/oled_print.o
+                  0x003504                  _oled_putc
+                  0x003566                  _oled_puts
+ .text            0x003610         0xfa build/default/production/_ext/230937639/qei.o
+                  0x003610                  _qei_init
+                  0x003642                  _qei_setMode
+                  0x00364c                  _qei_getCNT
+                  0x003662                  build/default/production/_ext/230937639/qei.o:_qei_pins1
+                  0x0036b6                  build/default/production/_ext/230937639/qei.o:_qei_pins2
+ .text            0x00370a         0xf0 build/default/production/_ext/230937639/mcpwm.o
+                  0x00370a                  _mcpwm_init
+                  0x00371e                  _mcpwm_setDC
+                  0x00373a                  _mcpwm_setDCPC
+                  0x003780                  _mcpwm_start
+                  0x00378e                  _mcpwm_stop
+ .text            0x0037fa         0xd2 build/default/production/_ext/1983099384/servo.o
+                  0x0037fa                  _servo_init
+                  0x00380e                  _servo_setDC
+                  0x00382a                  _servo_setDCPC
+                  0x003852                  _servo_start
+                  0x003860                  _servo_stop
+ .text            0x0038cc         0x8e build/default/production/_ext/230937639/spi.o
+                  0x003934                  _spi_init
+                  0x00393e                  _spiWrite
+ .text            0x00395a         0x5a build/default/production/_ext/506297139/sysconfig.o
+                  0x00395a                  _sys_init
+ .text            0x0039b4         0x58 build/default/production/main.o
+                  0x0039b4                  _main
+                  0x0039f4                  __T1Interrupt
+ .text            0x003a0c         0x48 build/default/production/_ext/1321615235/oled_draw.o
+                  0x003a0c                  _oled_putPixel
 
-.init.delay32     0x003ac0         0x1c
- .init.delay32    0x003ac0         0x1c /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libpic30-elf.a(delay32.eo)
-                  0x003ac0                  ___delay32
+.init.delay32     0x003a54         0x1c
+ .init.delay32    0x003a54         0x1c /Applications/microchip/xc16/v1.24/bin/bin/../../lib/libpic30-elf.a(delay32.eo)
+                  0x003a54                  ___delay32
