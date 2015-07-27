@@ -21,7 +21,6 @@ Command:
   -Lc:/program files (x86)/microchip/xc16/v1.24/bin/bin/../../support/dsPIC33E/gld \
   -Lc:/program files (x86)/microchip/xc16/v1.24/bin/bin/../../lib/dsPIC33F \
   -Lc:/program files (x86)/microchip/xc16/v1.24/bin/bin/../../support/dsPIC33F/gld \
-  build/pickit/production/_ext/506297139/sysconfig.o \
   build/pickit/production/_ext/230937639/adc.o \
   build/pickit/production/_ext/230937639/pps.o \
   build/pickit/production/_ext/230937639/qei.o \
@@ -29,6 +28,7 @@ Command:
   build/pickit/production/_ext/230937639/timer.o \
   build/pickit/production/_ext/230937639/uart.o \
   build/pickit/production/main.o \
+  build/pickit/production/_ext/506297139/bsp.o \
   --defsym=__MPLAB_BUILD=1 \
   -Tp33FJ128MC802.gld.00 \
   --stack=16 \
@@ -93,8 +93,8 @@ Data Memory  [Origin = 0x800, Length = 0x4000]
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
 .nbss                        0x800                   0            0x92  (146)
-_0387936055b1d482           0x4780                   0            0x30  (48)
-_0387954055b1d482           0x47c0                   0            0x30  (48)
+_0386936055b51ed4           0x4780                   0            0x30  (48)
+_0386954055b51ed4           0x47c0                   0            0x30  (48)
 
                         Total data memory used (bytes):           0xf2  (242) 1%
 
@@ -276,7 +276,6 @@ FUID3            0xf80016           0x000002
 
 Linker script and memory map
 
-LOAD build/pickit/production/_ext/506297139/sysconfig.o
 LOAD build/pickit/production/_ext/230937639/adc.o
 LOAD build/pickit/production/_ext/230937639/pps.o
 LOAD build/pickit/production/_ext/230937639/qei.o
@@ -284,6 +283,7 @@ LOAD build/pickit/production/_ext/230937639/spi.o
 LOAD build/pickit/production/_ext/230937639/timer.o
 LOAD build/pickit/production/_ext/230937639/uart.o
 LOAD build/pickit/production/main.o
+LOAD build/pickit/production/_ext/506297139/bsp.o
                     0x0001                  __MPLAB_BUILD = 0x1
 LOAD c:/program files (x86)/microchip/xc16/v1.24/bin/bin/../../lib/dsPIC33F\libp33FJ128MC802-elf.a
 LOAD c:/program files (x86)/microchip/xc16/v1.24/bin/bin/../../lib\libfx-elf.a
@@ -385,61 +385,61 @@ __FUID3
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x3580
+.debug_info       0x000000       0x357a
  *(.debug_info)
- .debug_info      0x000000        0x3e0 build/pickit/production/_ext/506297139/sysconfig.o
- .debug_info      0x0003e0        0xa4d build/pickit/production/_ext/230937639/adc.o
- .debug_info      0x000e2d        0x7ef build/pickit/production/_ext/230937639/pps.o
- .debug_info      0x00161c        0x729 build/pickit/production/_ext/230937639/qei.o
- .debug_info      0x001d45        0x5fc build/pickit/production/_ext/230937639/spi.o
- .debug_info      0x002341        0x57a build/pickit/production/_ext/230937639/timer.o
- .debug_info      0x0028bb        0xab4 build/pickit/production/_ext/230937639/uart.o
- .debug_info      0x00336f        0x211 build/pickit/production/main.o
+ .debug_info      0x000000        0xa4d build/pickit/production/_ext/230937639/adc.o
+ .debug_info      0x000a4d        0x7ef build/pickit/production/_ext/230937639/pps.o
+ .debug_info      0x00123c        0x729 build/pickit/production/_ext/230937639/qei.o
+ .debug_info      0x001965        0x5fc build/pickit/production/_ext/230937639/spi.o
+ .debug_info      0x001f61        0x57a build/pickit/production/_ext/230937639/timer.o
+ .debug_info      0x0024db        0xab4 build/pickit/production/_ext/230937639/uart.o
+ .debug_info      0x002f8f        0x211 build/pickit/production/main.o
+ .debug_info      0x0031a0        0x3da build/pickit/production/_ext/506297139/bsp.o
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000        0x8c3
  *(.debug_abbrev)
- .debug_abbrev    0x000000         0xcb build/pickit/production/_ext/506297139/sysconfig.o
- .debug_abbrev    0x0000cb        0x1ac build/pickit/production/_ext/230937639/adc.o
- .debug_abbrev    0x000277         0xcf build/pickit/production/_ext/230937639/pps.o
- .debug_abbrev    0x000346        0x15d build/pickit/production/_ext/230937639/qei.o
- .debug_abbrev    0x0004a3        0x100 build/pickit/production/_ext/230937639/spi.o
- .debug_abbrev    0x0005a3         0xc2 build/pickit/production/_ext/230937639/timer.o
- .debug_abbrev    0x000665        0x1b8 build/pickit/production/_ext/230937639/uart.o
- .debug_abbrev    0x00081d         0xa6 build/pickit/production/main.o
+ .debug_abbrev    0x000000        0x1ac build/pickit/production/_ext/230937639/adc.o
+ .debug_abbrev    0x0001ac         0xcf build/pickit/production/_ext/230937639/pps.o
+ .debug_abbrev    0x00027b        0x15d build/pickit/production/_ext/230937639/qei.o
+ .debug_abbrev    0x0003d8        0x100 build/pickit/production/_ext/230937639/spi.o
+ .debug_abbrev    0x0004d8         0xc2 build/pickit/production/_ext/230937639/timer.o
+ .debug_abbrev    0x00059a        0x1b8 build/pickit/production/_ext/230937639/uart.o
+ .debug_abbrev    0x000752         0xa6 build/pickit/production/main.o
+ .debug_abbrev    0x0007f8         0xcb build/pickit/production/_ext/506297139/bsp.o
 
-.debug_line       0x000000       0x1519
+.debug_line       0x000000       0x1513
  *(.debug_line)
- .debug_line      0x000000        0x160 build/pickit/production/_ext/506297139/sysconfig.o
- .debug_line      0x000160        0x3c8 build/pickit/production/_ext/230937639/adc.o
- .debug_line      0x000528        0x4a4 build/pickit/production/_ext/230937639/pps.o
- .debug_line      0x0009cc        0x240 build/pickit/production/_ext/230937639/qei.o
- .debug_line      0x000c0c        0x20e build/pickit/production/_ext/230937639/spi.o
- .debug_line      0x000e1a        0x284 build/pickit/production/_ext/230937639/timer.o
- .debug_line      0x00109e        0x34d build/pickit/production/_ext/230937639/uart.o
- .debug_line      0x0013eb        0x12e build/pickit/production/main.o
+ .debug_line      0x000000        0x3c8 build/pickit/production/_ext/230937639/adc.o
+ .debug_line      0x0003c8        0x4a4 build/pickit/production/_ext/230937639/pps.o
+ .debug_line      0x00086c        0x240 build/pickit/production/_ext/230937639/qei.o
+ .debug_line      0x000aac        0x20e build/pickit/production/_ext/230937639/spi.o
+ .debug_line      0x000cba        0x284 build/pickit/production/_ext/230937639/timer.o
+ .debug_line      0x000f3e        0x34d build/pickit/production/_ext/230937639/uart.o
+ .debug_line      0x00128b        0x12e build/pickit/production/main.o
+ .debug_line      0x0013b9        0x15a build/pickit/production/_ext/506297139/bsp.o
 
 .debug_frame      0x000000        0x4a0
  *(.debug_frame)
- .debug_frame     0x000000         0x44 build/pickit/production/_ext/506297139/sysconfig.o
- .debug_frame     0x000044         0x94 build/pickit/production/_ext/230937639/adc.o
- .debug_frame     0x0000d8        0x1c4 build/pickit/production/_ext/230937639/pps.o
- .debug_frame     0x00029c         0x64 build/pickit/production/_ext/230937639/qei.o
- .debug_frame     0x000300         0x54 build/pickit/production/_ext/230937639/spi.o
- .debug_frame     0x000354         0x64 build/pickit/production/_ext/230937639/timer.o
- .debug_frame     0x0003b8         0xc4 build/pickit/production/_ext/230937639/uart.o
- .debug_frame     0x00047c         0x24 build/pickit/production/main.o
+ .debug_frame     0x000000         0x94 build/pickit/production/_ext/230937639/adc.o
+ .debug_frame     0x000094        0x1c4 build/pickit/production/_ext/230937639/pps.o
+ .debug_frame     0x000258         0x64 build/pickit/production/_ext/230937639/qei.o
+ .debug_frame     0x0002bc         0x54 build/pickit/production/_ext/230937639/spi.o
+ .debug_frame     0x000310         0x64 build/pickit/production/_ext/230937639/timer.o
+ .debug_frame     0x000374         0xc4 build/pickit/production/_ext/230937639/uart.o
+ .debug_frame     0x000438         0x24 build/pickit/production/main.o
+ .debug_frame     0x00045c         0x44 build/pickit/production/_ext/506297139/bsp.o
 
 .debug_str        0x000000        0x119
  *(.debug_str)
- .debug_str       0x000000         0x1e build/pickit/production/_ext/506297139/sysconfig.o
- .debug_str       0x00001e         0x69 build/pickit/production/_ext/230937639/adc.o
- .debug_str       0x000087          0xb build/pickit/production/_ext/230937639/pps.o
- .debug_str       0x000092         0x18 build/pickit/production/_ext/230937639/qei.o
- .debug_str       0x0000aa         0x24 build/pickit/production/_ext/230937639/spi.o
- .debug_str       0x0000ce          0x6 build/pickit/production/_ext/230937639/timer.o
- .debug_str       0x0000d4         0x3c build/pickit/production/_ext/230937639/uart.o
- .debug_str       0x000110          0x9 build/pickit/production/main.o
+ .debug_str       0x000000         0x69 build/pickit/production/_ext/230937639/adc.o
+ .debug_str       0x000069          0xb build/pickit/production/_ext/230937639/pps.o
+ .debug_str       0x000074         0x18 build/pickit/production/_ext/230937639/qei.o
+ .debug_str       0x00008c         0x24 build/pickit/production/_ext/230937639/spi.o
+ .debug_str       0x0000b0          0x6 build/pickit/production/_ext/230937639/timer.o
+ .debug_str       0x0000b6         0x3c build/pickit/production/_ext/230937639/uart.o
+ .debug_str       0x0000f2          0x9 build/pickit/production/main.o
+ .debug_str       0x0000fb         0x1e build/pickit/production/_ext/506297139/bsp.o
 
 .debug_loc
  *(.debug_loc)
@@ -451,21 +451,21 @@ __FUID3
                   0x000000        0x234
  *(.debug_pubnames)
  .debug_pubnames
-                  0x000000         0x1f build/pickit/production/_ext/506297139/sysconfig.o
+                  0x000000         0x99 build/pickit/production/_ext/230937639/adc.o
  .debug_pubnames
-                  0x00001f         0x99 build/pickit/production/_ext/230937639/adc.o
+                  0x000099         0x20 build/pickit/production/_ext/230937639/pps.o
  .debug_pubnames
-                  0x0000b8         0x20 build/pickit/production/_ext/230937639/pps.o
+                  0x0000b9         0x3e build/pickit/production/_ext/230937639/qei.o
  .debug_pubnames
-                  0x0000d8         0x3e build/pickit/production/_ext/230937639/qei.o
+                  0x0000f7         0x2c build/pickit/production/_ext/230937639/spi.o
  .debug_pubnames
-                  0x000116         0x2c build/pickit/production/_ext/230937639/spi.o
+                  0x000123         0x62 build/pickit/production/_ext/230937639/timer.o
  .debug_pubnames
-                  0x000142         0x62 build/pickit/production/_ext/230937639/timer.o
+                  0x000185         0x75 build/pickit/production/_ext/230937639/uart.o
  .debug_pubnames
-                  0x0001a4         0x75 build/pickit/production/_ext/230937639/uart.o
+                  0x0001fa         0x1b build/pickit/production/main.o
  .debug_pubnames
-                  0x000219         0x1b build/pickit/production/main.o
+                  0x000215         0x1f build/pickit/production/_ext/506297139/bsp.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -473,21 +473,21 @@ __FUID3
 .debug_aranges    0x000000         0xc0
  *(.debug_aranges)
  .debug_aranges
-                  0x000000         0x18 build/pickit/production/_ext/506297139/sysconfig.o
+                  0x000000         0x18 build/pickit/production/_ext/230937639/adc.o
  .debug_aranges
-                  0x000018         0x18 build/pickit/production/_ext/230937639/adc.o
+                  0x000018         0x18 build/pickit/production/_ext/230937639/pps.o
  .debug_aranges
-                  0x000030         0x18 build/pickit/production/_ext/230937639/pps.o
+                  0x000030         0x18 build/pickit/production/_ext/230937639/qei.o
  .debug_aranges
-                  0x000048         0x18 build/pickit/production/_ext/230937639/qei.o
+                  0x000048         0x18 build/pickit/production/_ext/230937639/spi.o
  .debug_aranges
-                  0x000060         0x18 build/pickit/production/_ext/230937639/spi.o
+                  0x000060         0x18 build/pickit/production/_ext/230937639/timer.o
  .debug_aranges
-                  0x000078         0x18 build/pickit/production/_ext/230937639/timer.o
+                  0x000078         0x18 build/pickit/production/_ext/230937639/uart.o
  .debug_aranges
-                  0x000090         0x18 build/pickit/production/_ext/230937639/uart.o
+                  0x000090         0x18 build/pickit/production/main.o
  .debug_aranges
-                  0x0000a8         0x18 build/pickit/production/main.o
+                  0x0000a8         0x18 build/pickit/production/_ext/506297139/bsp.o
 
 .ivt              0x000004         0xfc
                   0x000004          0x4 LONG 0x30a DEFINED (__ReservedTrap0)?ABSOLUTE (__ReservedTrap0):ABSOLUTE (__DefaultInterrupt)
@@ -1840,40 +1840,40 @@ LOAD data_init
 .debug_pubtypes
                   0x0000c0        0x358
  .debug_pubtypes
-                  0x0000c0         0x52 build/pickit/production/_ext/506297139/sysconfig.o
+                  0x0000c0         0x94 build/pickit/production/_ext/230937639/adc.o
  .debug_pubtypes
-                  0x000112         0x94 build/pickit/production/_ext/230937639/adc.o
+                  0x000154         0x1e build/pickit/production/_ext/230937639/pps.o
  .debug_pubtypes
-                  0x0001a6         0x1e build/pickit/production/_ext/230937639/pps.o
+                  0x000172         0x86 build/pickit/production/_ext/230937639/qei.o
  .debug_pubtypes
-                  0x0001c4         0x86 build/pickit/production/_ext/230937639/qei.o
+                  0x0001f8         0x94 build/pickit/production/_ext/230937639/spi.o
  .debug_pubtypes
-                  0x00024a         0x94 build/pickit/production/_ext/230937639/spi.o
+                  0x00028c         0x35 build/pickit/production/_ext/230937639/timer.o
  .debug_pubtypes
-                  0x0002de         0x35 build/pickit/production/_ext/230937639/timer.o
+                  0x0002c1         0xca build/pickit/production/_ext/230937639/uart.o
  .debug_pubtypes
-                  0x000313         0xca build/pickit/production/_ext/230937639/uart.o
+                  0x00038b         0x3b build/pickit/production/main.o
  .debug_pubtypes
-                  0x0003dd         0x3b build/pickit/production/main.o
+                  0x0003c6         0x52 build/pickit/production/_ext/506297139/bsp.o
 
 __c30_signature
                   0x000418         0x42
  __c30_signature
-                  0x000418          0x6 build/pickit/production/_ext/506297139/sysconfig.o
+                  0x000418          0x6 build/pickit/production/_ext/230937639/adc.o
  __c30_signature
-                  0x00041e          0x6 build/pickit/production/_ext/230937639/adc.o
+                  0x00041e          0x6 build/pickit/production/_ext/230937639/pps.o
  __c30_signature
-                  0x000424          0x6 build/pickit/production/_ext/230937639/pps.o
+                  0x000424          0x6 build/pickit/production/_ext/230937639/qei.o
  __c30_signature
-                  0x00042a          0x6 build/pickit/production/_ext/230937639/qei.o
+                  0x00042a          0x6 build/pickit/production/_ext/230937639/spi.o
  __c30_signature
-                  0x000430          0x6 build/pickit/production/_ext/230937639/spi.o
+                  0x000430          0x6 build/pickit/production/_ext/230937639/timer.o
  __c30_signature
-                  0x000436          0x6 build/pickit/production/_ext/230937639/timer.o
+                  0x000436          0x6 build/pickit/production/_ext/230937639/uart.o
  __c30_signature
-                  0x00043c          0x6 build/pickit/production/_ext/230937639/uart.o
+                  0x00043c          0x6 build/pickit/production/main.o
  __c30_signature
-                  0x000442          0x6 build/pickit/production/main.o
+                  0x000442          0x6 build/pickit/production/_ext/506297139/bsp.o
  __c30_signature
                   0x000448          0x6 c:/program files (x86)/microchip/xc16/v1.24/bin/bin/../../lib\libpic30-elf.a(crt0_standard.o)
  __c30_signature
@@ -1881,15 +1881,15 @@ __c30_signature
  __c30_signature
                   0x000454          0x6 c:/program files (x86)/microchip/xc16/v1.24/bin/bin/../../lib\libm-elf.a(udivsi3.eo)
 
-_0387936055b1d482
+_0386936055b51ed4
                     0x4780         0x30
- _0387936055b1d482
+ _0386936055b51ed4
                     0x4780         0x30 build/pickit/production/_ext/230937639/adc.o
                     0x4780                  _dmaBufferA
 
-_0387954055b1d482
+_0386954055b51ed4
                     0x47c0         0x30
- _0387954055b1d482
+ _0386954055b51ed4
                     0x47c0         0x30 build/pickit/production/_ext/230937639/adc.o
                     0x47c0                  _dmaBufferB
 
@@ -1979,7 +1979,7 @@ _0387954055b1d482
  .text            0x00080a         0x6a build/pickit/production/_ext/230937639/spi.o
                   0x000862                  _spi_init
                   0x000868                  _spiWrite
- .text            0x000874         0x46 build/pickit/production/_ext/506297139/sysconfig.o
+ .text            0x000874         0x46 build/pickit/production/_ext/506297139/bsp.o
                   0x0008b4                  _sys_init
  .text            0x0008ba         0x2e build/pickit/production/main.o
                   0x0008ba                  _main

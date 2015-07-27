@@ -45,17 +45,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../../libs/dspic33f_pic24h_corelibs/src/device/sysconfig.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/adc.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/spi.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/timer.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/uart.c main.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c ../../libs/dspic33f_pic24h_corelibs/src/device/system.c ../../libs/dspic33f_pic24h_corelibs/src/device/bsp.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/adc.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/ic.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/mcpwm.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/pps.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/qei.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/spi.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/timer.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/uart.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/506297139/sysconfig.o ${OBJECTDIR}/_ext/230937639/adc.o ${OBJECTDIR}/_ext/230937639/spi.o ${OBJECTDIR}/_ext/230937639/timer.o ${OBJECTDIR}/_ext/230937639/uart.o ${OBJECTDIR}/main.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/506297139/sysconfig.o.d ${OBJECTDIR}/_ext/230937639/adc.o.d ${OBJECTDIR}/_ext/230937639/spi.o.d ${OBJECTDIR}/_ext/230937639/timer.o.d ${OBJECTDIR}/_ext/230937639/uart.o.d ${OBJECTDIR}/main.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/_ext/506297139/system.o ${OBJECTDIR}/_ext/506297139/bsp.o ${OBJECTDIR}/_ext/230937639/adc.o ${OBJECTDIR}/_ext/230937639/ic.o ${OBJECTDIR}/_ext/230937639/mcpwm.o ${OBJECTDIR}/_ext/230937639/pps.o ${OBJECTDIR}/_ext/230937639/qei.o ${OBJECTDIR}/_ext/230937639/spi.o ${OBJECTDIR}/_ext/230937639/timer.o ${OBJECTDIR}/_ext/230937639/uart.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/_ext/506297139/system.o.d ${OBJECTDIR}/_ext/506297139/bsp.o.d ${OBJECTDIR}/_ext/230937639/adc.o.d ${OBJECTDIR}/_ext/230937639/ic.o.d ${OBJECTDIR}/_ext/230937639/mcpwm.o.d ${OBJECTDIR}/_ext/230937639/pps.o.d ${OBJECTDIR}/_ext/230937639/qei.o.d ${OBJECTDIR}/_ext/230937639/spi.o.d ${OBJECTDIR}/_ext/230937639/timer.o.d ${OBJECTDIR}/_ext/230937639/uart.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/506297139/sysconfig.o ${OBJECTDIR}/_ext/230937639/adc.o ${OBJECTDIR}/_ext/230937639/spi.o ${OBJECTDIR}/_ext/230937639/timer.o ${OBJECTDIR}/_ext/230937639/uart.o ${OBJECTDIR}/main.o
+OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/_ext/506297139/system.o ${OBJECTDIR}/_ext/506297139/bsp.o ${OBJECTDIR}/_ext/230937639/adc.o ${OBJECTDIR}/_ext/230937639/ic.o ${OBJECTDIR}/_ext/230937639/mcpwm.o ${OBJECTDIR}/_ext/230937639/pps.o ${OBJECTDIR}/_ext/230937639/qei.o ${OBJECTDIR}/_ext/230937639/spi.o ${OBJECTDIR}/_ext/230937639/timer.o ${OBJECTDIR}/_ext/230937639/uart.o
 
 # Source Files
-SOURCEFILES=../../libs/dspic33f_pic24h_corelibs/src/device/sysconfig.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/adc.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/spi.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/timer.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/uart.c main.c
+SOURCEFILES=main.c ../../libs/dspic33f_pic24h_corelibs/src/device/system.c ../../libs/dspic33f_pic24h_corelibs/src/device/bsp.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/adc.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/ic.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/mcpwm.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/pps.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/qei.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/spi.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/timer.c ../../libs/dspic33f_pic24h_corelibs/src/peripheral/uart.c
 
 
 CFLAGS=
@@ -82,12 +82,26 @@ MP_LINKER_FILE_OPTION=,--script=p33FJ128MC802.gld
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/_ext/506297139/sysconfig.o: ../../libs/dspic33f_pic24h_corelibs/src/device/sysconfig.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/main.o.d 
+	@${RM} ${OBJECTDIR}/main.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  main.c  -o ${OBJECTDIR}/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1    -omf=elf -D__MPLAB_SIM -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/506297139/system.o: ../../libs/dspic33f_pic24h_corelibs/src/device/system.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/506297139" 
-	@${RM} ${OBJECTDIR}/_ext/506297139/sysconfig.o.d 
-	@${RM} ${OBJECTDIR}/_ext/506297139/sysconfig.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/dspic33f_pic24h_corelibs/src/device/sysconfig.c  -o ${OBJECTDIR}/_ext/506297139/sysconfig.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/506297139/sysconfig.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1    -omf=elf -D__MPLAB_SIM -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
-	@${FIXDEPS} "${OBJECTDIR}/_ext/506297139/sysconfig.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	@${RM} ${OBJECTDIR}/_ext/506297139/system.o.d 
+	@${RM} ${OBJECTDIR}/_ext/506297139/system.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/dspic33f_pic24h_corelibs/src/device/system.c  -o ${OBJECTDIR}/_ext/506297139/system.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/506297139/system.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1    -omf=elf -D__MPLAB_SIM -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/_ext/506297139/system.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/506297139/bsp.o: ../../libs/dspic33f_pic24h_corelibs/src/device/bsp.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/506297139" 
+	@${RM} ${OBJECTDIR}/_ext/506297139/bsp.o.d 
+	@${RM} ${OBJECTDIR}/_ext/506297139/bsp.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/dspic33f_pic24h_corelibs/src/device/bsp.c  -o ${OBJECTDIR}/_ext/506297139/bsp.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/506297139/bsp.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1    -omf=elf -D__MPLAB_SIM -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/_ext/506297139/bsp.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/_ext/230937639/adc.o: ../../libs/dspic33f_pic24h_corelibs/src/peripheral/adc.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/230937639" 
@@ -95,6 +109,34 @@ ${OBJECTDIR}/_ext/230937639/adc.o: ../../libs/dspic33f_pic24h_corelibs/src/perip
 	@${RM} ${OBJECTDIR}/_ext/230937639/adc.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/dspic33f_pic24h_corelibs/src/peripheral/adc.c  -o ${OBJECTDIR}/_ext/230937639/adc.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/230937639/adc.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1    -omf=elf -D__MPLAB_SIM -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
 	@${FIXDEPS} "${OBJECTDIR}/_ext/230937639/adc.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/230937639/ic.o: ../../libs/dspic33f_pic24h_corelibs/src/peripheral/ic.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/230937639" 
+	@${RM} ${OBJECTDIR}/_ext/230937639/ic.o.d 
+	@${RM} ${OBJECTDIR}/_ext/230937639/ic.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/dspic33f_pic24h_corelibs/src/peripheral/ic.c  -o ${OBJECTDIR}/_ext/230937639/ic.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/230937639/ic.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1    -omf=elf -D__MPLAB_SIM -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/_ext/230937639/ic.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/230937639/mcpwm.o: ../../libs/dspic33f_pic24h_corelibs/src/peripheral/mcpwm.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/230937639" 
+	@${RM} ${OBJECTDIR}/_ext/230937639/mcpwm.o.d 
+	@${RM} ${OBJECTDIR}/_ext/230937639/mcpwm.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/dspic33f_pic24h_corelibs/src/peripheral/mcpwm.c  -o ${OBJECTDIR}/_ext/230937639/mcpwm.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/230937639/mcpwm.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1    -omf=elf -D__MPLAB_SIM -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/_ext/230937639/mcpwm.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/230937639/pps.o: ../../libs/dspic33f_pic24h_corelibs/src/peripheral/pps.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/230937639" 
+	@${RM} ${OBJECTDIR}/_ext/230937639/pps.o.d 
+	@${RM} ${OBJECTDIR}/_ext/230937639/pps.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/dspic33f_pic24h_corelibs/src/peripheral/pps.c  -o ${OBJECTDIR}/_ext/230937639/pps.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/230937639/pps.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1    -omf=elf -D__MPLAB_SIM -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/_ext/230937639/pps.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/230937639/qei.o: ../../libs/dspic33f_pic24h_corelibs/src/peripheral/qei.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/230937639" 
+	@${RM} ${OBJECTDIR}/_ext/230937639/qei.o.d 
+	@${RM} ${OBJECTDIR}/_ext/230937639/qei.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/dspic33f_pic24h_corelibs/src/peripheral/qei.c  -o ${OBJECTDIR}/_ext/230937639/qei.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/230937639/qei.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1    -omf=elf -D__MPLAB_SIM -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/_ext/230937639/qei.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/_ext/230937639/spi.o: ../../libs/dspic33f_pic24h_corelibs/src/peripheral/spi.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/230937639" 
@@ -117,20 +159,27 @@ ${OBJECTDIR}/_ext/230937639/uart.o: ../../libs/dspic33f_pic24h_corelibs/src/peri
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/dspic33f_pic24h_corelibs/src/peripheral/uart.c  -o ${OBJECTDIR}/_ext/230937639/uart.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/230937639/uart.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1    -omf=elf -D__MPLAB_SIM -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
 	@${FIXDEPS} "${OBJECTDIR}/_ext/230937639/uart.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
+else
 ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  main.c  -o ${OBJECTDIR}/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1    -omf=elf -D__MPLAB_SIM -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
+	${MP_CC} $(MP_EXTRA_CC_PRE)  main.c  -o ${OBJECTDIR}/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d"        -g -omf=elf -D__MPLAB_SIM -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
 	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-else
-${OBJECTDIR}/_ext/506297139/sysconfig.o: ../../libs/dspic33f_pic24h_corelibs/src/device/sysconfig.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/506297139/system.o: ../../libs/dspic33f_pic24h_corelibs/src/device/system.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/506297139" 
-	@${RM} ${OBJECTDIR}/_ext/506297139/sysconfig.o.d 
-	@${RM} ${OBJECTDIR}/_ext/506297139/sysconfig.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/dspic33f_pic24h_corelibs/src/device/sysconfig.c  -o ${OBJECTDIR}/_ext/506297139/sysconfig.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/506297139/sysconfig.o.d"        -g -omf=elf -D__MPLAB_SIM -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
-	@${FIXDEPS} "${OBJECTDIR}/_ext/506297139/sysconfig.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	@${RM} ${OBJECTDIR}/_ext/506297139/system.o.d 
+	@${RM} ${OBJECTDIR}/_ext/506297139/system.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/dspic33f_pic24h_corelibs/src/device/system.c  -o ${OBJECTDIR}/_ext/506297139/system.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/506297139/system.o.d"        -g -omf=elf -D__MPLAB_SIM -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/_ext/506297139/system.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/506297139/bsp.o: ../../libs/dspic33f_pic24h_corelibs/src/device/bsp.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/506297139" 
+	@${RM} ${OBJECTDIR}/_ext/506297139/bsp.o.d 
+	@${RM} ${OBJECTDIR}/_ext/506297139/bsp.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/dspic33f_pic24h_corelibs/src/device/bsp.c  -o ${OBJECTDIR}/_ext/506297139/bsp.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/506297139/bsp.o.d"        -g -omf=elf -D__MPLAB_SIM -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/_ext/506297139/bsp.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/_ext/230937639/adc.o: ../../libs/dspic33f_pic24h_corelibs/src/peripheral/adc.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/230937639" 
@@ -138,6 +187,34 @@ ${OBJECTDIR}/_ext/230937639/adc.o: ../../libs/dspic33f_pic24h_corelibs/src/perip
 	@${RM} ${OBJECTDIR}/_ext/230937639/adc.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/dspic33f_pic24h_corelibs/src/peripheral/adc.c  -o ${OBJECTDIR}/_ext/230937639/adc.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/230937639/adc.o.d"        -g -omf=elf -D__MPLAB_SIM -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
 	@${FIXDEPS} "${OBJECTDIR}/_ext/230937639/adc.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/230937639/ic.o: ../../libs/dspic33f_pic24h_corelibs/src/peripheral/ic.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/230937639" 
+	@${RM} ${OBJECTDIR}/_ext/230937639/ic.o.d 
+	@${RM} ${OBJECTDIR}/_ext/230937639/ic.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/dspic33f_pic24h_corelibs/src/peripheral/ic.c  -o ${OBJECTDIR}/_ext/230937639/ic.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/230937639/ic.o.d"        -g -omf=elf -D__MPLAB_SIM -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/_ext/230937639/ic.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/230937639/mcpwm.o: ../../libs/dspic33f_pic24h_corelibs/src/peripheral/mcpwm.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/230937639" 
+	@${RM} ${OBJECTDIR}/_ext/230937639/mcpwm.o.d 
+	@${RM} ${OBJECTDIR}/_ext/230937639/mcpwm.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/dspic33f_pic24h_corelibs/src/peripheral/mcpwm.c  -o ${OBJECTDIR}/_ext/230937639/mcpwm.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/230937639/mcpwm.o.d"        -g -omf=elf -D__MPLAB_SIM -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/_ext/230937639/mcpwm.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/230937639/pps.o: ../../libs/dspic33f_pic24h_corelibs/src/peripheral/pps.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/230937639" 
+	@${RM} ${OBJECTDIR}/_ext/230937639/pps.o.d 
+	@${RM} ${OBJECTDIR}/_ext/230937639/pps.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/dspic33f_pic24h_corelibs/src/peripheral/pps.c  -o ${OBJECTDIR}/_ext/230937639/pps.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/230937639/pps.o.d"        -g -omf=elf -D__MPLAB_SIM -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/_ext/230937639/pps.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/230937639/qei.o: ../../libs/dspic33f_pic24h_corelibs/src/peripheral/qei.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/230937639" 
+	@${RM} ${OBJECTDIR}/_ext/230937639/qei.o.d 
+	@${RM} ${OBJECTDIR}/_ext/230937639/qei.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/dspic33f_pic24h_corelibs/src/peripheral/qei.c  -o ${OBJECTDIR}/_ext/230937639/qei.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/230937639/qei.o.d"        -g -omf=elf -D__MPLAB_SIM -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/_ext/230937639/qei.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/_ext/230937639/spi.o: ../../libs/dspic33f_pic24h_corelibs/src/peripheral/spi.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/230937639" 
@@ -159,13 +236,6 @@ ${OBJECTDIR}/_ext/230937639/uart.o: ../../libs/dspic33f_pic24h_corelibs/src/peri
 	@${RM} ${OBJECTDIR}/_ext/230937639/uart.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../libs/dspic33f_pic24h_corelibs/src/peripheral/uart.c  -o ${OBJECTDIR}/_ext/230937639/uart.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/230937639/uart.o.d"        -g -omf=elf -D__MPLAB_SIM -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
 	@${FIXDEPS} "${OBJECTDIR}/_ext/230937639/uart.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/main.o.d 
-	@${RM} ${OBJECTDIR}/main.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  main.c  -o ${OBJECTDIR}/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d"        -g -omf=elf -D__MPLAB_SIM -O1 -I"../../libs/dspic33f_pic24h_corelibs/include" -I"../../libs" -msmart-io=1 -Wall -msfr-warn=off
-	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 endif
 

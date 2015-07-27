@@ -1,8 +1,7 @@
 #include "common/globals.h"
 #include "common/types.h"
 #include "device/configbits.h"
-#include "device/pinconfig.h"
-#include "device/sysconfig.h"
+#include "device/bsp.h"
 #include "peripheral/timer.h"
 #include <stdint.h>
 

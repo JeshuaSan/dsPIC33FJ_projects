@@ -14,7 +14,7 @@
                    projectFiles="true">
       <logicalFolder name="src" displayName="src" projectFiles="true">
         <logicalFolder name="device" displayName="device" projectFiles="true">
-          <itemPath>../../libs/dspic33f_pic24h_corelibs/src/device/sysconfig.c</itemPath>
+          <itemPath>../../libs/dspic33f_pic24h_corelibs/src/device/bsp.c</itemPath>
         </logicalFolder>
         <logicalFolder name="src" displayName="src" projectFiles="true">
           <logicalFolder name="device" displayName="device" projectFiles="true">

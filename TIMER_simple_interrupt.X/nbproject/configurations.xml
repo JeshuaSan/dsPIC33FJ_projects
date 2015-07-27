@@ -14,10 +14,14 @@
                    projectFiles="true">
       <logicalFolder name="src" displayName="src" projectFiles="true">
         <logicalFolder name="device" displayName="device" projectFiles="true">
-          <itemPath>../../libs/dspic33f_pic24h_corelibs/src/device/sysconfig.c</itemPath>
+          <itemPath>../../libs/dspic33f_pic24h_corelibs/src/device/bsp.c</itemPath>
         </logicalFolder>
         <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
           <itemPath>../../libs/dspic33f_pic24h_corelibs/src/peripheral/adc.c</itemPath>
+          <itemPath>../../libs/dspic33f_pic24h_corelibs/src/peripheral/ic.c</itemPath>
+          <itemPath>../../libs/dspic33f_pic24h_corelibs/src/peripheral/mcpwm.c</itemPath>
+          <itemPath>../../libs/dspic33f_pic24h_corelibs/src/peripheral/pps.c</itemPath>
+          <itemPath>../../libs/dspic33f_pic24h_corelibs/src/peripheral/qei.c</itemPath>
           <itemPath>../../libs/dspic33f_pic24h_corelibs/src/peripheral/spi.c</itemPath>
           <itemPath>../../libs/dspic33f_pic24h_corelibs/src/peripheral/timer.c</itemPath>
           <itemPath>../../libs/dspic33f_pic24h_corelibs/src/peripheral/uart.c</itemPath>
@@ -415,7 +419,7 @@
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="extra-include-directories"
-                  value="../../libs/dspic33f_pic24h_corelibs/include;../../libs"/>
+                  value="..\..\libs\dspic33f_pic24h_corelibs\include;../../libs"/>
         <property key="isolate-each-function" value="false"/>
         <property key="keep-inline" value="false"/>
         <property key="oXC16gcc-align-arr" value="false"/>
@@ -443,6 +447,25 @@
       <C30-AR>
         <property key="additional-options-chop-files" value="false"/>
       </C30-AR>
+      <C30-AS>
+        <property key="assembler-symbols" value=""/>
+        <property key="expand-macros" value="false"/>
+        <property key="extra-include-directories-for-assembler" value=""/>
+        <property key="extra-include-directories-for-preprocessor" value=""/>
+        <property key="false-conditionals" value="false"/>
+        <property key="keep-locals" value="false"/>
+        <property key="list-assembly" value="false"/>
+        <property key="list-section-info" value="false"/>
+        <property key="list-source" value="false"/>
+        <property key="list-symbols" value="false"/>
+        <property key="oXC16asm-extra-opts" value=""/>
+        <property key="oXC16asm-list-to-file" value="false"/>
+        <property key="omit-debug-dirs" value="false"/>
+        <property key="omit-forms" value="false"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="relax" value="false"/>
+        <property key="warning-level" value="emit-warnings"/>
+      </C30-AS>
       <C30-LD>
         <property key="additional-options-use-response-files" value="false"/>
         <property key="boot-eeprom" value="no_eeprom"/>

@@ -1,6 +1,5 @@
 #include "device/configbits.h"
-#include "device/pinconfig.h"
-#include "device/sysconfig.h"
+#include "device/bsp.h"
 #include "peripheral/uart.h"
 #include "cobs/cobs.h"
 #include <stdint.h>

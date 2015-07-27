@@ -23,7 +23,7 @@
                    projectFiles="true">
       <logicalFolder name="src" displayName="src" projectFiles="true">
         <logicalFolder name="device" displayName="device" projectFiles="true">
-          <itemPath>../../libs/dspic33f_pic24h_corelibs/src/device/sysconfig.c</itemPath>
+          <itemPath>../../libs/dspic33f_pic24h_corelibs/src/device/bsp.c</itemPath>
         </logicalFolder>
         <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
           <itemPath>../../libs/dspic33f_pic24h_corelibs/src/peripheral/adc.c</itemPath>
@@ -122,6 +122,9 @@
         <property key="use-cci" value="false"/>
         <property key="use-iar" value="false"/>
       </C30>
+      <C30-AR>
+        <property key="additional-options-chop-files" value="false"/>
+      </C30-AR>
       <C30-LD>
         <property key="additional-options-use-response-files" value="false"/>
         <property key="boot-eeprom" value="no_eeprom"/>

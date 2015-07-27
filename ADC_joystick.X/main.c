@@ -1,6 +1,5 @@
 #include "device/configbits.h"
-#include "device/sysconfig.h"
-#include "device/pinconfig.h"
+#include "device/bsp.h"
 #include "oled/oled.h"
 #include "peripheral/timer.h"
 #include "peripheral/adc.h"
@@ -28,25 +27,20 @@ int main(void)
 
     while(1)
     {
-        if (oledUpdate)
+        if (BIT_CHECK(_sysTick, SYSTICK_10MS))
         {
-            adc0 = adc_read(AN4)/16;
-            adc1 = adc_read(AN5)/8;
-            oled_clearDisplay();
-            oled_printf(1,2,"AN4: %i", adc0);
-            oled_printf(1,3,"AN5: %i", adc1);
-            oled_printf(1,4,"counter: %X", counter);
-            oled_render();
-            oledUpdate = 0;
-            LED ^= 1;
+            if(++oledUpdate > 5)
+            {
+                adc0 = adc_read(AN4)/16;
+                adc1 = adc_read(AN5)/8;
+                oled_clearDisplay();
+                oled_printf(1,2,"AN4: %i", adc0);
+                oled_printf(1,3,"AN5: %i", adc1);
+                oled_printf(1,4,"counter: %X", counter);
+                oled_render();
+                oledUpdate = 0;
+            }
         }
     }
     return (0);
-}
-
-void __attribute__ ((__interrupt__, no_auto_psv)) _T1Interrupt(void)
-{
-    _T1IF = 0;      // Clear Timer1 interrupt flag
-    oledUpdate = 1;
-    ++counter;
 }
